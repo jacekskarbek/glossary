@@ -1,0 +1,130 @@
+﻿<div class="container">
+            
+    
+        {% if results %}
+       
+        <div class="row borderb">
+            	<div class="col-md-3 ">
+            		{{ sourcelanguage }}
+            	</div>
+            	<div class="col-md-3 ">
+            		{{ targetlanguage }}
+            	</div>
+            	<div class="col-md-3 ">
+            		Description
+            	</div>
+            </div>
+       
+       		{% for termbase in results %}
+       		{% if termbase %}
+       		<div class="row borderb">
+            	<div class="col-md-9 descrip">
+            		Termbase: <b>{{ termbase.name }}</b>
+            		<i>{{ termbase.description }}</i>
+            	</div>
+            		
+            </div>
+            {% endif %}
+            {% for entry in termbase.entries %}
+            
+            {% if entry.istarget %}
+            
+            <div class="row borderb">
+            <div class="col-md-3">
+	            {% for lang in entry.languages %}
+	            	{% if lang.lang|stringformat:"s" == sourcelanguage|stringformat:"s" %}
+	            		{% for term in lang.termGrp %}
+	            		{% if forloop.counter != 1 %}
+	            		<div class="borderu">
+	            		<a  href="{% url 'editentry' term.id  %}">
+	            			 <span style="color: blue;"><b>{{ term.value  }} </b></a></span><br>
+	            			{% for desc in term.descripGrp %}
+	            			<li class="descrip"> <i><b>{{ desc.type }}:</b> {{ desc.value  }} </i></li>
+	            			{% endfor %} 
+	            		</div>
+	            		{% else %}
+	            			<a  href="{% url 'editentry' term.id  %}">
+	            			<span style="color: blue;"><b>{{ term.value  }} </b></a></span><br>
+	            			{% for desc in term.descripGrp %}
+	            			<li class="descrip"> <i><b>{{ desc.type }}:</b> {{ desc.value  }} </i></li>
+	            			{% endfor %} 
+	            		{% endif %}
+	            			
+	            		{% endfor %} 
+	            			
+	            	{% endif %}
+	            {% endfor %}
+	            </div>
+	            <div class="col-md-3">
+            	{% for lang in entry.languages %}
+	            	{% if lang.lang|stringformat:"s" == targetlanguage|stringformat:"s" %}
+	            	
+	            		{% for term in lang.termGrp %}
+	            		{% if forloop.counter != 1 %}
+	            		<div class="borderu">
+	            		
+	            		
+	            		{% if termbase.access %}
+	            		<a  href="{% url 'editentry' term.id  %}">
+	            			 <span style="color: green;"><b>{{ term.value  }} </b></a></span><br>
+	            		{% else %}
+	            		<a  href="{% url 'lspsoftware'  %}">
+	            			<b>---click here to get access---  </b></a><br>
+	            		{% endif%}
+	            			{% for desc in term.descripGrp %}
+	            			<li class="descrip"> <i><b>{{ desc.type }}:</b> {{ desc.value  }} </i></li>
+	            			{% endfor %} 
+	            		</div>
+	            		{% else %}
+	            			
+	            			{% if termbase.access %}
+	            			<a  href="{% url 'editentry' term.id  %}">
+	            			 <span style="color: green;"><b>{{ term.value  }} </b></a></span><br>
+	            		{% else %}
+	            		<a  href="{% url 'lspsoftware'   %}">
+	            			<b>---click here to get access---  </b></a><br>
+	            		{% endif%}
+	            			{% for desc in term.descripGrp %}
+	            			<li class="descrip"> <i><b>{{ desc.type }}:</b> {{ desc.value  }} </i></li>
+	            			{% endfor %} 
+	            		
+	            			{% endif %}
+	            		{% endfor %} 
+	            		
+	            	{% endif %}
+	            {% endfor %}
+	            </div>
+            	<div class="col-md-5">
+				{% for edesc in entry.descripGrp %}
+				
+					<li class="descrip"> <i><b>{{ edesc.type }}:</b> {% autoescape off %}{{ edesc.value  }}{% endautoescape %}  </i></li>
+				{% endfor %}
+				{% for lang in entry.languages %}
+					{% for ldesc in lang.descripGrp %}
+						<li class="descrip"> <i><b>{{ ldesc.type }}:</b> {{ ldesc.value  }} </i></li>
+					{% endfor %}
+					
+				{% endfor %}
+				</div>
+				
+		
+            </div>
+            {% endif %}
+            
+			{% endfor %}	
+			
+			{% endfor %}
+					
+		{% else %}
+			{% if too_short %}
+			<tr><span style="color: red;">Query too short. Must have minimum 3 characters!</span></tr>
+			{% else %}
+			<tr> <span style="color: red;">No results...</span></tr>
+			{% endif %}
+		{% endif %}
+         </table>
+
+
+               
+            </div>
+        </div>

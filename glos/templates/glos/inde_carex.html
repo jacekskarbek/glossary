@@ -1,0 +1,256 @@
+
+
+{% extends "glos/base.html" %}
+{% load i18n static %}
+
+
+
+{% block content %}
+
+
+<section class="banner-section">
+                <div class="container">
+                    <div class="header-title2 text-center">
+                        
+                        
+                    </div> <!-- header-title -->
+                </div>
+</section> <!-- banner-section -->
+
+           
+<section class="working-section section-padding">
+                <div class="working-section-two">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-3">
+                                <div class="section-sidebar">
+                                    <div class="project-part">
+                                        <ul>
+                                            {% if termbases %}
+    
+         <form action="" method="post">  
+        <table >
+        
+            <b>Termbases</b>
+        
+        {% for termbase in termbases %}
+            <tr> 
+            {% if termbase.termbase.termbase_name  in selectedtermbases %} 
+             
+                <td> <input checked="checked" type="checkbox" name="checks[]" value="{{ termbase.termbase}}">  {{ termbase.termbase}}</input></td>
+            {% else %}
+            	<td> <input  type="checkbox" name="checks[]" value="{{ termbase.termbase}}">  {{ termbase.termbase}}</input></td>
+            {% endif %}
+            </tr>
+        {% endfor %}
+        </table>
+        
+{% else %}
+    <p>{% trans "You don't have any termbases." %}</p>
+{% endif %}
+                                          
+          <table >
+        
+           
+        
+        {{ form2 }}
+        </table>
+        
+        
+                                            
+                                            
+                                        </ul>
+                                    </div> <!-- project-part -->
+
+                                    <div class="contact-part">
+                                        <h4>Contact</h4>
+
+                                        <ul class="location">
+                                            <li>
+                                                <i class="fa fa-map-marker" aria-hidden="true"></i>
+                                                <span class="text">49488 Avenida Obregon, <br> La Quinta, CA 92253</span>
+                                            </li>
+
+                                            <li>
+                                                <i class="fa fa-phone" aria-hidden="true"></i>
+                                                <span class="text">+1-(281)-813 926 <br> +1-(281)-813 612</span>
+                                            </li>
+
+                                            <li>
+                                                <i class="fa fa-envelope-o" aria-hidden="true"></i>
+                                                <span class="text">support@consultcare.com</span>
+                                            </li>
+                                        </ul>
+                                    </div> <!-- contact-part -->
+
+                                    <div class="asset-part">
+                                        <h4>Brochures</h4>
+                                        <p>View our 2016 financial prospectus brochure for an easy to read guide on all of the services offer.</p>
+                                        <a href="#" class="btn btn-primary"><i class="fa fa-download" aria-hidden="true"></i> Download Brochure</a>
+                                        <a href="#" class="btn btn-default"><i class="fa fa-user-circle-o" aria-hidden="true"></i> Characteristics</a>
+                                    </div> <!-- asset-part -->
+                                </div> <!-- section-sidebar -->
+                            </div> <!-- col-md-4 -->
+
+                            <div class="col-md-8">
+                                
+
+                                <div class="section-wrapper">
+                                    <div class="row">
+                                        <div class="col-sm-8">
+                                            <div class="wrapper-content">
+                                                
+                                                
+                                                 {% csrf_token %}
+ 
+    											{{ form }}
+    											
+    											<input type="submit" value="Search" />
+												</form>
+
+                                                
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="row">
+										<div class="col-sm-6">
+									
+                                            <div class="wrapper-content">
+                                            
+        <table width="1200">
+        <colgroup>
+       	 <col span="1" style="width: 30%;">
+	       <col span="1" style="width: 30%;">
+	       <col span="1" style="width: 40%;">
+	       
+       	
+    	</colgroup>
+        {% if results %}
+        <tr class="blank_row"></tr>
+        <tr class="trhead">
+        	<th class="thmargin">{{ sourcelanguage }}</th>
+        	<th class="thmargin">Target language</th>
+        	<th class="thmargin">Description</th>
+        	
+        </tr>
+            {% for entry in results %}
+            <tr class="trrow">
+            
+	            {% for lang in entry.languages %}
+	            	{% if lang.lang|stringformat:"s" == sourcelanguage|stringformat:"s" %}
+	            	 <td class="thmargin"> 
+	            		{% for term in lang.termGrp %}
+	            		<a href="{% url 'editentry' term.id  %}">
+	            			 <b>{{ term.value  }} </b></a><br/>
+	            			{% for desc in term.descripGrp %}
+	            			<li> <i><b>{{ desc.name }}:</b> {{ desc.value  }} </i></li>
+	            			{% endfor %}
+	            		{% endfor %} </td>
+	            	{% endif %}
+	            {% endfor %}
+            	{% for lang in entry.languages %}
+	            	{% if lang.lang|stringformat:"s" != sourcelanguage|stringformat:"s" %}
+	            	 <td class="thmargin"> 
+	            		{% for term in lang.termGrp %}
+	            		<a href="{% url 'editentry' term.id  %}">
+	            			 <b>{{ term.value  }} </b></a><br/>
+	            			{% for desc in term.descripGrp %}
+	            			<li> <i><b>{{ desc.name }}:</b> {{ desc.value  }} </i></li>
+	            			{% endfor %}
+	            		{% endfor %} </td>
+	            	{% endif %}
+	            {% endfor %}
+            <td class="thmargin">
+				{% for edesc in entry.descripGrp %}
+					<li> <i><b>{{ edesc.name }}:</b> {{ edesc.value  }} </i></li>
+				{% endfor %}
+				{% for lang in entry.languages %}
+					{% for ldesc in lang.descripGrp %}
+						<li> <i><b>{{ ldesc.name }}:</b> {{ ldesc.value  }} </i></li>
+					{% endfor %}
+					
+				{% endfor %}
+				
+				
+			</td>
+            
+            
+			{% endfor %}	
+			
+			
+					
+		{% else %}
+			{% if too_short %}
+			<tr>Query too short. Must have minimum 3 characters!</tr>
+			{% else %}
+			<tr>No results...</tr>
+			{% endif %}
+		{% endif %}
+         </table>
+                                                
+                                            </div>
+                                        </div>
+                                       
+                                    </div>
+                                </div> <!-- section-wrapper -->
+                            </div> <!-- col-md-8 -->
+                        </div>
+                        </div>
+                    </div>
+                </div> <!-- working-section-two -->
+            </section>
+
+
+
+            <section class="information-section">
+                <div class="container">
+                    <h3>Zachęcamy do kontaktu z nami</h3>
+                    <a href="#" class="btn btn-primary pull-right">Kontakt</a>
+                </div>
+            </section> <!-- information-section -->
+
+
+
+             <section class="counting-section">
+                <div class="container text-center">
+                    <h2 class="hidden">counting-title</h2>
+
+                    <div class="counting-pusher">
+                        <div class="counting-wrapper">
+                            <div class="count-description inline-block">
+                                <span class="timer">23</span>
+                            </div>
+                            <p>lata doświadczenia w lokalizacji</p>
+                        </div>  <!-- counting-wrapper --> 
+
+                        <div class="counting-wrapper">
+                            <div class="count-description inline-block">
+                                <span class="timer">2500</span>
+                            </div>
+                            <p>zrealizowanych projektów</p>
+                        </div>  <!-- counting-wrapper -->
+
+                        <div class="counting-wrapper">
+                            <div class="count-description inline-block">
+                                <span class="timer">150</span>mln
+                            </div>
+                            <p>przetłumaczonych słów</p>
+                        </div>  <!-- counting-wrapper -->
+
+                        <div class="counting-wrapper">
+                            <div class="count-description inline-block">
+                                <span class="timer">65</span>
+                            </div>
+                            <p>zadowolonych klientów</p>
+                        </div>  <!-- counting-wrapper -->
+                    </div> <!-- /.counting-pusher -->
+                </div>
+            </section> <!-- counting-section -->
+
+
+ 
+
+
+            
+
+{% endblock %}

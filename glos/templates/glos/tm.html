@@ -1,0 +1,48 @@
+
+
+{% extends "glos/base.html" %}
+{% load i18n static %}
+
+
+
+{% block content %}
+
+<section class="banner-section">
+                <div class="container">
+                    <div class="header-title2 text-center">
+                        <h2 class="title">{% trans 'Pamięć tłumaczeń' %}</h2>
+                        
+                    </div> <!-- header-title -->
+                </div>
+            </section> <!-- banner-section -->
+			
+			 <section class="working-section section-padding-start">
+                <div class="working-section-two">
+                    <div class="container">
+                        <div class="header">
+                            <div class="row">
+                                <div class="col-sm-4">
+                                    <h2>{% trans 'Pamięć tłumaczeń' %}</h2>
+                                    <p><i>{% trans '„XXXXXXXXXX XXXXXXXXXXX XXXXXXXXXXXX.”' %}</i></p>
+                                </div>
+
+                                <div class="col-sm-8">
+                                    <h4>{% trans 'Pamięć tłumaczeń to baza danych składająca się jednostek tłumaczeniowych, którymi najczęściej są zdania w języku źródłowym i ich tłumaczenia w języku docelowym. Każde nowe zdanie przed tłumaczeniem jest porównywane z zawartością pamięci tłumaczeń (czyli wszystkimi poprzednio przetłumaczonymi zdaniami) w poszukiwaniu podobieństw.' %}</h4>                               
+<h4>{% trans 'Po przetłumaczeniu każde zdanie źródłowe jest wraz z tłumaczeniem jest dopisywane do pamięci tłumaczeń. Pamięć tłumaczeń umieszczona na serwerze umożliwia pracę wielu tłumaczy i korektorów nad tym samym projektem. Każdy z uczestników procesu tłumaczeniowego widzi dzięki temu  nie tylko swoje tłumaczenia, ale również innych osób. Zapewnia to wysoką jakość tłumaczenia dzięki spójności stylu i terminologii w obrębie tłumaczenia, przyspiesza tłumaczenie, zmniejsza jego koszty – nigdy nie tłumaczy się tego samego zdania dwukrotnie i eliminuje się wiele cyklów korekty.' %}</h4>
+<h4>{% trans 'Od ponad 20 lat w każdym realizowanym przez nas projekcie używamy pamięci tłumaczeń, które zawierają wszystkie tłumaczenia wykonane dla danego klienta, danej dziedziny lub danego produktu. Dzięki temu pamięci tłumaczeń naszych klientów przekraczają nieraz kilka milionów zdań (kilkanaście milinów wyrazów) co przekłada się bezpośrednio na malejący koszt i czas realizacji kolejnych tłumaczeń przy jednoczesnym zachowaniu wysokiej jakości.' %}</h4>
+<h4>{% trans 'Firma LocStar używa systemów pamięci tłumaczeń wielu producentów m.in. SDL Trados Studio, SDL Trados GroupShare, memoQ, IBM Translation Manager, XTM Cloud, Memsource, Google Translation Toolkit, jak również własne autorskie rozwiązanie serwerowej pamięci tłumaczeń LocTM.' %}</h4>
+
+
+
+                                </div>
+                            </div>
+                        </div> <!-- header -->
+
+                       
+                    </div>
+                </div> <!-- working-section-two -->
+            </section>
+
+           
+
+{% endblock %}

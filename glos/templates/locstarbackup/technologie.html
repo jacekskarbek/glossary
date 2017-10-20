@@ -1,0 +1,81 @@
+
+
+{% extends "glos/base.html" %}
+{% load i18n static %}
+
+
+
+{% block content %}
+
+<section class="banner-section">
+                <div class="container">
+                    <div class="header-title2 text-center">
+                        <h2 class="title">Technology</h2>
+                        
+                    </div> <!-- header-title -->
+                </div>
+            </section> <!-- banner-section -->
+			
+			 <section class="working-section section-padding-start">
+                <div class="working-section-two">
+                    <div class="container">
+                        <div class="header">
+                            <div class="row">
+                                <div class="col-sm-4">
+                                    <h2>Technology</h2>
+                                </div>
+
+                                <div class="col-sm-8">
+                                    <h4>Technologie komputerowego wspomagania tłumaczeń obejmują szereg narzędzi i usług, których głównym zadaniem jest przyspieszenie pracy tłumacza oraz zapewnienie najwyższej jakości finalnego tekstu. Sercem każdego profesjonalnego systemu CAT jest <b>pamięć tłumaczeń</b>, czyli specjalistyczna baza danych, w której tekst przechowywany jest w postaci segmentów — fragmentów odpowiednio powiązanych tekstów źródłowych i przetłumaczonych. </h4>
+                                    <h4>
+Aplikacje wspomagające tłumaczenie to także programy, które wspomagają lokalizację oprogramowania — możliwe jest więc tłumaczenie oprogramowania na poziomie zarówno kodu źródłowego, jak i skompilowanego projektu. Tłumacz ma dzięki temu podgląd wszystkich okien dialogowych, interfejsu użytkownika itp. </h4>
+                                </div>
+                            </div>
+                        </div> <!-- header -->
+
+                        <div class="section-wrapper">
+                            <div class="row first-part">
+                                <div class="col-sm-4">
+                                    <div class="wrapper-content">
+                                    <h3>Translation Memory</h3>
+                                        <img src="{% static "assets/images/cat.png" %}" alt="image">
+                                        <h3></h3>
+                                        <h5><b>Pamięć tłumaczeń</b> to baza danych składająca się jednostek tłumaczeniowych, którymi najczęściej są zdania w języku źródłowym i ich tłumaczenia w języku docelowym.</h5>
+                                        
+                                        <a href="{% url  'tm'  %}" class="btn btn-primary">Read More</a>
+                                    </div>
+                                </div>
+
+                                <div class="col-sm-4">
+                                    <div class="wrapper-content">
+                                    <h3>Terminology Management</h3>
+                                        <img src="{% static "assets/images/tm.png" %}" alt="image">
+                                         <h3></h3>
+                                        <h5><b>Słowniki, glosariusze i bazy terminologiczne</b> stosowane przy tłumaczeniach: terminy, synonimy, akronimy oraz dodatkowe informacje.</h5>
+                                        
+
+                                       <a href="{% url  'terminology'  %}" class="btn btn-primary">Read More</a>
+                                    </div>
+                                </div>
+
+                               <div class="col-sm-4">
+                                    <div class="wrapper-content">
+                                    	<h3>Machine Translation</h3>
+                                        <img src="{% static "assets/images/glossart.png" %}" alt="image">
+                                        <h3></h3>
+                                        <h5><b>Systemy tłumaczenia maszynowego</b> umożliwiają częściowe zredukowanie pracy tłumacza poprzez automatyczne generowanie tłumaczeń przez komputer.</h5>
+										
+                                         <a href="{% url  'mt'  %}" class="btn btn-primary">Read More</a>
+                                    </div>
+                               </div>
+                            </div>
+							
+                            
+                        </div> <!-- section-wrapper -->
+                    </div>
+                </div> <!-- working-section-two -->
+            </section>
+
+           
+
+{% endblock %}

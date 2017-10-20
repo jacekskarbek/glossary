@@ -1,0 +1,325 @@
+{% load i18n static %}
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <!--[if IE]>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <![endif]-->
+    <title>Terminologia online</title>
+    <!-- BOOTSTRAP CORE STYLE CSS -->
+    <link href="{% static "assetslsp/css/bootstrap.css" %}" rel="stylesheet" />
+     <!-- FONTAWESOME STYLE CSS -->
+     <link href="{% static "assetslsp/css/font-awesome.css" %}" rel="stylesheet" />
+    <!-- CUSTOM STYLE CSS -->
+    <link href="{% static "assetslsp/css/style.css" %}"  rel="stylesheet" />
+</head>
+
+
+
+<body > 
+   
+        <div class="navbar navbar-inverse navbar-fixed-top " >
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#" ><strong style=""></strong> LSP S<i class="fa fa-globe"></i>FTWARE <small >Terminologia online</small></a>
+            </div>
+            <div class="navbar-collapse collapse move-me">
+                <ul class="nav navbar-nav navbar-right set-links">
+                    <limenu><a href="index.html" class="active-menu-item">START</a></li>
+                     <limenu><a href="about.html">LSP SOFTWARE</a></li>
+                     <limenu><a href="pricing.html">SKLEP</a></li>
+                     <limenu><a href="#stats-download">KONTAKT</a></li>
+                    
+                </ul>
+            </div>
+
+        </div>
+    </div>
+    <!--MENU SECTION END-->
+    <section id="home-sec">
+        <div class="overlay text-center2">
+            <h1 >TERMINOLOGIA ONLINE</h1>
+            <hr class="hr-set"/>
+
+            <p>Słowniki specjalistyczne w jednym miejscu </p>
+        </div>
+    </section>
+    
+    <!--HOME SECTION END-->
+    
+        <section id="futures-sec">
+        <div class="container">
+           <div class="row text-center" >
+				<div class="col-md-2">
+    {% if termbases %}
+    
+        <form action="" method="post" id="test" >  
+        <table >
+        
+            <label class="form-control input-cls-small" >Termbases</label>
+        
+        {% for termbase in termbases %}
+            
+            {% if termbase.termbase.termbase_name  in selectedtermbases %} 
+             
+                 <label class="form-control-small input-cls-small2"><input   checked="checked" type="checkbox" name="checks[]" value="{{ termbase.termbase}}">  {{ termbase.termbase}}</input></label>
+            {% else %}
+            	<label class="form-control-small input-cls-small2"><input  type="checkbox" name="checks[]" value="{{ termbase.termbase}}">  {{ termbase.termbase}}</input></label>
+            {% endif %}
+            
+        {% endfor %}
+        </table>
+        
+{% else %}
+    <p>{% trans "You don't have any termbases." %}</p>
+{% endif %}
+			</div>
+          <div class="col-md-2">                              
+          <table >
+        
+           
+        
+        	{% for field in form2 %}
+        <label class="form-control input-cls-small" for="{{ field.name }}">{{ field.label }}</label>
+        {{ field }}
+    	{% endfor %}
+        </table>
+
+				</div>
+				<div class="col-md-2">                              
+          <table >
+        
+           
+        
+        	{% for field in form3 %}
+        <label class="form-control input-cls-small" for="{{ field.name }}">{{ field.label }}</label>
+        {{ field }}
+    	{% endfor %}
+        </table>
+
+				</div>
+				<div class="col-md-2">                              
+          <table >
+        
+        
+        
+        	{% for count in counts %}
+        <label class="form-control input-cls-small" for="{{ count }}">{{ count }}</label>
+    	{% endfor %}
+        </table>
+
+				</div>
+                
+            </div>
+        </div>
+    </section>
+    <!--SERVICES SECTION END-->
+    
+    <section id="search-domain" >
+        <div class="container">
+        
+            <div class="row">
+				<div class="col-md-6">
+		<!--	        <div class="form-control input-cls"> -->
+				        {% csrf_token %}
+    				 {{ form }}
+    	<!--			</div> -->
+				</div>  
+                <div class="col-md-4">
+                    	<input type="submit" class="btn btn-info btn-lg btn-set"  id="but" value="SEARCH" />
+                </div>
+            </div>
+            </form>
+        </div>
+    </section>
+     <!--SEARCH SECTION END-->
+
+	   <section id="clients-sec">
+	   
+      
+    </section>
+    <!--CLIENTS SECTION END-->
+    <div id="testimonial-sec">
+
+   
+        <div class="container">
+              <div class="row ">
+            <div class="col-md-12">
+                <div id="carousel-example" class="carousel slide" data-ride="carousel">
+
+                    <ol class="carousel-indicators">
+                        <li data-target="#carousel-example" data-slide-to="0" class="active"></li>
+                        <li data-target="#carousel-example" data-slide-to="1"></li>
+                        <li data-target="#carousel-example" data-slide-to="2"></li>
+                    </ol>
+
+                    <div class="carousel-inner">
+                        <div class="item active">
+                            <div class="container center">
+                                <div class="col-md-6 col-md-offset-3 slide-custom">
+                                   
+                                    <h4><i class="fa fa-quote-left"></i> Największy wybór słowników specjalistycznych w formacie SDL MultiTerm<i class="fa fa-quote-right"></i></h4>
+                                     <div class="user-img pull-right">
+						<img src="{% static "assetslsp/img/user.gif" %}" alt="" class="img-u image-responsive"  />
+					</div>
+                                    <h5 class="pull-right"><strong class="c-black">Lorem Dolor</strong></h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="container center">
+                                <div class="col-md-6 col-md-offset-3 slide-custom">
+                                    <h4> <i class="fa fa-quote-left"></i> Aenean faucibus luctus enim. Duis quis sem risu suspend lacinia elementum nunc. <i class="fa fa-quote-right"></i></h4>
+                                         <div class="user-img pull-right">
+						<img src="{% static "assetslsp/img/user2.png" %}" alt="" class="img-u image-responsive"  />
+					</div>
+                                    <h5 class="pull-right"><strong class="c-black">Faucibus luctus</strong></h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="container center">
+                                <div class="col-md-6 col-md-offset-3 slide-custom">
+                                    <h4><i class="fa fa-quote-left"></i>Sed ultricies, libero ut adipiscing a egestas dui metus a arcu condimentum. <i class="fa fa-quote-right"></i></h4>
+                                        <div class="user-img pull-right">
+						<img src="{% static "assetslsp/img/user.gif" %}" alt="" class="img-u image-responsive"  />
+					</div>
+                                    <h5 class="pull-right"><strong class="c-black">Sed ultricies</strong></h5>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+         </div>
+    <!--TESTIMONIAL SECTION END-->
+    <section id="features-sec"  >
+        <div class="container">
+           
+            <div class="row text-center" >
+<div class="col-md-3">
+    <i class="fa fa-comments-o fa-3x icon-custom-2 color-2"></i>
+    <h4>24x7 SUPPORT</h4>
+    <p>
+        Nunc at viverra risus. 
+        In euismod quam ac dictum varius. 
+    </p>
+
+</div>
+                <div class="col-md-3">
+                     <i class="fa fa-rocket fa-3x icon-custom-2 color-2"></i>
+    <h4>Ultra Fast </h4>
+                     <p>
+        Nunc at viverra risus. 
+        In euismod quam ac dictum varius. 
+    </p>
+                </div>
+                <div class="col-md-3">
+                     <i class="fa fa-bars fa-3x icon-custom-2 color-2"></i>
+    <h4>Fast Response</h4>
+                     <p>
+        Nunc at viverra risus. 
+        In euismod quam ac dictum varius. 
+    </p>
+                </div>
+                <div class="col-md-3">
+                     <i class="fa fa-table fa-3x icon-custom-2 color-2"></i>
+    <h4>Customizable</h4>
+                     <p>
+        Nunc at viverra risus. 
+        In euismod quam ac dictum varius. 
+    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+     <!--FEATURES SECTION END-->
+    <section id="clients-sec">
+        <div class="container">
+            <div class="row">
+<div class="col-md-12">
+    <img src="{% static "assetslsp/img/clients.png" %}" alt="" class="img-rounded img-responsive" />
+</div>
+
+               
+            </div>
+        </div>
+    </section>
+    <!--CLIENTS SECTION END-->
+    <section id="footer-sec" >
+        <div class="container">
+            <div class="row">
+<div class="col-md-4">
+   <h4>Informacje</h4>
+    <p style="padding-right:50px;">
+        Właścicielem marki TERMINOLOGIA-ONLINE<br>jest firma LSP Software sp. zo.o.
+        	</a>
+    </p>
+</div>
+                <div class="col-md-4">
+       <h4>PHYSICAL LOCATION </h4>
+                    <h5>345/DC, New York State,</h5>
+                     <h5>The Lane Tower Road,</h5>
+                    <h5>United States-201-900-590.</h5>
+                    <br />
+                    <h5><strong>Email:</strong> info@domain.com</h5>
+                      <h5><strong>Call:</strong> +1-908-78-55-5555</h5>
+                   
+</div>
+                <div class="col-md-4">
+      <h4>SOCIAL LINKS</h4>
+                    <div class="social-links">
+
+                    
+                    <a href="#" > <i class="fa fa-facebook fa-2x" ></i></a>
+                         <a href="#" > <i class="fa fa-twitter fa-2x" ></i></a>
+                         <a href="#" > <i class="fa fa-linkedin fa-2x" ></i></a>
+                         <a href="#" > <i class="fa fa-google-plus fa-2x" ></i></a>
+                         <a href="#" > <i class="fa fa-github fa-2x" ></i></a>
+                         <a href="#" > <i class="fa fa-digg fa-2x" ></i></a>
+                         <a href="#" > <i class="fa fa-dropbox fa-2x" ></i></a>
+                   </div>
+
+</div>
+               
+            </div>
+               
+        </div>
+    </section>
+     <!--FOOTER SECTION END-->
+    <div class="copy-txt">
+         <div class="container">
+        <div class="row">
+<div class="col-md-12 set-foot" >
+    &copy 2017 LSP Software | Wszelkie prawa zastrzeżone</a> 
+</div>
+            </div>
+                   </div>
+    </div>
+     <!-- COPY TEXT SECTION END-->
+    <!-- JAVASCRIPT FILES PLACED AT THE BOTTOM TO REDUCE THE LOADING TIME  -->
+    <!-- CORE JQUERY  -->
+    <!-- <script src="{% static "assetslsp/js/jquery-1.11.1.js" %}"></script> -->
+    <!-- <script src="https://code.jquery.com/jquery-3.1.0.min.js"></script> -->
+    <!-- <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.js"></script> -->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+	<script src="{% static "assetslsp/js/main.js" %}"></script>
+
+
+    <!-- BOOTSTRAP SCRIPTS  -->
+    <script src="{% static "assetslsp/js/bootstrap.js" %}"></script>
+    <!-- CUSTOM SCRIPTS  -->
+    <script src="{% static "assetslsp/js/custom.js" %}"></script>
+</body>
+</html>

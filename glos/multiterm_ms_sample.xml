@@ -1,0 +1,24 @@
+<?xml version='1.0' encoding='UTF-8' ?><mtf>
+<conceptGrp>
+	<concept>1</concept>
+	<languageGrp>
+		<language lang="EN" type="English"></language>
+		<descripGrp>
+			<descrip type="Definicja">A method of sorting data, such as a set of records, that typically uses the following order: punctuation marks, numerals, alphabetic characters (with capitals preceding lowercase letters), and any remaining symbols.</descrip>
+		</descripGrp>
+		<termGrp>
+			<term>alphanumeric sort</term>
+			<descripGrp>
+				<descrip type="Czêœæ mowy">rzeczownik</descrip>
+			</descripGrp>
+			<transacGrp>
+				<transac type="origination">LSP Software</transac>
+				<date>2014-01-01T00:00:00</date>
+			</transacGrp>
+			<transacGrp>
+				<transac type="modification">LSP Software</transac>
+				<date>2014-01-01T00:00:00</date>
+			</transacGrp>
+		</termGrp>
+	</languageGrp>
+	<languageGrp><language lang="PL" type="Polish">

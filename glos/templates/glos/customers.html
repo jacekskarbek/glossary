@@ -1,0 +1,50 @@
+
+
+{% extends "glos/base.html" %}
+{% load i18n static %}
+
+
+
+{% block content %}
+
+<section class="banner-section">
+                <div class="container">
+                    <div class="header-title2 text-center">
+                        <h2 class="title">{% trans 'Klienci' %}</h2>
+                        
+                    </div> <!-- header-title -->
+                </div>
+            </section> <!-- banner-section -->
+			
+			 <section class="working-section section-padding-start">
+                <div class="working-section-two">
+                    <div class="container">
+                        <div class="header">
+                            <div class="row">
+                                <div class="col-sm-4">
+                                    <h2>{% trans 'Klienci' %}</h2>
+                                    <p><i>{% trans '„Wiele firm może pochwalić się tłumaczeniami dla znanych firm. Ale to właśnie LocStar jest firmą, która obsługuje najważniejsze projekty i sztandarowe produkty liderów w branży.”' %}</i></p>
+                                </div>
+
+                                <div class="col-sm-8">
+                                <h3>{% trans 'Od <span style="font-size: 200%; color: blue;">A</span> do <span style="font-size: 200%; color: green;">Z</span>' %}</h3>
+                                    <h4>{% trans 'Nasze doświadczenie obejmuje tłumaczenia dla następujących klientów końcowych:' %}</h4>
+                                    <h4>{% trans '<span style="font-size: 200%; color: blue;">A</span>BB, Adobe, Amazon, Apple, Autodesk, Avast, AVG, Cisco, Clarion, Fluke, F-Secure, General Electric, Fedex, Google, Godaddy, HP, IBM, Logitech, Nokia, Microsoft, Novell, Oracle, Pinnacle, Roche, Rockwell, ServiceNow, Siemens, Skype, Sony, Toshiba, Trend Micro, Yahoo, Y Soft, <span style="font-size: 200%; color: green;">Z</span>yxel…' %}</h4>
+  <h4>
+{% trans 'Ponadto na bieżąco tłumaczymy  materiały dla wielu innych firm, które mają równie wysokie oczekiwania co do jakości swoich zlokalizowanych produktów jak liderzy w branży.' %}</h4>
+ <h4>
+{% trans 'Nasza specjalizacja to tłumaczenia IT, ale również elektronika użytkowa, przemysł, biznes, turystyka, rozrywka oraz gry komputerowe.' %}</h4>
+
+
+                                </div>
+                            </div>
+                        </div> <!-- header -->
+
+                       
+                    </div>
+                </div> <!-- working-section-two -->
+            </section>
+
+           
+
+{% endblock %}

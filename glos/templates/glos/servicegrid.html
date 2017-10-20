@@ -1,0 +1,92 @@
+
+
+{% extends "glos/base.html" %}
+{% load i18n static %}
+
+
+
+{% block content %}
+
+<section class="banner-section">
+                <div class="container">
+                    <div class="header-title2 text-center">
+                        <h2 class="title">{% trans 'Usługi' %}</h2>
+                        
+                    </div> <!-- header-title -->
+                </div>
+            </section> <!-- banner-section -->
+			
+			 <section class="working-section section-padding-start">
+                <div class="working-section-two">
+                    <div class="container">
+                        <div class="header">
+                            <div class="row">
+                                <div class="col-sm-4">
+                                    <h2>{% trans 'Usługi' %}</h2>
+                                </div>
+
+                                <div class="col-sm-8">
+                                    <h4>{% trans 'Świadczymy kompleksowe usługi związane z <b>lokalizacją oprogramowania i tłumaczeniem</b>, głównie z języka angielskiego na język polski. Przetłumaczyliśmy już ponad 150 milionów słów, a efekty naszej pracy można zobaczyć w postaci zlokalizowanych produktów na prawie każdym komputerze i telefonie — najbardziej popularny pakiet biurowy i system operacyjny w języku polskim to przykładowe efekty naszej pracy.' %}</h4>
+                                    
+                                </div>
+                            </div>
+                        </div> <!-- header -->
+
+                        <div class="section-wrapper">
+                            <div class="row first-part">
+                                <div class="col-sm-4">
+                                    <div class="wrapper-content">
+                                    <h3>{% trans 'Tłumaczenie' %}</h3>
+                                        <img src="{% static "assets/images/cat.png" %}" alt="image">
+                                        <h3></h3>
+                                        <h5><b>{% trans 'Instrukcje obsługi, materiały marketingowe, dokumentacja, artykuły, treści edukacyjne itd.' %}
+</h5>
+                                        
+                                        <a href="{% url  'translation'  %}" class="btn btn-primary">{% trans 'Dowiedz się więcej' %}</a>
+                                    </div>
+                                </div>
+
+                                <div class="col-sm-4">
+                                    <div class="wrapper-content">
+                                    <h3>{% trans 'Lokalizacja oprogramowania' %}</h3>
+                                        <img src="{% static "assets/images/tm.png" %}" alt="image">
+                                         <h3></h3>
+                                        <h5><b>{% trans 'Oprogramowanie komputerowe, aplikacje na urządzenia mobilne, systemy operacyjne, interfejsy sterujące urządzeń, gry itd.' %}
+</h5>
+                                       <a href="{% url  'localization'  %}" class="btn btn-primary">{% trans 'Dowiedz się więcej' %}</a>
+                                    </div>
+                                </div>
+
+                               <div class="col-sm-4">
+                                    <div class="wrapper-content">
+                                    	<h3>{% trans 'Lokalizacja witryn internetowych' %}</h3>
+                                        <img src="{% static "assets/images/glossart.png" %}" alt="image">
+                                        <h3></h3>
+                                        <h5><b>{% trans 'Witryny, serwisy, portale, sklepy, aplikacje internetowe itd.' %}
+</h5>
+										
+                                         <a href="{% url  'website'  %}" class="btn btn-primary">{% trans 'Dowiedz się więcej' %}</a>
+                                    </div>
+                               </div>
+							   <div class="col-sm-4">
+                                    <div class="wrapper-content">
+                                    	<h3>{% trans 'Inne usługi' %}</h3>
+                                        <img src="{% static "assets/images/glossart.png" %}" alt="image">
+                                        <h3></h3>
+                                        <h5><b>{% trans 'Kontrola jakości, usługi językowe, testowanie, studio nagraniowe.' %}
+</h5>
+										
+                                         <a href="{% url  'other'  %}" class="btn btn-primary">{% trans 'Dowiedz się więcej' %}</a>
+                                    </div>
+                               </div>
+                            </div>
+							
+                            
+                        </div> <!-- section-wrapper -->
+                    </div>
+                </div> <!-- working-section-two -->
+            </section>
+
+           
+
+{% endblock %}

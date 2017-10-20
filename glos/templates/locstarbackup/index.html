@@ -1,0 +1,212 @@
+
+
+{% extends "glos/baselocstar.html" %}
+{% load i18n static %}
+
+
+
+{% block content %}
+
+<section id="futures-sec">
+        <div class="container">
+           <div class="row text-center" >
+				<div class="col-md-2">
+    {% if termbases %}
+    
+        <form action="" method="post" id="test" >  
+        <table >
+        
+            <label class="form-control input-cls-small" >Termbases</label>
+        
+        {% for termbase in termbases %}
+            
+            {% if termbase.termbase.name  in selectedtermbases %} 
+             
+                 <label class="form-control-small input-cls-small2"><input   checked="checked" type="checkbox" name="checks[]" value="{{ termbase.termbase}}">  {{ termbase.termbase}}</input></label>
+            {% else %}
+            	<label class="form-control-small input-cls-small2"><input  type="checkbox" name="checks[]" value="{{ termbase.termbase}}">  {{ termbase.termbase}}</input></label>
+            {% endif %}
+            
+        {% endfor %}
+        </table>
+        
+{% else %}
+    <p>{% trans "You don't have any termbases." %}</p>
+{% endif %}
+			</div>
+          <div class="col-md-2">                              
+          <table >
+        
+           
+        
+        	{% for field in form2 %}
+        <label class="form-control input-cls-small" for="{{ field.name }}">{{ field.label }}</label>
+        {{ field }}
+    	{% endfor %}
+        </table>
+
+				</div>
+				<div class="col-md-2">                              
+          <table >
+        
+           
+        
+        	{% for field in form3 %}
+        <label class="form-control input-cls-small" for="{{ field.name }}">{{ field.label }}</label>
+        {{ field }}
+    	{% endfor %}
+        </table>
+
+				</div>
+			
+                
+            </div>
+        </div>
+    </section>
+    <!--SERVICES SECTION END-->
+    
+     <section id="search-domain" >
+        <div class="container">
+        
+            <div class="row">
+				<div class="col-md-6">
+		<!--	        <div class="form-control input-cls"> -->
+				        {% csrf_token %}
+    				 {{ form }}
+    	<!--			</div> -->
+				</div>  
+                <div class="col-md-4">
+                    	<input type="submit" class="btn btn-info btn-lg btn-set"  id="but" value="SEARCH" />
+                </div>
+            </div>
+            </form>
+        </div>
+    </section>
+     <!--SEARCH SECTION END-->
+
+	   <section id="clients-sec">
+        <div class="container">
+            
+
+    
+        {% if results %}
+       
+        <div class="row borderb">
+            	<div class="col-md-3 ">
+            		{{ sourcelanguage }}
+            	</div>
+            	<div class="col-md-3 ">
+            		{{ targetlanguage }}
+            	</div>
+            </div>
+       
+       		{% for termbase in results %}
+       		{% if termbase %}
+       		<div class="row borderb">
+            	<div class="col-md-3 descrip">
+            		Termbase: {{ termbase.name }}
+            	</div>
+            </div>
+            {% endif %}
+            {% for entry in termbase.entries %}
+            
+            {% if entry.istarget %}
+            
+            <div class="row borderb">
+            <div class="col-md-3">
+	            {% for lang in entry.languages %}
+	            	{% if lang.lang|stringformat:"s" == sourcelanguage|stringformat:"s" %}
+	            		{% for term in lang.termGrp %}
+	            		{% if forloop.counter != 1 %}
+	            		<div class="borderu">
+	            		<a  href="{% url 'editentry' term.id  %}">
+	            			 <b>{{ term.value  }} </b></a><br>
+	            			{% for desc in term.descripGrp %}
+	            			<li class="descrip"> <i><b>{{ desc.type }}:</b> {{ desc.value  }} </i></li>
+	            			{% endfor %} 
+	            		</div>
+	            		{% else %}
+	            			<a  href="{% url 'editentry' term.id  %}">
+	            			<b>{{ term.value  }} </b></a><br>
+	            			{% for desc in term.descripGrp %}
+	            			<li class="descrip"> <i><b>{{ desc.type }}:</b> {{ desc.value  }} </i></li>
+	            			{% endfor %} 
+	            		{% endif %}
+	            			
+	            		{% endfor %} 
+	            			
+	            	{% endif %}
+	            {% endfor %}
+	            </div>
+	            <div class="col-md-3">
+            	{% for lang in entry.languages %}
+	            	{% if lang.lang|stringformat:"s" == targetlanguage|stringformat:"s" %}
+	            	
+	            		{% for term in lang.termGrp %}
+	            		{% if forloop.counter != 1 %}
+	            		<div class="borderu">
+	            		
+	            		<a  href="{% url 'editentry' term.id  %}">
+	            		{% if termbase.access %}
+	            			 <b>{{ term.value  }} </b></a><br>
+	            		{% else %}
+	            			<b> a kuku  </b></a><br>
+	            		{% endif%}
+	            			{% for desc in term.descripGrp %}
+	            			<li class="descrip"> <i><b>{{ desc.type }}:</b> {{ desc.value  }} </i></li>
+	            			{% endfor %} 
+	            		</div>
+	            		{% else %}
+	            			<a  href="{% url 'editentry' term.id  %}">
+	            			{% if termbase.access %}
+	            			 <b>{{ term.value  }} </b></a><br>
+	            		{% else %}
+	            			<b> a kuku  </b></a><br>
+	            		{% endif%}
+	            			{% for desc in term.descripGrp %}
+	            			<li class="descrip"> <i><b>{{ desc.type }}:</b> {{ desc.value  }} </i></li>
+	            			{% endfor %} 
+	            		
+	            			{% endif %}
+	            		{% endfor %} 
+	            		
+	            	{% endif %}
+	            {% endfor %}
+	            </div>
+            	<div class="col-md-5">
+				{% for edesc in entry.descripGrp %}
+				
+					<li class="descrip"> <i><b>{{ edesc.type }}:</b> {{ edesc.value  }} </i></li>
+				{% endfor %}
+				{% for lang in entry.languages %}
+					{% for ldesc in lang.descripGrp %}
+						<li class="descrip"> <i><b>{{ ldesc.type }}:</b> {{ ldesc.value  }} </i></li>
+					{% endfor %}
+					
+				{% endfor %}
+				</div>
+				
+		
+            </div>
+            {% endif %}
+            
+			{% endfor %}	
+			
+			{% endfor %}
+					
+		{% else %}
+			{% if too_short %}
+			<tr>Query too short. Must have minimum 3 characters!</tr>
+			{% else %}
+			<tr>No results...</tr>
+			{% endif %}
+		{% endif %}
+         </table>
+
+
+               
+            </div>
+        </div>
+    </section>
+
+{% endblock %}

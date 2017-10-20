@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+{% load i18n static %}
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>LocStar - Tłumaczenie, lokalizacja, zarządzanie projektami, testowanie</title>
+        <!-- fav icon -->
+        <link href="{% static "assets/images/favicon.png" %}" rel="shortcut icon"  type="image/png">
+
+        <!-- Bootstrap -->
+        <link href="{% static "assets/bootstrap/css/bootstrap.min.css" %}" rel="stylesheet">
+        <!-- animated-css -->
+        <link href="{% static "assets/css/animate.min.css"  %}" rel="stylesheet" type="text/css">
+        <!-- font-awesome-css -->
+        <link href="{% static "assets/css/font-awesome.min.css"  %}" rel="stylesheet" type="text/css">
+        <!-- owl-carrosel-css -->
+        <link href="{% static "assets/owl-carrosel/owl.carousel.min.css" %}" rel="stylesheet"  type="text/css">
+        <link href="{% static "assets/owl-carrosel/owl.theme.default.min.css" %}" rel="stylesheet"  type="text/css">
+        <!-- offcanvas-menu-css -->
+        <link href="{% static "assets/css/offcanvas-menu.css" %}" rel="stylesheet"  type="text/css">
+        <!-- Revulation Slider CSS -->
+        <link rel= "stylesheet" type="text/css" href="{% static "assets/rs-plugin/css/settings.css" %}" media="screen" />
+        <!-- style-css -->
+        <link href="{% static "assets/css/style.css" %}" rel="stylesheet"  type="text/css">
+        <style>
+        label { margin-right: 10px; }
+       .blank_row
+{
+    height: 30px !important; /* overwrites any other rules */
+    
+}
+table {
+  border-collapse: collapse;
+  
+}
+.trhead { 
+  border: solid;
+  border-width: 2px 0;
+  
+}
+
+.trrow { 
+  border: solid;
+  border-width: 1px 0;
+ 
+}
+.thmargin
+{
+padding-left: 10px;
+padding-right: 10px;
+padding-bottom: 3px;
+padding-top: 3px;
+	}
+
+        </style>
+
+
+    </head>
+    <body class="homePageFour">
+        <div id="preloader"><img src="{% static "assets/images/loader.gif" %}" alt=""></div>
+
+        <div id="main-wrapper">
+
+            <header class="header-section">
+                
+                
+
+                <nav class="navbar navbar-inverse hidden-sm hidden-xs">
+                    <div class="container">
+                        <div class="navbar-header">
+                            <a class="navbar-brand" href="index.html"><img src="{% static "assets/images/locstar_logo.png" %}" alt="image"></a>
+                        </div>
+                        
+
+                        <div class="collapse navbar-collapse navbar-right">
+                            <ul class="nav navbar-nav">
+                                
+
+                                <li><a href="about.html">O nas</a></li>
+
+                                
+
+                                <li class="dropdown"><a href="">Usługi <i class="fa fa-angle-down" aria-hidden="true"></i></a>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="blog-list.html">Tłumaczenie/Lokalizacja</a></li>
+                                        <li><a href="blog-single.html">Testowanie</a></li>
+                                        <li><a href="blog-single.html">Internacjonalizacja</a></li>
+                                        <li><a href="blog-single.html">Studio nagraniowe</a></li>
+                                         <li><a href="blog-single.html">Usługi językowe</a></li>
+                                         <li><a href="blog-single.html">Konsulting</a></li>
+                                    </ul>
+
+                                <li class="dropdown"><a href="#">Technologie <i class="fa fa-angle-down" aria-hidden="true"></i></a>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="blog-list.html">Systemy komputerowego<br>wspomagania tłumaczeń</a></li>
+                                        <li><a href="blog-single.html">Pamięci tłumaczeń</a></li>
+                                        <li><a href="blog-single.html">Bazy terminologiczne</a></li>
+                                    </ul>
+                                </li>
+
+                                <li class="mapdrop"><a href="contact.html">Kontakt</a>
+                                    <ul class="map-menu">
+                                        <li>
+                                            <div class="author-details">
+                                                <h4>Dział zamówień</h4>
+                                                <div class="item">
+                                                    <span class="caption pull-left"><img src="{% static "assets/images/consult/cs1.jpg" %}" alt="image"></span>
+
+                                                    <div class="content">
+                                                        <h5>
+                                                        </h5>
+                                                        <span class="number"><i class="fa fa-phone" aria-hidden="true"></i> +48 (91) 4375311</span>
+                                                        <span class="message"><i class="fa fa-envelope" aria-hidden="true"></i> info@locstar.pl</span>
+                                                    </div>
+                                                </div>
+                                            </div> <!-- author-details -->
+
+                                            <div class="author-details">
+                                                <h4>Dział rekrutacji</h4>
+                                                <div class="item">
+                                                    <span class="caption pull-left"><img src="{% static "assets/images/consult/cs3.jpg" %}" alt="image"></span>
+
+                                                    <div class="content">
+                                                        <h5>
+                                                        </h5>
+                                                        <span class="number"><i class="fa fa-phone" aria-hidden="true"></i> +48 (91) 4375311</span>
+                                                        <span class="message"><i class="fa fa-envelope" aria-hidden="true"></i> info@locstar.pl</span>
+                                                    </div>
+                                                </div>
+                                            </div> <!-- author-details -->
+                                        </li>
+
+                                        <li>
+                                            <div class="map-section pull-right">
+                                                <div id="menuMap"></div>
+                                            </div> <!-- map-section -->
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                            
+                        </div><!--/.nav-collapse -->
+
+
+                    </div> <!-- container -->
+                </nav>
+            </header> <!-- header-section -->
+
+
+{% block content %}
+            
+
+
+{% endblock %}
+          
+       
+     
+ <footer class="footer-section">
+                <div class="container">
+                    <div class="footer-part">
+                        <div class="row">
+                            <div class="col-sm-6 col-md-3">
+                                <div class="footer-wrapper">
+                                    <span class="footer-logo"><img src="{% static "assets/images/locstar_logo.png" %}" alt="image"></span>
+
+                                    <p>Zapraszamy do kontaktu z nami.</p>
+
+                                    <ul class="time-part">
+                                        <li><span>Pon - Pią</span>: 8-16</li>
+                                        
+                                    </ul> <!-- social-icon -->
+                                </div> <!-- footer-wrapper -->
+                            </div>
+
+                            <div class="col-sm-6 col-md-3">
+                                <div class="footer-wrapper">
+                                    <h3>Wiadomości</h3>
+
+                                    <div class="recent-post">
+                                        <div class="caption pull-left"><img src="{% static "assets/images/footer/p1.jpg" %}" alt="image"></div>
+
+                                        <div class="content">
+                                            <p>Dzień Tłumacza!</p>
+                                            <span class="time"><i class="fa fa-clock-o" aria-hidden="true"></i> 29 maj 2017</span>
+                                        </div>
+                                    </div> <!-- recent-post -->
+
+                                    <div class="recent-post second-post">
+                                        <div class="caption pull-left"><img src="{% static "assets/images/footer/p1.jpg" %}" alt="image"></div>
+
+                                        <div class="content">
+                                            <p>Szukamy stażysty do działu IT</p>
+                                            <span class="time"><i class="fa fa-clock-o" aria-hidden="true"></i> 29 Maj 2017</span>
+                                        </div>
+                                    </div> <!-- recent-post -->
+                                </div> <!-- footer-wrapper -->
+                            </div>
+
+                            <div class="col-sm-4 col-md-2">
+                                <div class="footer-wrapper">
+                                    <h3>Łącza</h3>
+
+                                    <ul class="page-link">
+                                        <li><a href="#">Strona główna</a></li>
+                                        <li><a href="#">O nas</a></li>
+                                        <li><a href="#">Usługi</a></li>
+                                        <li><a href="#">Technologie</a></li>
+                                       
+                                        <li><a href="#">Kontakt</a></li>
+                                    </ul> <!-- page-link -->
+                                </div> <!-- footer-wrapper -->
+                            </div>
+
+                            <div class="col-sm-8 col-md-4">
+                                <div class="footer-wrapper">
+                                    <h3>Biuletyn</h3>
+
+                                    <form class="footer-form form-horizontal">
+                                        <div class="form-group">
+                                            <input class="footerSearchBar form-control" value="adres email.." onblur="if(this.value=='')this.value='email address..'" onfocus="if(this.value=='email address..')this.value=''" id="footerSearchBar" name="email" type="email">
+                                        </div>
+
+                                        <div class="form-group">
+                                            <button type="submit" class="subscribeBtn"><i class="fa fa-paper-plane" aria-hidden="true"></i></button>
+                                        </div>
+                                    </form>
+
+                                    <h3 class="social-title">Media społecznościowe</h3>
+
+                                    <ul class="social-media">
+                                        <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                                        <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                                        <li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+                                        <li><a href="#"><i class="fa fa-google-plus" aria-hidden="true"></i></a></li>
+                                        <li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                                    </ul> <!-- social-media -->
+                                </div> <!-- footer-wrapper -->
+                            </div>
+                        </div>
+                    </div> <!-- footer-part -->
+                </div>
+
+                <div class="copyright-section">
+                    <div class="container">
+                        <p class="inline-block">2017 © Wszystkie prawa zastrzeżone <span><a href="#">LocStar 2017</a></span></p>
+
+                        <ul class="pull-right">
+                          
+                            <li><a href="#">mapa strony</a></li>
+                            <li><a href="#">Polityka prywatności</a></li>
+                        </ul>
+                    </div>
+                </div> <!-- copyright-section -->
+            </footer> <!-- footer-section -->
+
+        </div> <!-- main-wrapper -->
+
+       
+
+        <div id="toTop" class="hidden-xs">
+            <i class="fa fa-chevron-up"></i>
+        </div> <!-- totop -->
+
+
+        <script src="{% static "assets/js/jquery.js" %}"></script>
+        <script src="{% static "assets/js/map.js" %}"></script>
+        <script src="{% static "assets/bootstrap/js/bootstrap.min.js" %}"></script>
+        <script src="{% static "assets/rs-plugin/js/jquery.themepunch.tools.min.js" %}"></script>
+        <script src="{% static "assets/rs-plugin/js/jquery.themepunch.revolution.min.js" %}"></script>
+        <script src="{% static "assets/js/jquery.inview.min.js" %}"></script>
+        <script src="{% static "assets/js/wow.js" %}"></script>
+        <script src="{% static "assets/js/lightbox.js" %}"></script>
+        <script src="{% static "assets/js/chart.js" %}"></script>
+        <script src="{% static "assets/owl-carrosel/owl.carousel.min.js" %}"></script>
+        <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js"></script>
+        <script src="{% static "assets/js/script.js" %}"></script>
+    </body>
+</html>

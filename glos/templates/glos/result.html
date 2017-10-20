@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+
+<html lang="en-us" >
+<head>
+<title>Site administration | Django site admin</title>
+<link rel="stylesheet" type="text/css" href="/static/admin/css/base.css" />
+<link rel="stylesheet" type="text/css" href="/static/admin/css/dashboard.css" />
+
+<!-- Container -->
+<div id="container">
+
+    
+    <!-- Header -->
+    <div id="header">
+        <div id="branding">
+        
+<h1 id="site-name"><a href="/admin/">LocStar Server administration</a></h1>
+
+        </div>
+        <div id="user-tools">
+                Welcome,
+                <strong>admin</strong>.
+                    <a href="/">View site</a> /
+                <a href="/admin/password_change/">Change password</a> /
+                <a href="/admin/logout/">Log out</a>          
+        </div>
+    </div>
+    <!-- END Header -->
+    <div id="content-main">
+    <div class="app-auth module">
+        <table>
+        <caption>
+            <a href="/admin/auth/" class="section" title="Models in the Authentication and Authorization application">Authentication and Authorization</a>
+        </caption>
+        <form action="" method="post">
+    {% csrf_token %}
+    {{ form }}
+    <input type="submit" value="Search" />
+</form>
+            {% for result in results %}
+	<tr>
+        <th>{{ result.sourceTerm }}</th>
+        <th>{{ result.targetTerm }}</th>
+        <th>{{ result.sense }}</th>
+        <th>{{ result.collocator }}</th>
+        <th>{{ result.wordclass }}</th>
+        <th>{{ result.topic }}</th>
+        <th><a href="/admin/auth/user/add/" class="addlink"></th>
+    <tr>
+			{% endfor %}
+         </table>
+    </div>
+ </div>  
+   </div>  
+
+
+</body>
+</html>

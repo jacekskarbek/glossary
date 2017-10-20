@@ -1,0 +1,114 @@
+
+
+{% extends "glos/base.html" %}
+{% load i18n static %}
+
+
+
+{% block content %}
+
+<section class="banner-section">
+                <div class="container">
+                    <div class="header-title2 text-center">
+                        <h2 class="title">Usługi</h2>
+                        
+                    </div> <!-- header-title -->
+                </div>
+            </section> <!-- banner-section -->
+			
+			 <section class="working-section section-padding-start">
+                <div class="working-section-two">
+                    <div class="container">
+                        <div class="header">
+                            <div class="row">
+                                <div class="col-sm-3">
+                                    <h2>Usługi</h2>
+                                </div>
+
+                                <div class="col-sm-9">
+                                    <h4>Główną domeną naszej działalności są usługi w zakresie lokalizacji oprogramowania i tłumaczeń z języka angielskiego na język polski. Jednak aby zapewnić naszym klientom kompleksową obsługę, świadczymy również usługi dodatkowe związane z tłumaczeniami. 
+Nasze doświadczenie jest poparte wieloletnią współpracą z największymi i najbardziej znanymi firmami na świecie.
+Przetłumaczyliśmy już ponad 70 milionów słów, a efekty naszej pracy można zobaczyć na każdym kroku — najłatwiej po prostu włączyć komputer.
+Zapraszamy do zapoznania się z naszą ofertą!</h4>
+                                </div>
+                            </div>
+                        </div> <!-- header -->
+
+                        <div class="section-wrapper">
+                            <div class="row first-part">
+                                <div class="col-sm-4">
+                                    <div class="wrapper-content">
+                                        <img src="{% static "assets/images/work/w1.jpg" %}" alt="image">
+                                        <h5><b>Lokalizacja oprogramowania (interfejsu użytkownika):</b></h5>
+                                        <h5>
+										<li>oprogramowanie komputerowe</li>
+										<li>aplikacje telefonii komórkowej</li>
+										<li>oprogramowanie sterujące sprzętu elektronicznego i maszyn</li>
+										</h5>
+
+
+                                        <a href="{% url  'servicetl'  %}" class="link">Dowiedz się więcej <i class="fa fa-sort-asc" aria-hidden="true"></i></a>
+                                    </div>
+                                </div>
+
+                                <div class="col-sm-4">
+                                    <div class="wrapper-content">
+                                        <img src="{% static "assets/images/work/w2.jpg" %}" alt="image">
+                                        <h5>Testowanie to bardzo ważny etap w procesie produkcji oprogramowania. Umożliwia wykrycie błędów (funkcjonalnych, związanych z interfejsem użytkownika lub związanych z uwarunkowaniami lokalnymi) powstałych na wcześniejszych etapach produkcji i poprawienie ich, jeszcze zanim produkt trafi do klienta.</h5>
+
+                                        <a href="#" class="link">Dowiedz się więcej <i class="fa fa-sort-asc" aria-hidden="true"></i></a>
+                                    </div>
+                                </div>
+
+                                <div class="col-sm-4">
+                                    <div class="wrapper-content">
+                                        <img src="{% static "assets/images/work/w3.jpg" %}" alt="image">
+                                        <h5>O jakości produktu końcowego często decyduje sposób zaprojektowania aplikacji i zbiór czynności, które poprzedzają proces lokalizacji. Umownie nosi on nazwę internacjonalizacji, jednak często w użyciu jest skrót "i18n".</h5>
+
+                                        <a href="#" class="link">Dowiedz się więcej <i class="fa fa-sort-asc" aria-hidden="true"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-sm-4">
+                                    <div class="wrapper-content">
+                                        <img src="{% static "assets/images/work/w4.jpg" %}" alt="image">
+                                        <h5>Jako jedna z nielicznych firm lokalizacyjnych w kraju dysponujemy w pełni profesjonalnym studiem nagraniowym. Realizowaliśmy liczne projekty typu voice-over, nagrania lektorskie, muzyczne i e-learningowe. Nasze studio spełnia najwyższe normy jakościowe i zapewnia doskonałą jakość nagrań.</h5>
+
+                                        <a href="#" class="link">Dowiedz się więcej <i class="fa fa-sort-asc" aria-hidden="true"></i></a>
+                                    </div>
+                                </div>
+
+                                <div class="col-sm-4">
+                                    <div class="wrapper-content">
+                                        <img src="{% static "assets/images/work/w5.jpg" %}" alt="image">
+                                        <h5>W ramach realizowanych projektów lokalizacyjnych i tłumaczeń oferujemy następujące usługi lingwistyczne:
+                                        <li> Zarządzanie terminologią:</li>
+                                        <li> Kontrola jakości: </li>
+                                        <li> Inne usługi językowe:</li>
+                                        </h5>
+
+
+                                        <a href="#" class="link">Dowiedz się więcej <i class="fa fa-sort-asc" aria-hidden="true"></i></a>
+                                    </div>
+                                </div>
+
+                                <div class="col-sm-4">
+                                    <div class="wrapper-content">
+                                        <img src="{% static "assets/images/work/w6.jpg" %}" alt="image">
+                                        <h5>Firma LocStar dysponuje najwyższej klasy specjalistami w zakresie lokalizacji. Bogate doświadczenie oraz setki pomyślnie ukończonych projektów pozwoliły nam zbudować pełne „know-how”, dzięki któremu nie tylko planujemy optymalny cykl pracy w obrębie projektu, ale również używamy odpowiednich technologii i zapewniamy najwyższą jakość.
+                                        </h5>
+
+                                        <a href="#" class="link">Dowiedz się więcej <i class="fa fa-sort-asc" aria-hidden="true"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div> <!-- section-wrapper -->
+                    </div>
+                </div> <!-- working-section-two -->
+            </section>
+
+           
+
+{% endblock %}

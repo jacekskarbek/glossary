@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?><martif type="TBX" xml:lang="en-US"><text><body>
+<termEntry id="TEST1">
+	<langSet xml:lang="en-US">
+		<descripGrp>
+			<descrip type="definition">The process of measuring the amplitude of an analog signal at regular intervals for the purpose of converting the signal into a digital format.</descrip>
+		</descripGrp>
+		<ntig>
+			<termGrp>
+				<term id="148156">sampling</term>
+				<termNote type="partOfSpeech">Noun</termNote>
+			</termGrp>
+		</ntig>
+	</langSet>
+	<langSet xml:lang="pl-pl">
+		<ntig>
+			<termGrp>
+				<term id="148167">próbkowanie</term>
+				<termNote type="partOfSpeech">Noun</termNote>
+			</termGrp>
+		</ntig>
+	</langSet>
+</termEntry>
+<termEntry id="TEST2">
+	<langSet xml:lang="en-US">
+		<descripGrp>
+			<descrip type="definition">A statistical process that yields some inferential knowledge about a population or data set of interest as a whole by observing or analyzing a portion of the population or data set.</descrip>
+		</descripGrp>
+		<ntig>
+			<termGrp>
+				<term id="481867">sampling</term>
+				<termNote type="partOfSpeech">Noun</termNote>
+			</termGrp>
+		</ntig>
+	</langSet>
+	<langSet xml:lang="pl-pl">
+		<ntig>
+			<termGrp>
+				<term id="1282708">próbkowanie</term>
+				<termNote type="partOfSpeech">Noun</termNote>
+			</termGrp>
+		</ntig>
+	</langSet>
+</termEntry>
+</body>
+</text>
+</martif>
