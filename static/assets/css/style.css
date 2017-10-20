@@ -781,7 +781,7 @@ button,
         .header-section .navbar .navbar-collapse .navbar-nav li .dropdown-menu {
           top: 70px;
           left: -50px;
-          min-width: 300px;
+          min-width: 370px;
     /*      background-color: #222;   */
        	  background-color: #FFFFFF;
           padding: 10px 0;
