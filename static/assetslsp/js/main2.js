@@ -11,8 +11,9 @@ function send_form()
 	 console.log("create post is working!") // sanity check
      console.log($('#id_searchTerm').val())
      var checkbox_value = [];
+     $('#clients-sec').html("<div class="col-md-3">Searching...</div>");
 	 // add the error to the dom
-    console.log(xhr.status + ": " + xhr.responseText);
+    
     $(":checkbox").each(function () {
         var ischecked = $(this).is(":checked");
         if (ischecked) {

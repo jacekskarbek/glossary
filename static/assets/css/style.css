@@ -48,7 +48,7 @@ a > * {
 
 a:focus,
 a:hover {
-  color: #1c8039;
+  color: #1cc700;
   outline: none;
   text-decoration: none; }
 
@@ -199,8 +199,8 @@ button,
 .btn-primary.active, .btn-primary:active,
 .open > .dropdown-toggle.btn-primary {
   color: #FFFFFF;
-  background-color: #54be73;
-  border-color: #54be73; }
+  background-color: #1cc700;
+  border-color: #1cc700; }
 
 @media screen and (max-width: 480px) {
   .btn-default {
@@ -267,7 +267,7 @@ button,
   background-color: #1376a5; }
 
 .homePageFour .btn-primary {
-  background-color: #1CC700; }
+  background-color: #0A7692; }
 .homePageFour .btn-primary:hover,
 .homePageFour .btn-primary.focus,
 .homePageFour .btn-primary:focus,
@@ -280,7 +280,7 @@ button,
 .homePageFour .open > .dropdown-toggle.btn-primary.focus,
 .homePageFour .open > .dropdown-toggle.btn-primary:focus,
 .homePageFour .open > .dropdown-toggle.btn-primary:hover {
-  background-color: #0A7692; }
+  background-color:  #1CC700;}
 
 .subscribeBtn {
   background-color: #54be73;
@@ -1045,7 +1045,7 @@ button,
   border-color: transparent;
   margin: 0 7px; }
   .slider-section .link-button .btn-default:hover {
-    background-color: #0A7692; }
+    background-color: #1cc700; }
 
 /* =========================================================
         Working-Section STYLE 
@@ -1073,6 +1073,7 @@ button,
     font-size: 18px;
     line-height: 30px;
     color: #999999;
+    text-align: justify
     /*word-break: break-all;*/ }
     @media only screen and (max-width: 767px) {
       .working-section .section-wrapper .wrapper-content p {
@@ -1102,7 +1103,8 @@ button,
     font-size: 18px;
     line-height: 30px;
  /*   color: #999999; } */
- 	color: #686F77; }
+ 	color: #686F77; 
+ 	text-align: justify}
     .working-section .working-wrapper .wrapper-content p strong {
       font-size: 30px;
       letter-spacing: 1px;
@@ -1112,9 +1114,9 @@ button,
   .working-section .working-wrapper .wrapper-content .btn {
     margin-top: 22px;
     color: #FFFFFF;
-    background-color: #1CC700; }
+    background-color: #0A7692; }
     .working-section .working-wrapper .wrapper-content .btn:hover {
-      background-color: #0A7692; }
+      background-color:  #1CC700;}
   @media only screen and (max-width: 991px) {
     .working-section .working-wrapper .wrapper-content {
       margin-bottom: 80px; } }
@@ -1377,7 +1379,8 @@ button,
         line-height: 25px; } }
   .research-section .section-wrapper .research-content .content-bar p {
     font-size: 18px;
-    line-height: 30px; }
+    line-height: 30px;
+    text-align: justify ;}
     @media only screen and (max-width: 991px) {
       .research-section .section-wrapper .research-content .content-bar p {
         line-height: 27px; } }
@@ -1389,9 +1392,9 @@ button,
     padding: 11px 41px;
     margin-top: 16px; 
     color: #FFFFFF;
-    background-color: #1CC700;}
+    background-color: #0A7692;}
    .research-section .section-wrapper .research-content .content-bar .btn:hover {
-   background-color: #0A7692; }
+   background-color:  #1CC700;}
     @media only screen and (max-width: 991px) {
       .research-section .section-wrapper .research-content .content-bar .btn {
         font-size: 16px;
@@ -1908,7 +1911,9 @@ button,
       color: #54be73; }
     .testimonial-section .testimonial-part-two .section-wrapper .wrapper-content p {
  /*     color: #99a4b0; }  */
- 		color: 686F77; }
+ 		color: 686F77; 
+ 		text-align: justify ;
+ 		}
     .testimonial-section .testimonial-part-two .section-wrapper .wrapper-content ul li {
       display: inline-block;
       margin: 0 2px; }
@@ -2069,7 +2074,8 @@ button,
       .contact-section .contact-section-one .section-one-wrapper .contact-wrapper p {
         font-size: 19px;
         line-height: 34px;
-        color: #7c828b; }
+        color: #7c828b; 
+        text-align: justify}
         @media only screen and (max-width: 991px) {
           .contact-section .contact-section-one .section-one-wrapper .contact-wrapper p {
             line-height: 27px; } }
@@ -4006,25 +4012,25 @@ button,
 .homePageFour a {
  /* ZMIANA
   color: #FFFFFF; } */
-  color: #1CC700; }
+  color: #FFFFFF; }
 .homePageFour a:focus, .homePageFour a:hover {
   /* color: #FFFFFF; } */
-  color: #0f408a;; }
+  color: #FFFFFF; }
 .homePageFour .title-bar .title-border {
   /* ZMIANA
       background-color: #1CC700; */
-      background-color: #1CC700;}
+      background-color:  #0a7692;}
 .homePageFour #main-wrapper {
   margin: 0; }
 .homePageFour .header-section .navbar .navbar-collapse .navbar-nav li .megamenu li .content h4 {
-  color: #1CC700; }
+  color:  #0a7692; }
 .homePageFour .header-section .navbar .navbar-collapse .navbar-nav li.dropdown:hover .dropdown-menu {
   top: 96px; }
 @media only screen and (min-width: 1200px) {
   .homePageFour.box-layout .header-section .navbar.sticky {
     top: 69px; } }
 .homePageFour .header-section .top-bar {
-  background-color: #0A7692;
+  background-color:  #0a7692;
   padding: 0;
   height: 0;
   -webkit-transition: 0.8s;
@@ -4045,7 +4051,7 @@ button,
         height: 54px;
          /* ZMIANA
       background-color: #1CC700; */
-      background-color: #1CC700;
+      background-color:  #0a7692;
         border-radius: 50%;
         float: left;
         text-align: center;
@@ -4168,7 +4174,7 @@ button,
       color: #FFFFFF;
        /* ZMIANA
       background-color: #1CC700; */
-      background-color: #1CC700;
+      background-color: #0a7692;
       width: 40px;
       height: 40px;
       line-height: 40px;
@@ -4186,7 +4192,7 @@ button,
   .homePageFour .slider-section .btn-default:hover {
      /* ZMIANA
       background-color: #1CC700; */
-      background-color: #1C7C00; !important;
+      background-color: #1CC700; !important;
     color: #FFFFFF !important; }
 .homePageFour .business-section .left-content h2::before {
   display: none; }
@@ -4240,9 +4246,9 @@ button,
     color: #FFFFFF;
      /* ZMIANA
       background-color: #1CC700; */
-      background-color: #1CC700; }
-    .homePageFour .information-section .btn-primary:hover {
       background-color: #0A7692; }
+    .homePageFour .information-section .btn-primary:hover {
+      background-color: #1CC700;  }
   @media only screen and (max-width: 991px) {
     .homePageFour .information-section {
       text-align: center; }
@@ -4379,8 +4385,8 @@ button,
       .homePageFour .footer-section .copyright-section ul > li > a:hover {
         color: #1CC700; }
 .homePageFour #toTop {
-  color: #1CC700;
-  border-color: #1CC700; }
+  color: #0a7692;
+  border-color: #0a7692; }
 .homePageFour .chat-box #open-box {
    /* ZMIANA
       background-color: #1CC700; */
@@ -4613,7 +4619,8 @@ button,
     font-size: 16px;
     line-height: 27px;
     color: #777777;
-    margin-left: 320px; }
+    margin-left: 320px; 
+    text-align: justify}
     @media only screen and (max-width: 991px) {
       .about-page .working-section .section-wrapper .wrapper-content p {
         margin: 0;

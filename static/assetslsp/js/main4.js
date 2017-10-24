@@ -27,6 +27,7 @@ function send_form()
 	things = JSON.stringify(checkbox_value)
 	console.log(things)
 	$.ajax({
+		
         url : "create_post/", // the endpoint
         type : "POST", // http method
         data : { search : $('#id_searchTerm').val(),

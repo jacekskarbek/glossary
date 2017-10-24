@@ -10,9 +10,10 @@ function send_form()
 {
 	 console.log("create post is working!") // sanity check
      console.log($('#id_searchTerm').val())
-     var checkbox_value = [];
+     var checkbox_value = []
+     $('#clients-sec').html("<div class='container'><div class='row borderb'><div class='col-md-3'><b>Searching: <span style='color: red;'>"+$('#id_searchTerm').val()+"</span></b></div></div></div>");
 	 // add the error to the dom
-    console.log(xhr.status + ": " + xhr.responseText);
+    
     $(":checkbox").each(function () {
         var ischecked = $(this).is(":checked");
         if (ischecked) {
