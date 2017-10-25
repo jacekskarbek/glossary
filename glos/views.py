@@ -59,6 +59,17 @@ def lspsoftware (request):
 def create_post(request):
 	if request.method == 'POST':
 		search = request.POST.get('search')
+		search=search.strip()
+		normal=True
+		start=True
+		full = True
+		if search[-1]=='*':
+			search=search[:-1]
+			normal=False
+		if search[0]=='*':
+			search=search[1:]
+			normal=False
+			start=False
 		if len(search)>=3:
 			sourcelanguage = request.POST.get('source')
 			targetlanguage = request.POST.get('target')
@@ -71,10 +82,13 @@ def create_post(request):
 			selectedtermbases = request.POST.getlist('selectedtermbases[]')	
 			print(selectedtermbases)
 			print('START',time.time())
-			source = Term.objects.filter(value__iexact=search, language=sourcelanguage, termbase__name__in=selectedtermbases)
-			source_entries = source.order_by('entry').values('entry').distinct()
-			target = Term.objects.filter(entry__in = source_entries, language=targetlanguage)[:10]
-			if not target:
+			source=''
+			target=''
+			if normal:
+				source = Term.objects.filter(value__iexact=search, language=sourcelanguage, termbase__name__in=selectedtermbases)
+				source_entries = source.order_by('entry').values('entry').distinct()
+				target = Term.objects.filter(entry__in = source_entries, language=targetlanguage)[:10]
+			if not target and start:
 				print("istart")
 				source = Term.objects.filter(value__istartswith=search, language=sourcelanguage, termbase__name__in=selectedtermbases)
 				source_entries = source.order_by('entry').values('entry').distinct()
