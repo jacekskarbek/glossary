@@ -47,7 +47,7 @@ class TbxItem:
 	pass
 class TermBase:
 	pass
-class TermBase:
+class TBelement:
 	pass
 def lspsoftware (request):
     return HttpResponseRedirect('http://www.lspsoftware.pl')
@@ -69,6 +69,7 @@ def create_post(request):
 			sourcelanguagename = Language.objects.filter(pk=sourcelanguage)[0].name
 			targetlanguagename = Language.objects.filter(pk=targetlanguage)[0].name
 			selectedtermbases = request.POST.getlist('selectedtermbases[]')	
+			print(selectedtermbases)
 			print('START',time.time())
 			source = Term.objects.filter(value__iexact=search, language=sourcelanguage, termbase__name__in=selectedtermbases)
 			source_entries = source.order_by('entry').values('entry').distinct()
@@ -88,7 +89,9 @@ def create_post(request):
 			
 			print('Start4',time.time())
 			tooshort = False
-			allTBX = target_array(source, target, myuser)
+			allTBX = target_array(source, target, myuser, False)
+			#alldescriptions = alldesc(allTBX)
+			#print (alldescriptions)
 		else:
 			tooshort=True
 		print('START3: ',time.time())
@@ -129,7 +132,7 @@ def term_list(request):
 			source_entries = source.order_by('entry').values('entry').distinct()
 			target = Term.objects.filter(entry__in = source_entries, language=targetlanguagename)[:10]
 			
-		allTBX = target_array(source, target, myuser)
+		allTBX = target_array(source, target, myuser, True)
 		print("ALL",time.time());
 		print("LANGS",sourcelanguagename, targetlanguagename)
 		serializer = TermbaseResultsSerializer(allTBX, many=True)
@@ -237,6 +240,8 @@ def index(request):
 	#token = Token.objects.get_or_create(user=request.user)
 	#print (token)
 	#if request.user.is_authenticated:
+		descriptions = []
+		#descriptions.append('all')
 		if request.method == 'POST':
 			form = NameForm(request.POST)
 			form2 =Sourcelanguage(request.POST)
@@ -255,6 +260,8 @@ def index(request):
 					sourcelanguagename = Language.objects.filter(pk=sourcelanguage)[0].value
 					targetlanguagename = Language.objects.filter(pk=targetlanguage)[0].value
 					selectedtermbases = request.POST.getlist('checks[]')
+					seldescrip = request.POST.getlist('checks[]')
+					print("SEL:",seldescrip)
 					#print ('SELTERMBASES',selectedtermbases)
 					# main DB query
 					source = Term.objects.filter(value__iexact=search, language=sourcelanguage, termbase__name__in=selectedtermbases)
@@ -285,6 +292,8 @@ def index(request):
 					'form3': form3,
 					'sourcelanguage':sourcelanguagename,
 					'targetlanguage':targetlanguagename,
+					'descriptions': descriptions,
+					'seldescrip': seldescrip,
 				#	'user': myuser,
 					#'counts': counts,
 				}
@@ -293,23 +302,36 @@ def index(request):
 		else:
 			form=NameForm()
 			#counts=[]
+			alldescriptions=[]
 			allLang = Language.objects.all()
 			#for onelang in allLang:
 			#	count = Term.objects.filter(language=onelang).count()
 			#	print(onelang.name,count)
 			#	counts.append(onelang.name+': '+str(count))
 			#counts.append('TOTAL: '+str(Term.objects.all().count()))
+			alldescrip = Description.objects.all().values('type').distinct()
+			for value in alldescrip:
+				if value['type'] not in descriptions:
+					descriptions.append(value['type'])
+					
+			print(alldescriptions)
 			counts='TOTAL TERMS: '+str(Term.objects.all().count())
 			#form = Termbases(user=request.user)
 			form2 = Sourcelanguage(initial={'source': allLang[0]})
 			form3 = Targetlanguage(initial={'target': allLang[1]})
 			selectedtermbases = []
+			#descriptions = []
+			seldescrip=[]
+			#descriptions.append('all')
 			myuser=request.user
 			if not request.user.is_authenticated:
 				myuser = User.objects.get(username='anonymous')
 			termbasesResult=UserTermbase.objects.filter(user=myuser)
+			
 			for termb in termbasesResult:
 				selectedtermbases.append(termb.termbase.name)
+			for desc in descriptions:
+				selectedtermbases.append(desc)
 			#selectedtermbases = termbasesResult
 			print ('chosen',selectedtermbases)
 			context = {
@@ -321,6 +343,8 @@ def index(request):
 				'form3': form3,
 			#	'user': myuser,
 				'counts': counts,
+				'descriptions': descriptions,
+				#'seldescrip': seldescrip,
 			}
 			return render(request, 'glos/index.html', context)
 	#else:
@@ -530,7 +554,7 @@ def get_target_array(results2, sourcelanguagename, targetlanguagename, selectedt
 
 	return allTBX
 	
-def target_array(source, target,  myuser):
+def target_array(source, target,  myuser, client):
 	allTBX = []
 	print('#', time.time())
 	for term in target:
@@ -572,23 +596,23 @@ def target_array(source, target,  myuser):
 			for sourceterm in source:
 				if sourceterm.entry==term.entry:
 					alldescripssource = Description.objects.filter(term=sourceterm)
-					processlanguage(entry, sourceterm, alldescripssource)
+					processlanguage(entry, sourceterm, alldescripssource, client)
 					entry.term=sourceterm.value
 		else:
 			entry = entry[0]
 		entry.istarget=True
 		#########################################################################################
 		#entry.term = term.value
-		processlanguage(entry, term, alldescrips)
+		processlanguage(entry, term, alldescrips, client)
 		
 	#end=time.time()
 	#printTBX(allTBX)
 	return allTBX
 	
-def processlanguage(entry, term, alldescrips):
+def processlanguage(entry, term, alldescrips, client):
 	#entry.descripGrp = alldescrips.filter(level=Description.ENTRY_LEVEL)
-	entry.descripGrp = CNEdescrip(alldescrips)
-	print(entry.descripGrp)
+	entry.descripGrp = CNEdescrip(alldescrips, client)
+	#print(entry.descripGrp)
 	language = [langid for langid in entry.languages if term.language==langid.lang]
 	if not language:
 		language = LanguageItem()
@@ -611,7 +635,7 @@ def processlanguage(entry, term, alldescrips):
 	termGrp.append(termgroup)
 	language.termGrp = termGrp
 	
-def CNEdescrip(alldescrips):
+def CNEdescrip_old(alldescrips, client):
 	all = alldescrips.filter(level=Description.ENTRY_LEVEL)
 	#print(all)
 	
@@ -623,17 +647,47 @@ def CNEdescrip(alldescrips):
 			if list[onedesc.name]=='':
 				list[onedesc.name] = onedesc.value
 			else:
-				list[onedesc.name] = list[onedesc.name]+'<span style="color: red;">///</span>'+onedesc.value
+				if client:
+					list[onedesc.name] = list[onedesc.name]+'///'+onedesc.value
+				else:
+					list[onedesc.name] = list[onedesc.name]+'<span style="color: red;">///</span>'+onedesc.value
 	alllist=[]
-	for key, value in list.iteritems():
+	for key, value in list.items():
 		onedesc=DescriptionItem()
 		onedesc.type = key
+		onedesc.name = key
 		onedesc.value = value
 		alllist.append(onedesc)
 	
 	#print('WYNIK',alllist)
 	return alllist
+def CNEdescrip(alldescrips, client):
+	all = alldescrips.filter(level=Description.ENTRY_LEVEL)
 	
+	list = {}
+	for onedesc in all:
+	#	print(onedesc.value)
+		#print(list[onedesc.name])
+		if not onedesc.name in list:
+			list[onedesc.name]=""
+		if onedesc.value not in list[onedesc.name]:
+			if list[onedesc.name]=='':
+				list[onedesc.name] = onedesc.value
+			else:
+				if client:
+					list[onedesc.name] = list[onedesc.name]+'///'+onedesc.value
+				else:
+					list[onedesc.name] = list[onedesc.name]+'<span style="color: red;">///</span>'+onedesc.value
+	alllist=[]
+	for key, value in list.items():
+		onedesc=DescriptionItem()
+		onedesc.type = key
+		onedesc.name = key
+		onedesc.value = value
+		alllist.append(onedesc)
+	
+	#print('WYNIK',alllist)
+	return alllist
 def printTBX(allTBX):
 	for termbase in allTBX:
 		print('Termbase name', termbase.name)
@@ -643,7 +697,23 @@ def printTBX(allTBX):
 				print('         Language', lang.lang)
 				for termgroup in lang.termGrp:
 					print('             Term',termgroup.value)
-				
+def alldesc(allTBX):
+	all=[]
+	for termbase in allTBX:
+		for tbxitem in termbase.entries:
+			for desc in tbxitem.descripGrp:
+				if desc.type not in all:
+					all.append(desc.type)
+			for lang in tbxitem.languages:
+				for desc in lang.descripGrp:
+					if desc.type not in all:
+						all.append(desc.type)
+				for termgroup in lang.termGrp:
+					for desc in termgroup.descripGrp:
+						if desc.type not in all:
+							all.append(desc.type)
+	return all
+					
 def processdescription(newterm, descrip, level, entry):
 	newedescrip, nd =Description.objects.get_or_create(term=newterm, name=descrip['name'] , type=descrip['type'], value=descrip['value'], level=level, entry=entry)
 	newedescrip.save

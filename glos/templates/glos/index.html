@@ -1,6 +1,6 @@
 
 
-{% extends "glos/baselsp.html" %}
+{% extends "glos/baselocstar.html" %}
 {% load i18n static %}
 
 
@@ -36,9 +36,7 @@
 			</div>
           <div class="col-md-3">                              
           <table >
-        
-           
-        
+       
         	{% for field in form2 %}
         <label class="form-control input-cls-small" for="{{ field.name }}">{{ field.label }}</label>
         {{ field }}
@@ -46,29 +44,29 @@
         </table>
 
 				</div>
-				
-			
-				
+		
 				<div class="col-md-3">                              
           <table >
-        
-           
-        
+      
         	{% for field in form3 %}
         <label class="form-control input-cls-small" for="{{ field.name }}">{{ field.label }}</label>
         {{ field }}
     	{% endfor %}
         </table>
-
 				</div>
 				<div class="col-md-3">                              
-                    
-                    
-        					<label class="form-control input-cls-small" for="{{ field.name }}">{{ counts }}</label>
-        				
-        				
-    				
-    				
+        				<table >
+       <label class="form-control input-cls-small" >Descriptions</label>
+        	{% for description in descriptions %}
+        {% if description  in selectedtermbases %} 
+             
+                 <label id="descriptions" class="form-control-small input-cls-small2"><input   checked="checked" type="checkbox" name="descriptions[]" value="{{ description}}">  {{ description}}</input></label>
+            {% else %}
+            	<label id="descriptions" class="form-control-small input-cls-small2"><input  type="checkbox" name="descriptions[]" value="{{ description }}">  {{ description}}</input></label>
+            {% endif %}
+        
+    	{% endfor %}
+        </table>
 				</div>
                 
             </div>

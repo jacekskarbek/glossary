@@ -36,20 +36,18 @@
 	            		{% for term in lang.termGrp %}
 	            		{% if forloop.counter != 1 %}
 	            		<div class="borderu">
+	            		{% endif %}
 	            		<a  href="{% url 'editentry' term.id  %}">
 	            			 <span style="color: blue;"><b>{{ term.value  }} </b></a></span><br>
 	            			{% for desc in term.descripGrp %}
+	            			{% if desc.type in selectedtermbases %}
 	            			<li class="descrip"> <i><b>{{ desc.type }}:</b> {{ desc.value  }} </i></li>
+	            			{% endif%}
 	            			{% endfor %} 
+	            		{% if forloop.counter != 1 %}
 	            		</div>
-	            		{% else %}
-	            			<a  href="{% url 'editentry' term.id  %}">
-	            			<span style="color: blue;"><b>{{ term.value  }} </b></a></span><br>
-	            			{% for desc in term.descripGrp %}
-	            			<li class="descrip"> <i><b>{{ desc.type }}:</b> {{ desc.value  }} </i></li>
-	            			{% endfor %} 
 	            		{% endif %}
-	            			
+	            		
 	            		{% endfor %} 
 	            			
 	            	{% endif %}
@@ -58,12 +56,10 @@
 	            <div class="col-md-3">
             	{% for lang in entry.languages %}
 	            	{% if lang.lang|stringformat:"s" == targetlanguage|stringformat:"s" %}
-	            	
 	            		{% for term in lang.termGrp %}
 	            		{% if forloop.counter != 1 %}
 	            		<div class="borderu">
-	            		
-	            		
+	            		{% endif %}
 	            		{% if termbase.access %}
 	            		<a  href="{% url 'editentry' term.id  %}">
 	            			 <span style="color: green;"><b>{{ term.value  }} </b></a></span><br>
@@ -72,39 +68,40 @@
 	            			<b>---click here to get access---  </b></a><br>
 	            		{% endif%}
 	            			{% for desc in term.descripGrp %}
+	            			{% if desc.type in selectedtermbases %}
 	            			<li class="descrip"> <i><b>{{ desc.type }}:</b> {{ desc.value  }} </i></li>
-	            			{% endfor %} 
-	            		</div>
-	            		{% else %}
-	            			
-	            			{% if termbase.access %}
-	            			<a  href="{% url 'editentry' term.id  %}">
-	            			 <span style="color: green;"><b>{{ term.value  }} </b></a></span><br>
-	            		{% else %}
-	            		<a  href="{% url 'lspsoftware'   %}">
-	            			<b>---click here to get access---  </b></a><br>
-	            		{% endif%}
-	            			{% for desc in term.descripGrp %}
-	            			<li class="descrip"> <i><b>{{ desc.type }}:</b> {{ desc.value  }} </i></li>
-	            			{% endfor %} 
-	            		
 	            			{% endif %}
+	            			{% endfor %} 
+	            		{% if forloop.counter != 1 %}
+	            		</div>
+	            		{% endif %}
+	            		
 	            		{% endfor %} 
 	            		
 	            	{% endif %}
 	            {% endfor %}
 	            </div>
             	<div class="col-md-5">
+            		
+	            	
+	            	
 				{% for edesc in entry.descripGrp %}
 				
+				{% if edesc.type in selectedtermbases %}
 					<li class="descrip"> <i><b>{{ edesc.type }}:</b> {% autoescape off %}{{ edesc.value  }}{% endautoescape %}  </i></li>
+				{% endif %}	
 				{% endfor %}
+				
 				{% for lang in entry.languages %}
 					{% for ldesc in lang.descripGrp %}
+				
+					{% if ldesc.type in selectedtermbases %}
 						<li class="descrip"> <i><b>{{ ldesc.type }}:</b> {{ ldesc.value  }} </i></li>
+					{% endif %}	
 					{% endfor %}
-					
+				
 				{% endfor %}
+				
 				</div>
 				
 		
