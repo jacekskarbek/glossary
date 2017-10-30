@@ -59,7 +59,7 @@ def lspsoftware (request):
 def create_post(request):
 	if request.method == 'POST':
 		search = request.POST.get('search')
-		search=search.strip()
+		search=search.strip().lower()
 		normal=True
 		start=True
 		full = True
@@ -85,23 +85,23 @@ def create_post(request):
 			source=''
 			target=''
 			if normal:
-				source = Term.objects.filter(value__iexact=search, language=sourcelanguage, termbase__name__in=selectedtermbases)
+				source = Term.objects.filter(lowvalue__exact=search, language=sourcelanguage, termbase__name__in=selectedtermbases)
 				source_entries = source.order_by('entry').values('entry').distinct()
 				target = Term.objects.filter(entry__in = source_entries, language=targetlanguage)[:10]
+				#target = Term.objects.filter(entry__in = source_entries, language=targetlanguage)
 			if not target and start:
 				print("istart")
-				source = Term.objects.filter(value__istartswith=search, language=sourcelanguage, termbase__name__in=selectedtermbases)
+				source = Term.objects.filter(lowvalue__startswith=search, language=sourcelanguage, termbase__name__in=selectedtermbases)
 				source_entries = source.order_by('entry').values('entry').distinct()
 				target = Term.objects.filter(entry__in = source_entries, language=targetlanguage)[:10]	
 			print('START1',time.time())	
 			if not target:
 				print("icontains")
-				source = Term.objects.filter(value__icontains=search, language=sourcelanguage, termbase__name__in=selectedtermbases)
+				source = Term.objects.filter(lowvalue__contains=search, language=sourcelanguage, termbase__name__in=selectedtermbases)
 				source_entries = source.order_by('entry').values('entry').distinct()
 				target = Term.objects.filter(entry__in = source_entries, language=targetlanguage)[:10]
 			print('START2',time.time())	
 			
-			print('Start4',time.time())
 			tooshort = False
 			allTBX = target_array(source, target, myuser, False)
 			#alldescriptions = alldesc(allTBX)
