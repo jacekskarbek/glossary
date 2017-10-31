@@ -33,6 +33,7 @@ function send_form()
         data : { search : $('#id_searchTerm').val(),
         		source : $('#id_source').val() ,
         		target:  $('#id_target').val() ,
+        		hit: $('#id_hit').val() ,
         		selectedtermbases: checkbox_value  }, // data sent with the post request
 		
         // handle a successful response
@@ -143,6 +144,7 @@ function send_form()
         data : { search : $('#id_searchTerm').val(),
         		source : $('#id_source').val() ,
         		target:  $('#id_target').val() ,
+        		hit: $('#id_hit').val() ,
         		selectedtermbases: checkbox_value  }, // data sent with the post request
 		
         // handle a successful response
