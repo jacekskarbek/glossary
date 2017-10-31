@@ -3,8 +3,8 @@ from django import forms
 from django.forms import formset_factory, modelformset_factory
 from django.http import HttpResponse, JsonResponse, HttpResponseRedirect
 from django.template import loader
-from .models import Termbase, UserTermbase, Term, Language, Description
-from .forms import NameForm, DocumentForm, Termbases, Sourcelanguage, Targetlanguage, ContactForm
+from .models import Termbase, UserTermbase, Term, Language, Description, Hits
+from .forms import NameForm, DocumentForm, Termbases, Sourcelanguage, Targetlanguage, ContactForm, SearchHits
 from .serializers import TermSerializer, TermbaseSerializer
 from django.contrib.auth import authenticate, login
 from django.db.models import Q
@@ -34,7 +34,7 @@ from django.contrib.auth.decorators import login_required, user_passes_test
 from django.core.mail import EmailMessage
 from django.contrib.postgres.search import TrigramSimilarity
 from django.contrib.postgres.search import SearchQuery, SearchVector
-
+import re
 
 
 class DescriptionItem:
@@ -60,6 +60,15 @@ def create_post(request):
 	if request.method == 'POST':
 		search = request.POST.get('search')
 		search=search.strip().lower()
+		hit=request.POST.get('hit')
+		hitstext=Hits.objects.filter(pk=hit)[0].hit
+		if hitstext=='all':
+			all=True
+		else:
+			hits=int(hitstext)
+			all=False
+		print('HITS',hitstext)
+		
 		normal=True
 		start=True
 		full = True
@@ -87,23 +96,31 @@ def create_post(request):
 			if normal:
 				source = Term.objects.filter(lowvalue__exact=search, language=sourcelanguage, termbase__name__in=selectedtermbases)
 				source_entries = source.order_by('entry').values('entry').distinct()
-				target = Term.objects.filter(entry__in = source_entries, language=targetlanguage)[:10]
-				#target = Term.objects.filter(entry__in = source_entries, language=targetlanguage)
+				if all:
+					target = Term.objects.filter(entry__in = source_entries, language=targetlanguage)
+				else:
+					target = Term.objects.filter(entry__in = source_entries, language=targetlanguage)[:hits]
 			if not target and start:
 				print("istart")
 				source = Term.objects.filter(lowvalue__startswith=search, language=sourcelanguage, termbase__name__in=selectedtermbases)
 				source_entries = source.order_by('entry').values('entry').distinct()
-				target = Term.objects.filter(entry__in = source_entries, language=targetlanguage)[:10]	
+				if all:
+					target = Term.objects.filter(entry__in = source_entries, language=targetlanguage)
+				else:
+					target = Term.objects.filter(entry__in = source_entries, language=targetlanguage)[:hits]	
 			print('START1',time.time())	
 			if not target:
 				print("icontains")
 				source = Term.objects.filter(lowvalue__contains=search, language=sourcelanguage, termbase__name__in=selectedtermbases)
 				source_entries = source.order_by('entry').values('entry').distinct()
-				target = Term.objects.filter(entry__in = source_entries, language=targetlanguage)[:10]
+				if all:
+					target = Term.objects.filter(entry__in = source_entries, language=targetlanguage)
+				else:
+					target = Term.objects.filter(entry__in = source_entries, language=targetlanguage)[:hits]
 			print('START2',time.time())	
 			
 			tooshort = False
-			allTBX = target_array(source, target, myuser, False)
+			allTBX = target_array(source, target, myuser, False, search)
 			#alldescriptions = alldesc(allTBX)
 			#print (alldescriptions)
 		else:
@@ -117,6 +134,7 @@ def create_post(request):
 			'results': allTBX,			
 			'sourcelanguage':sourcelanguagename,
 			'targetlanguage':targetlanguagename,
+			'hits': hitstext,
 			#'user': myuser,
 		}
 		html = render_to_string('glos/search.html', context)
@@ -130,7 +148,8 @@ def term_list(request):
 	queryset = User.objects.none()  
 	if request.method == 'POST':
 		data = JSONParser().parse(request)
-		print(data["search"])
+		search=data["search"]
+		print(search)
 		print(data["selectedTermbases"])
 		print("BIGSTART",time.time());
 		sourcelanguagename = Language.objects.filter(name=data["index"])[0]
@@ -138,15 +157,15 @@ def term_list(request):
 		print(sourcelanguagename, targetlanguagename)
 		if data["mode"]=="Normal":
 			print("NORMAL")		
-			source = Term.objects.filter(lowvalue__iexact=data["search"], language=sourcelanguagename, termbase__name__in=data["selectedTermbases"])
+			source = Term.objects.filter(lowvalue__exact=search, language=sourcelanguagename, termbase__name__in=data["selectedTermbases"])
 			source_entries = source.order_by('entry').values('entry').distinct()
 			target = Term.objects.filter(entry__in = source_entries, language=targetlanguagename)[:10]
 		else:
-			source = Term.objects.filter(lowvalue__in=data["search"], language=sourcelanguagename, termbase__name__in=data["selectedTermbases"])
+			source = Term.objects.filter(lowvalue__in=search, language=sourcelanguagename, termbase__name__in=data["selectedTermbases"])
 			source_entries = source.order_by('entry').values('entry').distinct()
 			target = Term.objects.filter(entry__in = source_entries, language=targetlanguagename)[:10]
 			
-		allTBX = target_array(source, target, myuser, True)
+		allTBX = target_array(source, target, myuser, True, search)
 		print("ALL",time.time());
 		print("LANGS",sourcelanguagename, targetlanguagename)
 		serializer = TermbaseResultsSerializer(allTBX, many=True)
@@ -271,8 +290,8 @@ def index(request):
 					if not request.user.is_authenticated:
 						myuser = User.objects.get(username='anonymous')
 					termResult=UserTermbase.objects.filter(user=myuser)
-					sourcelanguagename = Language.objects.filter(pk=sourcelanguage)[0].value
-					targetlanguagename = Language.objects.filter(pk=targetlanguage)[0].value
+					sourcelanguagename = Language.objects.filter(pk=sourcelanguage)[0].name
+					targetlanguagename = Language.objects.filter(pk=targetlanguage)[0].name
 					selectedtermbases = request.POST.getlist('checks[]')
 					seldescrip = request.POST.getlist('checks[]')
 					print("SEL:",seldescrip)
@@ -292,7 +311,7 @@ def index(request):
 						source_entries = source.order_by('entry').values('entry').distinct()
 						target = Term.objects.filter(entry__in = source_entries, language=targetlanguage)[:10]
 						tooshort = False
-						allTBX = target_array(source, target, myuser)
+						allTBX = target_array(source, target, myuser, search)
 				else:
 					tooshort=True
 				context = {
@@ -318,6 +337,7 @@ def index(request):
 			#counts=[]
 			alldescriptions=[]
 			allLang = Language.objects.all()
+			hits=Hits.objects.all()
 			#for onelang in allLang:
 			#	count = Term.objects.filter(language=onelang).count()
 			#	print(onelang.name,count)
@@ -333,6 +353,7 @@ def index(request):
 			#form = Termbases(user=request.user)
 			form2 = Sourcelanguage(initial={'source': allLang[0]})
 			form3 = Targetlanguage(initial={'target': allLang[1]})
+			hitform = SearchHits(initial={'hit': hits[0]})
 			selectedtermbases = []
 			#descriptions = []
 			seldescrip=[]
@@ -355,6 +376,7 @@ def index(request):
 				'form': form,
 				'form2': form2,
 				'form3': form3,
+				'hitform':hitform,
 			#	'user': myuser,
 				'counts': counts,
 				'descriptions': descriptions,
@@ -568,7 +590,7 @@ def get_target_array(results2, sourcelanguagename, targetlanguagename, selectedt
 
 	return allTBX
 	
-def target_array(source, target,  myuser, client):
+def target_array(source, target,  myuser, client, search):
 	allTBX = []
 	print('#', time.time())
 	for term in target:
@@ -610,20 +632,20 @@ def target_array(source, target,  myuser, client):
 			for sourceterm in source:
 				if sourceterm.entry==term.entry:
 					alldescripssource = Description.objects.filter(term=sourceterm)
-					processlanguage(entry, sourceterm, alldescripssource, client)
+					processlanguage(entry, sourceterm, alldescripssource, client, search, True)
 					entry.term=sourceterm.value
 		else:
 			entry = entry[0]
 		entry.istarget=True
 		#########################################################################################
 		#entry.term = term.value
-		processlanguage(entry, term, alldescrips, client)
+		processlanguage(entry, term, alldescrips, client, search, False)
 		
 	#end=time.time()
 	#printTBX(allTBX)
 	return allTBX
 	
-def processlanguage(entry, term, alldescrips, client):
+def processlanguage(entry, term, alldescrips, client, search, highlight):
 	#entry.descripGrp = alldescrips.filter(level=Description.ENTRY_LEVEL)
 	entry.descripGrp = CNEdescrip(alldescrips, client)
 	#print(entry.descripGrp)
@@ -640,7 +662,17 @@ def processlanguage(entry, term, alldescrips, client):
 	else:
 		termGrp=language.termGrp
 	termgroup = TermGroup()  #  termgroup element
-	termgroup.value = term.value
+	print(search, client)
+	if client or not highlight:
+		termgroup.value = term.value
+	else:
+		test = re.findall(search, term.value, flags=re.IGNORECASE)
+		#print(test)
+		for ones in test:
+			termgroup.value = term.value.replace(ones, '<span style="color: red;">'+ones+'</span>')
+			#print('REPLACE',termgroup.value)
+
+	#termgroup.value = term.value
 	print("Term value", term.value)
 	termgroup.id = term.pk  #  id number of term
 	

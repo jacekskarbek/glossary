@@ -34,10 +34,16 @@
     <p><span style="color: red;">{% trans "You don't have any termbases to select from. Please login." %}</span></p>
 {% endif %}
 			</div>
-          <div class="col-md-3">                              
+          <div class="col-md-2">                              
           <table >
        
         	{% for field in form2 %}
+        <label class="form-control input-cls-small" for="{{ field.name }}">{{ field.label }}</label>
+        {{ field }}
+    	{% endfor %}
+       
+      
+        	{% for field in form3 %}
         <label class="form-control input-cls-small" for="{{ field.name }}">{{ field.label }}</label>
         {{ field }}
     	{% endfor %}
@@ -45,15 +51,7 @@
 
 				</div>
 		
-				<div class="col-md-3">                              
-          <table >
-      
-        	{% for field in form3 %}
-        <label class="form-control input-cls-small" for="{{ field.name }}">{{ field.label }}</label>
-        {{ field }}
-    	{% endfor %}
-        </table>
-				</div>
+				
 				<div class="col-md-3">                              
         				<table >
        <label class="form-control input-cls-small" >Descriptions</label>
@@ -67,6 +65,19 @@
         
     	{% endfor %}
         </table>
+				</div>
+				<div class="col-md-2">       
+					<table >
+       
+        	{% for field in hitform %}
+        <label class="form-control input-cls-small" for="{{ field.name }}">{{ field.label }}</label>
+        {{ field }}
+    	{% endfor %}
+       
+      
+        	
+        </table>
+				
 				</div>
                 
             </div>
@@ -98,7 +109,7 @@
             
     
         {% if results %}
-       
+    
         <div class="row borderb">
             	<div class="col-md-3 ">
             		{{ sourcelanguage }}
@@ -132,14 +143,14 @@
 	            		{% if forloop.counter != 1 %}
 	            		<div class="borderu">
 	            		<a  href="{% url 'editentry' term.id  %}">
-	            			 <span style="color: blue;"><b>{{ term.value  }} </b></a></span><br>
+	            			 <span style="color: blue;"><b>{% autoescape off %}{{ term.value  }} {% endautoescape %}</b></a></span><br>
 	            			{% for desc in term.descripGrp %}
 	            			<li class="descrip"> <i><b>{{ desc.type }}:</b> {{ desc.value  }} </i></li>
 	            			{% endfor %} 
 	            		</div>
 	            		{% else %}
 	            			<a  href="{% url 'editentry' term.id  %}">
-	            			<span style="color: blue;"><b>{{ term.value  }} </b></a></span><br>
+	            			<span style="color: blue;"><b>{% autoescape off %}{{ term.value  }} {% endautoescape %} </b></a></span><br>
 	            			{% for desc in term.descripGrp %}
 	            			<li class="descrip"> <i><b>{{ desc.type }}:</b> {{ desc.value  }} </i></li>
 	            			{% endfor %} 
@@ -161,7 +172,7 @@
 	            		
 	            		{% if termbase.access %}
 	            		<a  href="{% url 'editentry' term.id  %}">
-	            			 <span style="color: green;"><b>{{ term.value  }} </b></a></span><br>
+	            			 <span style="color: green;"><b>{% autoescape off %}{{ term.value  }} {% endautoescape %} </b></a></span><br>
 	            		{% else %}
 	            		<a  href="{% url 'lspsoftware'  %}">
 	            			<b>---kliknij, aby uzyskać dostęp---  </b></a><br>
@@ -174,7 +185,7 @@
 	            			
 	            			{% if termbase.access %}
 	            			<a  href="{% url 'editentry' term.id  %}">
-	            			 <span style="color: green;"><b>{{ term.value  }} </b></a></span><br>
+	            			 <span style="color: green;"><b>{% autoescape off %}{{ term.value  }} {% endautoescape %} </b></a></span><br>
 	            		{% else %}
 	            		<a  href="{% url 'lspsoftware'   %}">
 	            			<b>---kliknij, aby uzyskać dostęp---  </b></a><br>
@@ -209,7 +220,7 @@
 			{% endfor %}	
 			
 			{% endfor %}
-					
+		
 		{% else %}
 			{% if too_short %}
 			<tr>Query too short. Must have minimum 3 characters!</tr>

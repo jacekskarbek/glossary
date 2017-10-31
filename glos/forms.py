@@ -1,5 +1,5 @@
 from django import forms
-from .models import UserTermbase, Language
+from .models import UserTermbase, Language, Hits
 class NameForm(forms.Form):
     #searchTerm = forms.CharField(label='Term: ', label_suffix="", max_length=100, widget=forms.TextInput(attrs={'class' : 'form-control input-cls'}))
     searchTerm = forms.CharField(label='', label_suffix="", max_length=100, widget=forms.TextInput(attrs={'class' : 'form-control input-cls'}))
@@ -13,6 +13,9 @@ class Sourcelanguage(forms.Form):
 
 class Targetlanguage(forms.Form):
     target = forms.ModelChoiceField(Language.objects, label='Target language', widget=forms.Select(attrs={'class':'form-control input-cls-small'}))
+   
+class SearchHits(forms.Form):
+    hit = forms.ModelChoiceField(Hits.objects, label='Search Hits', widget=forms.Select(attrs={'class':'form-control input-cls-small'}))
     
 class DocumentForm(forms.Form):
     docfile = forms.FileField(

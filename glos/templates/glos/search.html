@@ -38,7 +38,7 @@
 	            		<div class="borderu">
 	            		{% endif %}
 	            		<a  href="{% url 'editentry' term.id  %}">
-	            			 <span style="color: blue;"><b>{{ term.value  }} </b></a></span><br>
+	            			 <span style="color: blue;"><b>{% autoescape off %}{{ term.value  }} {% endautoescape %} </b></a></span><br>
 	            			{% for desc in term.descripGrp %}
 	            			{% if desc.type in selectedtermbases %}
 	            			<li class="descrip"> <i><b>{{ desc.type }}:</b> {{ desc.value  }} </i></li>
@@ -62,7 +62,7 @@
 	            		{% endif %}
 	            		{% if termbase.access %}
 	            		<a  href="{% url 'editentry' term.id  %}">
-	            			 <span style="color: green;"><b>{{ term.value  }} </b></a></span><br>
+	            			 <span style="color: green;"><b>{% autoescape off %}{{ term.value  }} {% endautoescape %} </b></a></span><br>
 	            		{% else %}
 	            		<a  href="{% url 'lspsoftware'  %}">
 	            			<b>---click here to get access---  </b></a><br>

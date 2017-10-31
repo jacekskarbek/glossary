@@ -26,6 +26,11 @@ class UserTermbase(models.Model):
 	    unique_together = ['user', 'termbase']
 	def __str__(self):
 		return self.user.username+"__"+self.termbase.name
+		
+class Hits(models.Model):
+	hit = models.CharField(max_length=5, unique=True)
+	def __str__(self):
+		return self.hit
 """
 class UserTM(models.Model):
 	user = models.ForeignKey(User, on_delete=models.CASCADE)
