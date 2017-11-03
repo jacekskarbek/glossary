@@ -70,6 +70,7 @@ def create_post(request):
 			all=False
 		print('HITS',hitstext)
 		"""
+		hits=int(hitstext)
 		normal=True
 		start=True
 		full = True
