@@ -62,13 +62,14 @@ def create_post(request):
 		search=search.strip().lower()
 		hit=request.POST.get('hit')
 		hitstext=Hits.objects.filter(pk=hit)[0].hit
+		"""
 		if hitstext=='all':
 			all=True
 		else:
 			hits=int(hitstext)
 			all=False
 		print('HITS',hitstext)
-		
+		"""
 		normal=True
 		start=True
 		full = True
@@ -97,27 +98,18 @@ def create_post(request):
 			if normal:
 				source = Term.objects.filter(lowvalue__exact=search, language=sourcelanguage, termbase__name__in=selectedtermbases)
 				source_entries = source.order_by('entry').values('entry').distinct()
-				if all:
-					target = Term.objects.filter(entry__in = source_entries, language=targetlanguage)
-				else:
-					target = Term.objects.filter(entry__in = source_entries, language=targetlanguage)[:hits]
+				target = Term.objects.filter(entry__in = source_entries, language=targetlanguage)[:hits]
 			if not target and start:
 				print("istart")
 				source = Term.objects.filter(lowvalue__startswith=search, language=sourcelanguage, termbase__name__in=selectedtermbases)
 				source_entries = source.order_by('entry').values('entry').distinct()
-				if all:
-					target = Term.objects.filter(entry__in = source_entries, language=targetlanguage)
-				else:
-					target = Term.objects.filter(entry__in = source_entries, language=targetlanguage)[:hits]	
+				target = Term.objects.filter(entry__in = source_entries, language=targetlanguage)[:hits]	
 			print('START1',time.time())	
 			if not target:
 				print("icontains")
 				source = Term.objects.filter(lowvalue__contains=search, language=sourcelanguage, termbase__name__in=selectedtermbases)
 				source_entries = source.order_by('entry').values('entry').distinct()
-				if all:
-					target = Term.objects.filter(entry__in = source_entries, language=targetlanguage)
-				else:
-					target = Term.objects.filter(entry__in = source_entries, language=targetlanguage)[:hits]
+				target = Term.objects.filter(entry__in = source_entries, language=targetlanguage)[:hits]
 			print('START2',time.time())	
 			targetlength = 'Target terms found: '+str(target.count())
 			#counts='TOTAL TERMS: '+str(Term.objects.all().count())
@@ -128,6 +120,7 @@ def create_post(request):
 		else:
 			tooshort=True
 		print('START3: ',time.time())
+		print(targetlength)
 		context = {
 			'too_short': tooshort,
 			'has_permission': True,
@@ -140,6 +133,7 @@ def create_post(request):
 			'hits': hitstext,
 			#'user': myuser,
 		}
+		
 		html = render_to_string('glos/search.html', context)
 		return HttpResponse(html)
 
@@ -356,7 +350,8 @@ def index(request):
 			#form = Termbases(user=request.user)
 			form2 = Sourcelanguage(initial={'source': allLang[0]})
 			form3 = Targetlanguage(initial={'target': allLang[1]})
-			hitform = SearchHits(initial={'hit': hits[0]})
+			all = Hits.objects.filter(hit='100')[0]
+			hitform = SearchHits(initial={'hit': all})
 			selectedtermbases = []
 			#descriptions = []
 			seldescrip=[]

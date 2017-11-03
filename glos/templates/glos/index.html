@@ -51,7 +51,7 @@
 
 				</div>
 		
-				
+				 <!-- OLD VERSION 
 				<div class="col-md-3">                              
         				<table >
        <label class="form-control input-cls-small" >Descriptions</label>
@@ -65,6 +65,26 @@
         
     	{% endfor %}
         </table>
+				</div>
+				
+				-->
+				<div class="col-md-3">                              
+        				
+       <label class="form-control input-cls-small" >Descriptions</label>
+       <div style="border:2px solid #ccc;  height: 100px; overflow-y: scroll;">
+        	{% for description in descriptions %}
+        {% if description  in selectedtermbases %} 
+             
+                 <label id="descriptions" class="form-control-small input-cls-small2"><input   checked="checked" type="checkbox" name="descriptions[]" value="{{ description}}">  {{ description}}</input><br/></label>
+            {% else %}
+            	<label id="descriptions" class="form-control-small input-cls-small2"><input  type="checkbox" name="descriptions[]" value="{{ description }}">  {{ description}}</input><br/></label>
+            {% endif %}
+        
+    	{% endfor %}
+    	</div>
+    
+    
+        
 				</div>
 				<div class="col-md-2">       
 					<table >
