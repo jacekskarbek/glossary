@@ -64,12 +64,12 @@ ROOT_URLCONF = 'glossary.urls'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'
 STATIC_URL = '/static/'
-#STATIC_ROOT = '/home/jacek/static'
+STATIC_ROOT = '/home/locstar/static'
 STATICFILES_DIRS = (
     os.path.join(BASE_DIR, 'static'),
 )
 
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+#STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 
 TEMPLATES = [
@@ -97,10 +97,10 @@ WSGI_APPLICATION = 'glossary.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'glossarytest',
+        'NAME': 'locstardb',
         #'NAME': 'LSPSOFTWARE',
 		'USER': 'postgres', 
-		'PASSWORD': 'zto32k1',
+		'PASSWORD': 'Zto32k1@149',
 		'HOST': 'localhost',
 		'PORT': '5432', 
 	

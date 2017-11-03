@@ -93,6 +93,7 @@ def create_post(request):
 			print('START',time.time())
 			source=''
 			target=''
+			#targetlength=0
 			if normal:
 				source = Term.objects.filter(lowvalue__exact=search, language=sourcelanguage, termbase__name__in=selectedtermbases)
 				source_entries = source.order_by('entry').values('entry').distinct()
@@ -118,7 +119,8 @@ def create_post(request):
 				else:
 					target = Term.objects.filter(entry__in = source_entries, language=targetlanguage)[:hits]
 			print('START2',time.time())	
-			
+			targetlength = 'Target terms found: '+str(target.count())
+			#counts='TOTAL TERMS: '+str(Term.objects.all().count())
 			tooshort = False
 			allTBX = target_array(source, target, myuser, False, search)
 			#alldescriptions = alldesc(allTBX)
@@ -134,6 +136,7 @@ def create_post(request):
 			'results': allTBX,			
 			'sourcelanguage':sourcelanguagename,
 			'targetlanguage':targetlanguagename,
+			'targetlength': targetlength,
 			'hits': hitstext,
 			#'user': myuser,
 		}

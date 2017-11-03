@@ -2,8 +2,11 @@
             
     
         {% if results %}
-       
+       <div class="row borderb">
+       	<span style="color: red;">{{ targetlength }}</span>
+       </div>
         <div class="row borderb">
+        
             	<div class="col-md-3 ">
             		{{ sourcelanguage }}
             	</div>
@@ -13,7 +16,7 @@
             	<div class="col-md-3 ">
             		Description
             	</div>
-            </div>
+        </div>
        
        		{% for termbase in results %}
        		{% if termbase %}
