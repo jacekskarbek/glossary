@@ -86,8 +86,11 @@
     
         
 				</div>
-				<div class="col-md-2">       
-					<table >
+				
+					<div class="col-md-2">     
+		  <label class="form-control input-cls-small" >{{ counts }}</label>
+        
+				
        
         	{% for field in hitform %}
         <label class="form-control input-cls-small" for="{{ field.name }}">{{ field.label }}</label>
@@ -96,10 +99,9 @@
        
       
         	
-        </table>
-				
+        
 				</div>
-                
+	
             </div>
         </div>
     </section>
