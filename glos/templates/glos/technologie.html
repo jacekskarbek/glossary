@@ -37,8 +37,8 @@
                             <div class="row first-part">
                                 <div class="col-sm-4">
                                     <div class="wrapper-content">
-                                    <h3>{% trans 'Pamięć tłumaczeń' %}</h3>
-                                        <img src="{% static "assets/images/cat.png" %}" alt="image">
+                                    <a href="{% url  'tm'  %}"><h3>{% trans 'Pamięć tłumaczeń' %}</h3></a>
+                                        <a href="{% url  'tm'  %}"><img src="{% static "assets/images/tmtr2.jpg" %}" alt="image"></a>
                                         <h3></h3>
                                         <h5>{% trans '<b>Pamięć tłumaczeń</b> to baza danych składająca się jednostek tłumaczeniowych, którymi najczęściej są zdania w języku źródłowym i ich tłumaczenia w języku docelowym.' %}</h5>
                                         
@@ -48,8 +48,8 @@
 
                                 <div class="col-sm-4">
                                     <div class="wrapper-content">
-                                    <h3>{% trans 'Zarządzanie terminologią' %}</h3>
-                                        <img src="{% static "assets/images/tm.png" %}" alt="image">
+                                    <a href="{% url  'terminology'  %}"><h3>{% trans 'Zarządzanie terminologią' %}</h3></a>
+                                        <a href="{% url  'terminology'  %}"><img src="{% static "assets/images/terms.jpg" %}" alt="image"></a>
                                          <h3></h3>
                                         <h5>{% trans '<b>Słowniki, glosariusze i bazy terminologiczne</b> stosowane przy tłumaczeniach: terminy, synonimy, akronimy oraz dodatkowe informacje.' %}</h5>
                                         
@@ -60,12 +60,24 @@
 
                                <div class="col-sm-4">
                                     <div class="wrapper-content">
-                                    	<h3>{% trans 'Tłumaczenie maszynowe' %}</h3>
-                                        <img src="{% static "assets/images/glossart.png" %}" alt="image">
+                                    	<a href="{% url  'mt'  %}"><h3>{% trans 'Tłumaczenie maszynowe' %}</h3></a>
+                                        <a href="{% url  'mt'  %}"><img src="{% static "assets/images/mt.jpg" %}" alt="image"></a>
                                         <h3></h3>
                                         <h5>{% trans '<b>Systemy tłumaczenia maszynowego</b> umożliwiają częściowe zredukowanie pracy tłumacza poprzez automatyczne generowanie tłumaczeń przez komputer.' %}</h5>
 										
                                          <a href="{% url  'mt'  %}" class="btn btn-primary">{% trans 'Dowiedz się więcej' %}</a>
+                                    </div>
+                               </div>
+                               </div>
+                                <div class="row first-part">
+                               <div class="col-sm-4">
+                                    <div class="wrapper-content">
+                                    	<a href="{% url  'tools'  %}"><h3>{% trans 'Narzędzia' %}</h3></a>
+                                        <a href="{% url  'tools'  %}"><img src="{% static "assets/images/tools350.jpg" %}" alt="image"></a>
+                                        <h3></h3>
+                                        <h5>{% trans '<b>Systemy tłumaczenia maszynowego</b> umożliwiają częściowe zredukowanie pracy tłumacza poprzez automatyczne generowanie tłumaczeń przez komputer.' %}</h5>
+										
+                                         <a href="{% url  'tools'  %}" class="btn btn-primary">{% trans 'Dowiedz się więcej' %}</a>
                                     </div>
                                </div>
                             </div>
