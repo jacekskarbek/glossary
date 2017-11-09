@@ -18,6 +18,7 @@ urlpatterns = [
     url(r'^language/', views.language_list),
     url(r'^termbase/', views.termbase_list),
     url(r'^create_termbase/', views.termbase_create),
+    url(r'^dtype_update/', views.dtype_update),
     url(r'^delete_termbase/', views.termbase),
     url(r'^create_term/', views.term_create),
     url(r'^create_term_merge/', views.term_create_merge),

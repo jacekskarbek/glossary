@@ -3,7 +3,7 @@ from django import forms
 from django.forms import formset_factory, modelformset_factory
 from django.http import HttpResponse, JsonResponse, HttpResponseRedirect
 from django.template import loader
-from .models import Termbase, UserTermbase, Term, Language, Description, Hits
+from .models import Termbase, UserTermbase, Term, Language, Description, Hits, Dtype
 from .forms import NameForm, DocumentForm, Termbases, Sourcelanguage, Targetlanguage, ContactForm, SearchHits
 from .serializers import TermSerializer, TermbaseSerializer
 from django.contrib.auth import authenticate, login
@@ -35,6 +35,7 @@ from django.core.mail import EmailMessage
 from django.contrib.postgres.search import TrigramSimilarity
 from django.contrib.postgres.search import SearchQuery, SearchVector
 import re
+from stemming.porter2 import stem
 
 
 class DescriptionItem:
@@ -74,6 +75,11 @@ def create_post(request):
 		normal=True
 		start=True
 		full = True
+		sourcelanguage = request.POST.get('source')
+		targetlanguage = request.POST.get('target')
+		sourcelanguagename = Language.objects.filter(pk=sourcelanguage)[0].name
+		targetlanguagename = Language.objects.filter(pk=targetlanguage)[0].name
+		selectedtermbases = request.POST.getlist('selectedtermbases[]')	
 		if search[-1]=='*':
 			search=search[:-1]
 			normal=False
@@ -81,16 +87,17 @@ def create_post(request):
 			search=search[1:]
 			normal=False
 			start=False
+		if 'fulltext' in selectedtermbases:
+			
+			normal=False
+			start=False	
 		if len(search)>=3:
-			sourcelanguage = request.POST.get('source')
-			targetlanguage = request.POST.get('target')
+			
 			myuser=request.user
 			if not request.user.is_authenticated:
 				myuser = User.objects.get(username='anonymous')
 			termResult=UserTermbase.objects.filter(user=myuser)
-			sourcelanguagename = Language.objects.filter(pk=sourcelanguage)[0].name
-			targetlanguagename = Language.objects.filter(pk=targetlanguage)[0].name
-			selectedtermbases = request.POST.getlist('selectedtermbases[]')	
+			
 			print(selectedtermbases)
 			print('START',time.time())
 			source=''
@@ -108,9 +115,24 @@ def create_post(request):
 			print('START1',time.time())	
 			if not target:
 				print("icontains")
-				source = Term.objects.filter(lowvalue__contains=search, language=sourcelanguage, termbase__name__in=selectedtermbases)
+				svector=SearchQuery(search, config='english')
+				#elem=
+				print('stem',stem(search))
+				#source = Term.objects.filter(lowvalue__contains=search, language=sourcelanguage, termbase__name__in=selectedtermbases)
+				source = Term.objects.annotate(search=SearchVector('lowvalue', config='english')).filter(search=svector, language=sourcelanguage, termbase__name__in=selectedtermbases)
+				#source = Term.objects.filter(lowvalue__search=search, language=sourcelanguage, termbase__name__in=selectedtermbases)
 				source_entries = source.order_by('entry').values('entry').distinct()
 				target = Term.objects.filter(entry__in = source_entries, language=targetlanguage)[:hits]
+				
+				"""
+				#results3 = Term.objects.annotate(search=SearchVector('value', config='english')).
+				filter(search=SearchQuery(data["search"], config='english'), language=sourcelanguagename, termbase__name__in=data["selectedTermbases"]).
+				order_by('entry').values('entry').distinct()
+				
+			#restest = Term.objects.annotate(search=SearchVector('value', config='english'))
+			#Post.objects.annotate(search=SearchVector('body', config='german')).filter
+				"""
+				
 			print('START2',time.time())	
 			targetlength = 'Target terms found: '+str(target.count())
 			#counts='TOTAL TERMS: '+str(Term.objects.all().count())
@@ -249,6 +271,22 @@ def language_list(request):
 @api_view(['GET'])
 @csrf_exempt
 @permission_classes([IsAuthenticated, ])
+def dtype_update(request):
+	descriptions = []
+	alldescrip = Description.objects.all().values('type').distinct()
+	for value in alldescrip:
+		if value['type'] not in descriptions:
+			descriptions.append(value['type'])
+	for onedesc in descriptions:
+		newedescrip, nd =Dtype.objects.get_or_create(type=onedesc)
+		newedescrip.save
+	respond =  {'name': 'OK'}
+	return Response(respond, status=status.HTTP_201_CREATED)
+
+
+@api_view(['GET'])
+@csrf_exempt
+@permission_classes([IsAuthenticated, ])
 def termbase_list(request):
 	termbases = Termbase.objects.all()
 	serializer = TermbaseSerializer(termbases, many=True)
@@ -293,6 +331,7 @@ def index(request):
 					selectedtermbases = request.POST.getlist('checks[]')
 					seldescrip = request.POST.getlist('checks[]')
 					print("SEL:",seldescrip)
+					print('Selected',selectedtermbases)
 					#print ('SELTERMBASES',selectedtermbases)
 					# main DB query
 					source = Term.objects.filter(value__iexact=search, language=sourcelanguage, termbase__name__in=selectedtermbases)
@@ -341,7 +380,8 @@ def index(request):
 			#	print(onelang.name,count)
 			#	counts.append(onelang.name+': '+str(count))
 			#counts.append('TOTAL: '+str(Term.objects.all().count()))
-			alldescrip = Description.objects.all().values('type').distinct()
+			#alldescrip = Description.objects.all().values('type').distinct()
+			alldescrip = Dtype.objects.all().values('type')
 			for value in alldescrip:
 				if value['type'] not in descriptions:
 					descriptions.append(value['type'])
@@ -379,6 +419,7 @@ def index(request):
 			#	'user': myuser,
 				'counts': counts,
 				'descriptions': descriptions,
+				'fulltext':'full',
 				#'seldescrip': seldescrip,
 			}
 			return render(request, 'glos/index.html', context)
@@ -665,10 +706,13 @@ def processlanguage(entry, term, alldescrips, client, search, highlight):
 	if client or not highlight:
 		termgroup.value = term.value
 	else:
+		termgroup.value = term.value
 		test = re.findall(search, term.value, flags=re.IGNORECASE)
 		#print(test)
 		for ones in test:
 			termgroup.value = term.value.replace(ones, '<span style="color: red;">'+ones+'</span>')
+			
+				
 			#print('REPLACE',termgroup.value)
 
 	#termgroup.value = term.value

@@ -83,7 +83,6 @@ class LanguageSerializer(serializers.ModelSerializer):
         model = Language
         fields = ('name',)
         
-
 class DescriptionSerializer(serializers.Serializer):
 	value = serializers.CharField()
 	type = serializers.CharField()

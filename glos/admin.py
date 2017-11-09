@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Termbase, UserTermbase, Language, Term, Description, Hits
+from .models import Termbase, UserTermbase, Language, Term, Description, Hits, Dtype
 from django.utils.safestring import mark_safe
 from django.contrib.contenttypes.models import ContentType
 from django.http import HttpResponseRedirect
@@ -215,6 +215,7 @@ admin.site.register(Language)
 admin.site.register(Term, TermAdmin)
 admin.site.register(Description)
 admin.site.register(Hits)
+admin.site.register(Dtype)
 #admin.site.register(TM)
 #admin.site.register(TMPair, TMPairAdmin)
 #admin.site.register(UserTM)

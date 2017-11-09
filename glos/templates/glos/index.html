@@ -98,7 +98,6 @@
     	{% endfor %}
        
       
-        	
         
 				</div>
 	
@@ -120,6 +119,15 @@
                 <div class="col-md-4">
                     	<input type="submit" class="btn btn-info btn-lg btn-set"  id="but" value="SEARCH" />
                 </div>
+                <div class="col-md-3">
+                <label class="form-control input-cls-small">
+        	{% if 'fulltext'  in selectedtermbases %} 
+             
+                 <input   checked="checked" type="checkbox" name="fulltext" value="fulltext"> Force Full Text Search</input><br/></label>
+            {% else %}
+            	<input  type="checkbox" name="fulltext" value="fulltext"> Force Full Text Search</input><br/></label>
+            {% endif %}
+            </div>
             </div>
             </form>
         </div>
