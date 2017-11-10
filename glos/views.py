@@ -81,11 +81,12 @@ def create_post(request):
 				search=search[1:]
 				normal=False
 				start=False
-			if 'fulltext' in selectedtermbases:
-				normal=False
-				start=False	
 			if 'stemsearching' in selectedtermbases:
 				stem=True
+			if ('fulltext' in selectedtermbases) or ('stemsearching' in selectedtermbases):
+				normal=False
+				start=False	
+			
 			myuser=request.user
 			if not request.user.is_authenticated:
 				myuser = User.objects.get(username='anonymous')
