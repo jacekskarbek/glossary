@@ -35,7 +35,7 @@ from django.core.mail import EmailMessage
 from django.contrib.postgres.search import TrigramSimilarity
 from django.contrib.postgres.search import SearchQuery, SearchVector
 import re
-from stemming.porter2 import stem
+#from stemming.porter2 import stem
 
 
 class DescriptionItem:
@@ -61,43 +61,35 @@ def create_post(request):
 	if request.method == 'POST':
 		search = request.POST.get('search')
 		search=search.strip().lower()
-		hit=request.POST.get('hit')
-		hitstext=Hits.objects.filter(pk=hit)[0].hit
-		"""
-		if hitstext=='all':
-			all=True
-		else:
-			hits=int(hitstext)
-			all=False
-		print('HITS',hitstext)
-		"""
-		hits=int(hitstext)
-		normal=True
-		start=True
-		full = True
-		sourcelanguage = request.POST.get('source')
-		targetlanguage = request.POST.get('target')
-		sourcelanguagename = Language.objects.filter(pk=sourcelanguage)[0].name
-		targetlanguagename = Language.objects.filter(pk=targetlanguage)[0].name
-		selectedtermbases = request.POST.getlist('selectedtermbases[]')	
-		if search[-1]=='*':
-			search=search[:-1]
-			normal=False
-		if search[0]=='*':
-			search=search[1:]
-			normal=False
-			start=False
-		if 'fulltext' in selectedtermbases:
-			
-			normal=False
-			start=False	
 		if len(search)>=3:
-			
+			hit=request.POST.get('hit')
+			hitstext=Hits.objects.filter(pk=hit)[0].hit
+			hits=int(hitstext)
+			normal=True
+			start=True
+			full = True
+			stem=False
+			sourcelanguage = request.POST.get('source')
+			targetlanguage = request.POST.get('target')
+			sourcelanguagename = Language.objects.filter(pk=sourcelanguage)[0].name
+			targetlanguagename = Language.objects.filter(pk=targetlanguage)[0].name
+			selectedtermbases = request.POST.getlist('selectedtermbases[]')	
+			if search[-1]=='*':
+				search=search[:-1]
+				normal=False
+			if search[0]=='*':
+				search=search[1:]
+				normal=False
+				start=False
+			if 'fulltext' in selectedtermbases:
+				normal=False
+				start=False	
+			if 'stemsearching' in selectedtermbases:
+				stem=True
 			myuser=request.user
 			if not request.user.is_authenticated:
 				myuser = User.objects.get(username='anonymous')
 			termResult=UserTermbase.objects.filter(user=myuser)
-			
 			print(selectedtermbases)
 			print('START',time.time())
 			source=''
@@ -114,37 +106,26 @@ def create_post(request):
 				target = Term.objects.filter(entry__in = source_entries, language=targetlanguage)[:hits]	
 			print('START1',time.time())	
 			if not target:
-				print("icontains")
-				svector=SearchQuery(search, config='english')
-				#elem=
-				print('stem',stem(search))
-				#source = Term.objects.filter(lowvalue__contains=search, language=sourcelanguage, termbase__name__in=selectedtermbases)
-				source = Term.objects.annotate(search=SearchVector('lowvalue', config='english')).filter(search=svector, language=sourcelanguage, termbase__name__in=selectedtermbases)
-				#source = Term.objects.filter(lowvalue__search=search, language=sourcelanguage, termbase__name__in=selectedtermbases)
+				if stem:
+					print("STEM")
+					svector=SearchQuery(search, config='english')
+					#pvector=plainto_tsquery
+					source = Term.objects.annotate(search=SearchVector('lowvalue', config='english')).filter(search=svector, language=sourcelanguage, termbase__name__in=selectedtermbases)
+				else:
+					print("NOSTEM ************************************")
+					#source = Term.objects.annotate(search=SearchVector('lowvalue', config='english')).filter(search=search, language=sourcelanguage, termbase__name__in=selectedtermbases)
+					source = Term.objects.filter(lowvalue__contains=search, language=sourcelanguage, termbase__name__in=selectedtermbases)
 				source_entries = source.order_by('entry').values('entry').distinct()
 				target = Term.objects.filter(entry__in = source_entries, language=targetlanguage)[:hits]
-				
-				"""
-				#results3 = Term.objects.annotate(search=SearchVector('value', config='english')).
-				filter(search=SearchQuery(data["search"], config='english'), language=sourcelanguagename, termbase__name__in=data["selectedTermbases"]).
-				order_by('entry').values('entry').distinct()
-				
-			#restest = Term.objects.annotate(search=SearchVector('value', config='english'))
-			#Post.objects.annotate(search=SearchVector('body', config='german')).filter
-				"""
 				
 			print('START2',time.time())	
 			targetlength = 'Target terms found: '+str(target.count())
 			#counts='TOTAL TERMS: '+str(Term.objects.all().count())
 			tooshort = False
 			allTBX = target_array(source, target, myuser, False, search)
-			#alldescriptions = alldesc(allTBX)
-			#print (alldescriptions)
-		else:
-			tooshort=True
-		print('START3: ',time.time())
-		print(targetlength)
-		context = {
+			print('START3: ',time.time())
+			print(targetlength)
+			context = {
 			'too_short': tooshort,
 			'has_permission': True,
 			'termbases': termResult,
@@ -155,10 +136,18 @@ def create_post(request):
 			'targetlength': targetlength,
 			'hits': hitstext,
 			#'user': myuser,
-		}
-		
-		html = render_to_string('glos/search.html', context)
-		return HttpResponse(html)
+			}
+			
+			html = render_to_string('glos/search.html', context)
+			return HttpResponse(html)
+		else:
+			tooshort=True
+			context = {
+			'too_short': tooshort,
+			'has_permission': True,	
+			}
+			html = render_to_string('glos/search.html', context)
+			return HttpResponse(html)
 
 @api_view(['POST'])
 @csrf_exempt
@@ -385,8 +374,7 @@ def index(request):
 			for value in alldescrip:
 				if value['type'] not in descriptions:
 					descriptions.append(value['type'])
-					
-			print(alldescriptions)
+			#print(alldescriptions)
 			counts='TOTAL TERMS: '+str(Term.objects.all().count())
 			#form = Termbases(user=request.user)
 			form2 = Sourcelanguage(initial={'source': allLang[0]})
@@ -702,7 +690,7 @@ def processlanguage(entry, term, alldescrips, client, search, highlight):
 	else:
 		termGrp=language.termGrp
 	termgroup = TermGroup()  #  termgroup element
-	print(search, client)
+	#print(search, client)
 	if client or not highlight:
 		termgroup.value = term.value
 	else:
@@ -716,7 +704,7 @@ def processlanguage(entry, term, alldescrips, client, search, highlight):
 			#print('REPLACE',termgroup.value)
 
 	#termgroup.value = term.value
-	print("Term value", term.value)
+#	print("Term value", term.value)
 	termgroup.id = term.pk  #  id number of term
 	
 	termgroup.descripGrp = alldescrips.filter(level=Description.TERM_LEVEL)
@@ -920,3 +908,23 @@ def checktodelete_old(entryID, entry):
 						_resid= Description.objects.filter(term = isproject.term, name='Project', type='Project', value__contains=project,  level=Description.ENTRY_LEVEL)
 						isproject.term.delete()
 						print("deleted")
+						
+"""
+FULLTEXT
+#elem=
+				#print('stem',stem(search))
+				#source = Term.objects.filter(lowvalue__contains=search, language=sourcelanguage, termbase__name__in=selectedtermbases)
+				source = Term.objects.annotate(search=SearchVector('lowvalue', config='english')).filter(search=svector, language=sourcelanguage, termbase__name__in=selectedtermbases)
+				#source = Term.objects.filter(lowvalue__search=search, language=sourcelanguage, termbase__name__in=selectedtermbases)
+				source_entries = source.order_by('entry').values('entry').distinct()
+				target = Term.objects.filter(entry__in = source_entries, language=targetlanguage)[:hits]
+				
+				
+				#results3 = Term.objects.annotate(search=SearchVector('value', config='english')).
+				filter(search=SearchQuery(data["search"], config='english'), language=sourcelanguagename, termbase__name__in=data["selectedTermbases"]).
+				order_by('entry').values('entry').distinct()
+				
+			#restest = Term.objects.annotate(search=SearchVector('value', config='english'))
+			#Post.objects.annotate(search=SearchVector('body', config='german')).filter
+			
+"""
