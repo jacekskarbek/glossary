@@ -11,7 +11,7 @@ function send_form()
 	 console.log("create post is working!") // sanity check
      console.log($('#id_searchTerm').val())
      var checkbox_value = []
-     $('#clients-sec').html("<div class='container'><div class='row borderb'><div class='col-md-3'><b>Searching: <span style='color: red;'>"+$('#id_searchTerm').val()+"</span></b></div></div></div>");
+     $('#clients-sec').html("<div class='container'><div class='row borderb'><div class='col-md-3'><b>Szukam: <span style='color: red;'>"+$('#id_searchTerm').val()+"</span></b></div></div></div>");
 	 // add the error to the dom
     
     $(":checkbox").each(function () {
@@ -122,7 +122,7 @@ function send_form()
 	 console.log("create post is working!") // sanity check
      console.log($('#id_searchTerm').val())
      var checkbox_value = []
-     $('#clients-sec').html("<div class='container'><div class='row borderb'><div class='col-md-3'><b>Searching: <span style='color: red;'>"+$('#id_searchTerm').val()+"</span></b></div></div></div>");
+     $('#clients-sec').html("<div class='container'><div class='row borderb'><div class='col-md-3'><b>Szukam: <span style='color: red;'>"+$('#id_searchTerm').val()+"</span></b></div></div></div>");
 	 // add the error to the dom
     
     $(":checkbox").each(function () {
@@ -157,7 +157,7 @@ function send_form()
 
         // handle a non-successful response
         error : function(xhr,errmsg,err) {
-            $('#clients-sec').html("<div class='alert-box alert radius' data-alert>Oops!!! We have encountered an error: "+errmsg+
+            $('#clients-sec').html("<div class='alert-box alert radius' data-alert>Wystąpił błąd: "+errmsg+
                 " <a href='#' class='close'>&times;</a></div>"); // add the error to the dom
             console.log(xhr.status + ": " + xhr.responseText); // provide a bit more info about the error to the console
         }

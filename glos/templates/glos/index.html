@@ -1,6 +1,6 @@
 
 
-{% extends "glos/baselocstar.html" %}
+{% extends "glos/baselsp.html" %}
 {% load i18n static %}
 
 
@@ -16,7 +16,7 @@
         <form action="" method="post" id="test" >  
         <table >
         
-            <label class="form-control input-cls-small" >Termbases</label>
+            <label class="form-control input-cls-small" >Słowniki</label>
         
         {% for termbase in termbases %}
             
@@ -70,7 +70,7 @@
 				-->
 				<div class="col-md-3">                              
         				
-       <label class="form-control input-cls-small" >Descriptions</label>
+       <label class="form-control input-cls-small" >Opisy</label>
        <div style="border:2px solid #ccc;  height: 100px; overflow-y: scroll;">
         	{% for description in descriptions %}
         {% if description  in selectedtermbases %} 
@@ -123,9 +123,9 @@
                 <label class="form-control input-cls-small">
         	{% if 'fulltext'  in selectedtermbases %} 
              
-                 <input   checked="checked" type="checkbox" name="fulltext" value="fulltext"> Force Full Text Search</input><br/></label>
+                 <input   checked="checked" type="checkbox" name="fulltext" value="fulltext"> Wyszukiwanie pełnotekstowe</input><br/></label>
             {% else %}
-            	<input  type="checkbox" name="fulltext" value="fulltext"> Force Full Text Search</input><br/></label>
+            	<input  type="checkbox" name="fulltext" value="fulltext"> Wyszukiwanie pełnotekstowe</input><br/></label>
             {% endif %}
             </div>
             
@@ -133,9 +133,9 @@
 	                <label class="form-control input-cls-small">
 	        	{% if 'stemsearching'  in selectedtermbases %} 
 	             
-	                 <input   checked="checked" type="checkbox" name="stemsearching" value="stemsearching"> Stem/Lemma Based Search</input><br/></label>
+	                 <input   checked="checked" type="checkbox" name="stemsearching" value="stemsearching"> Wyszukiwanie wg rdzenii*</input><br/></label>
 	            {% else %}
-	            	<input  type="checkbox" name="stemsearching" value="stemsearching"> Stem/Lemma Based Search</input><br/></label>
+	            	<input  type="checkbox" name="stemsearching" value="stemsearching"> Wyszukiwanie wg rdzeni*</input><br/></label>
 	            {% endif %}
 	            </div>
            
@@ -264,9 +264,9 @@
 		
 		{% else %}
 			{% if too_short %}
-			<tr>Query too short. Must have minimum 3 characters!</tr>
+			<tr>Wprowadź minimum trzy znaki!</tr>
 			{% else %}
-			<tr> <span style="color: red;">No results...</span></tr>
+			<tr> <span style="color: red;">Nic nie znaleziono...</span></tr>
 			{% endif %}
 		{% endif %}
          </table>

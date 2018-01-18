@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*- 
 from django.shortcuts import render
 from django import forms
 from django.forms import formset_factory, modelformset_factory
@@ -51,10 +52,11 @@ class TermBase:
 class TBelement:
 	pass
 def lspsoftware (request):
-    return HttpResponseRedirect('http://www.lspsoftware.pl')
+    return HttpResponseRedirect('http://www.lspsoftware.pl/uslugi/locterms-serwer-terminologii-online')
     
-#def handler404(request):
-#    return render(request, '404.html', status=404)
+def error_404(request):
+        data = {}
+        return render(request,'glos/404.html', data)
 
 
 def create_post(request):
@@ -121,7 +123,7 @@ def create_post(request):
 				
 			print('START2',time.time())	
 			targetlength = 'Target terms found: '+str(target.count())
-			#counts='TOTAL TERMS: '+str(Term.objects.all().count())
+			#counts='Liczba terminów: '+str(Term.objects.all().count())
 			tooshort = False
 			allTBX = target_array(source, target, myuser, False, search)
 			print('START3: ',time.time())
@@ -138,8 +140,10 @@ def create_post(request):
 			'hits': hitstext,
 			#'user': myuser,
 			}
-			
+			#print("uuaa", context)
 			html = render_to_string('glos/search.html', context)
+			
+			#print("a")
 			return HttpResponse(html)
 		else:
 			tooshort=True
@@ -148,6 +152,7 @@ def create_post(request):
 			'has_permission': True,	
 			}
 			html = render_to_string('glos/search.html', context)
+			#print(html)
 			return HttpResponse(html)
 
 @api_view(['POST'])
@@ -298,7 +303,12 @@ def termbase(request):
 def index(request):
 	#token = Token.objects.get_or_create(user=request.user)
 	#print (token)
-	#if request.user.is_authenticated:
+		if request.user.is_authenticated:
+			auten=True
+			user = request.user
+		else:
+			auten=False
+			user = User.objects.get(username='anonymous')
 		descriptions = []
 		#descriptions.append('all')
 		if request.method == 'POST':
@@ -354,7 +364,8 @@ def index(request):
 					'targetlanguage':targetlanguagename,
 					'descriptions': descriptions,
 					'seldescrip': seldescrip,
-				#	'user': myuser,
+					'user': user,
+					'auten': auten,
 					#'counts': counts,
 				}
 				
@@ -376,7 +387,7 @@ def index(request):
 				if value['type'] not in descriptions:
 					descriptions.append(value['type'])
 			#print(alldescriptions)
-			counts='TOTAL TERMS: '+str(Term.objects.all().count())
+			
 			#form = Termbases(user=request.user)
 			form2 = Sourcelanguage(initial={'source': allLang[0]})
 			form3 = Targetlanguage(initial={'target': allLang[1]})
@@ -396,6 +407,13 @@ def index(request):
 			for desc in descriptions:
 				selectedtermbases.append(desc)
 			#selectedtermbases = termbasesResult
+			sourcelanguage = Language.objects.all()[0]
+			targetlanguage = Language.objects.all()[1]
+			#sourceall = Term.objects.filter(language=sourcelanguage, termbase__name__in=selectedtermbases)
+			#source_entries_all = sourceall.order_by('entry').values('entry').distinct()
+			#targetall = Term.objects.filter(entry__in = source_entries_all, language=targetlanguage).count()
+			counts='Terminów razem: '+str(Term.objects.all().count())
+			#counts='Liczba terminów: '+str(targetall)
 			print ('chosen',selectedtermbases)
 			context = {
 				'has_permission': True,
@@ -405,10 +423,11 @@ def index(request):
 				'form2': form2,
 				'form3': form3,
 				'hitform':hitform,
-			#	'user': myuser,
+				'user': user,
 				'counts': counts,
 				'descriptions': descriptions,
 				'fulltext':'full',
+				'auten': auten,
 				#'seldescrip': seldescrip,
 			}
 			return render(request, 'glos/index.html', context)

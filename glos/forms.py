@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*- 
 from django import forms
 from .models import UserTermbase, Language, Hits
 class NameForm(forms.Form):
@@ -9,13 +10,13 @@ class ContactForm(forms.Form):
     email = forms.EmailField(required=True, label='', label_suffix="", max_length=100, widget=forms.EmailInput(attrs={'class' : 'contactSearchBar', 'placeholder': 'Email Address'}))
     message = forms.CharField(required=True, label='', label_suffix="", max_length=100, widget=forms.Textarea(attrs={'class' : 'contactSearchBar', 'placeholder': 'Your message'}))
 class Sourcelanguage(forms.Form):
-    source = forms.ModelChoiceField(Language.objects, label='Source language', widget=forms.Select(attrs={'class':'form-control input-cls-small'}))
+    source = forms.ModelChoiceField(Language.objects, label='Język źródłowy', widget=forms.Select(attrs={'class':'form-control input-cls-small'}))
 
 class Targetlanguage(forms.Form):
-    target = forms.ModelChoiceField(Language.objects, label='Target language', widget=forms.Select(attrs={'class':'form-control input-cls-small'}))
+    target = forms.ModelChoiceField(Language.objects, label='Język docelowy', widget=forms.Select(attrs={'class':'form-control input-cls-small'}))
    
 class SearchHits(forms.Form):
-    hit = forms.ModelChoiceField(Hits.objects, label='Search Hits', widget=forms.Select(attrs={'class':'form-control input-cls-small'}))
+    hit = forms.ModelChoiceField(Hits.objects, label='Liczba wyszukań', widget=forms.Select(attrs={'class':'form-control input-cls-small'}))
     
 class DocumentForm(forms.Form):
     docfile = forms.FileField(

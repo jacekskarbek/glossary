@@ -35,24 +35,16 @@
                 
             </div>
             <div class="navbar-collapse collapse move-me">
-               
-            
                 <ul class="nav navbar-nav navbar-right set-links">
-                    
-                     {% if auten %}
-                     <limenu><a href="{% url 'logout' %}" >Wyloguj się</a></limenu>
-                     {% else %}
-                    <limenu><a href="{% url 'login' %}" >Zaloguj się</a></limenu>
-                    {% endif %}
-                    
-                </ul>
-                 <ul class="nav navbar-nav navbar-right set-links">
-                    <limenu><a href="{% url 'index' %}" class="active-menu-item">LocTerms</a></limenu>
-                     <limenu><a href="{% url 'lspsoftware' %}">LspSoftware</a></limenu>
+                    <limenu><a <a href="{% url 'index' %}" class="active-menu-item">LocTerms</a></li>
+                     <limenu><a href="{% url 'lspsoftware' %}">LspSoftware</a></li>
                      
+                    <limenu><a href="{% url 'login' %}" >Login</a></li>
+                    
                     
                 </ul>
             </div>
+
         </div>
     </div>
     <!--MENU SECTION END
@@ -82,37 +74,36 @@
 
 
 {% endblock %}
-   
+    <!--CLIENTS SECTION END-->
+	   
     
   
-   
-     <!--FOOTER SECTION END-->
-    <div class="copy-txt">
-         <div class="container">
-          <div class="row">
-<div class="col-md-6">
-  
+    <section id="footer-sec" >
+        <div class="container">
+            <div class="row">
+<div class="col-md-12">
+   <h4>Informacje</h4>
     <p style="padding-right:50px;">
-        Właścicielem marki LocTerms.pl jest firma LSP Software sp. zo.o.
-        	 
-    </p>
-</div>
-<div class="col-md-6">
-  
-    <p style="padding-right:50px;">
-        	 &copy 2017 LspSoftware | Wszelkie prawa zastrzeżone. 
-    </p>
-</div>
-<div class="col-md-6">
-  
-    <p style="padding-right:50px;">
-        <a href="{% static "assetslsp/regulamin.pdf" %}">Regulamin serwisu</a>
+        Właścicielem marki TERMINOLOGIA-ONLINE<br>jest firma LSP Software sp. zo.o.
+        	</a>
     </p>
 </div>
                
 
 </div>
-       
+               
+            </div>
+               
+        </div>
+    </section> 
+     <!--FOOTER SECTION END-->
+    <div class="copy-txt">
+         <div class="container">
+        <div class="row">
+<div class="col-md-12 set-foot" >
+    &copy 2017 LspSoftware | Wszelkie prawa zastrzeżone. 
+</div>
+            </div>
                    </div>
     </div>
     
@@ -123,7 +114,7 @@
     <!-- <script src="https://code.jquery.com/jquery-3.1.0.min.js"></script> -->
     <!-- <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.js"></script> -->
     <script src="{% static "assetslsp/js/jquery.min.js" %}"></script>
- <script src="{% static "assetslsp/js/main6.js" %}"></script> 
+ <script src="{% static "assetslsp/js/main3.js" %}"></script> 
 	
 	<script>
     		var waiturl = "{% static "assets/images/loader.gif" %}";

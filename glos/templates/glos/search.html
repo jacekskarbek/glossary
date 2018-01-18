@@ -68,7 +68,7 @@
 	            			 <span style="color: green;"><b>{% autoescape off %}{{ term.value  }} {% endautoescape %} </b></a></span><br>
 	            		{% else %}
 	            		<a  href="{% url 'lspsoftware'  %}">
-	            			<b>---click here to get access---  </b></a><br>
+	            			<b>---kliknij, aby uzyskać dostęp---</b></a><br>
 	            		{% endif%}
 	            			{% for desc in term.descripGrp %}
 	            			{% if desc.type in selectedtermbases %}
@@ -117,9 +117,9 @@
 					
 		{% else %}
 			{% if too_short %}
-			<tr><span style="color: red;">Query too short. Must have minimum 3 characters!</span></tr>
+			<tr><span style="color: red;">Wprowadź minimum trzy znaki!</span></tr>
 			{% else %}
-			<tr> <span style="color: red;">No results...</span></tr>
+			<tr> <span style="color: red;">Nic nie znaleziono...</span></tr>
 			{% endif %}
 		{% endif %}
          </table>
