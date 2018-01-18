@@ -123,13 +123,21 @@
                 <label class="form-control input-cls-small">
         	{% if 'fulltext'  in selectedtermbases %} 
              
-                 <input   checked="checked" type="checkbox" name="fulltext" value="fulltext"> Wyszukiwanie pełnotekstowe </input><br/></label>
+                 <input   checked="checked" type="checkbox" name="fulltext" value="fulltext"> Wyszukiwanie pełnotekstowe</input><br/></label>
             {% else %}
             	<input  type="checkbox" name="fulltext" value="fulltext"> Wyszukiwanie pełnotekstowe</input><br/></label>
             {% endif %}
             </div>
             
-	            
+	            <div class="col-md-3">
+	                <label class="form-control input-cls-small">
+	        	{% if 'stemsearching'  in selectedtermbases %} 
+	             
+	                 <input   checked="checked" type="checkbox" name="stemsearching" value="stemsearching"> Wyszukiwanie wg rdzenii*</input><br/></label>
+	            {% else %}
+	            	<input  type="checkbox" name="stemsearching" value="stemsearching"> Wyszukiwanie wg rdzeni*</input><br/></label>
+	            {% endif %}
+	            </div>
            
             </div>
             </form>
