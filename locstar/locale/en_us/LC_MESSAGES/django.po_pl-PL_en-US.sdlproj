@@ -2957,6 +2957,11 @@
         <SettingsGroup Id="FileViewServiceSettings">
           <Setting Id="SelectedTargetLanguageCode">en-US</Setting>
         </SettingsGroup>
+        <SettingsGroup Id="Plugin.AnyTM.SourceLanguages">
+          <Setting Id="HasMixedSourceLanguages">False</Setting>
+          <Setting Id="AutoDetectSourceLanguage">True</Setting>
+          <Setting Id="SourceLanguages">pl-PL</Setting>
+        </SettingsGroup>
       </SettingsBundle>
     </SettingsBundle>
     <SettingsBundle Guid="ff2e89a1-5a44-4a99-9737-8630aad2ed33">
