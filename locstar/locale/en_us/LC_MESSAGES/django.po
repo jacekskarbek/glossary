@@ -1,0 +1,1249 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-01-30 10:40+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: .\templates\locstar\base.html:8
+msgid "LocStar - Tłumaczenie, lokalizacja, zarządzanie projektami, testowanie"
+msgstr "LocStar - Translation, localization, project management, testing"
+
+#: .\templates\locstar\base.html:44
+msgid "Godziny pracy"
+msgstr "Opening Hours"
+
+#: .\templates\locstar\base.html:45
+msgid "Pon-Pią: 8.00 - 17.00"
+msgstr "Mon-Fri: 8.00 a.m. - 5.00 p.m."
+
+#: .\templates\locstar\base.html:50
+msgid "Telefon"
+msgstr "Phone"
+
+#: .\templates\locstar\base.html:56
+msgid "Znajdź nas"
+msgstr "Find Us"
+
+#: .\templates\locstar\base.html:63
+msgid "E-mail"
+msgstr "E-mail"
+
+#: .\templates\locstar\base.html:79 .\templates\locstar\base.html:283
+#: .\templates\locstar\locstar.html:194 .\templates\locstar\onas.html:13
+msgid "O firmie"
+msgstr "About"
+
+#: .\templates\locstar\base.html:80 .\templates\locstar\base.html:284
+#: .\templates\locstar\locstar.html:226 .\templates\locstar\servicegrid.html:13
+#: .\templates\locstar\servicegrid.html:25
+msgid "Usługi"
+msgstr "Services"
+
+#: .\templates\locstar\base.html:82 .\templates\locstar\base.html:345
+#: .\templates\locstar\servicegrid.html:39
+#: .\templates\locstar\translation.html:10
+#: .\templates\locstar\translation.html:22
+msgid "Tłumaczenie"
+msgstr "Translation"
+
+#: .\templates\locstar\base.html:83 .\templates\locstar\base.html:346
+#: .\templates\locstar\localization.html:10
+#: .\templates\locstar\localization.html:22
+#: .\templates\locstar\servicegrid.html:51
+msgid "Lokalizacja oprogramowania"
+msgstr "Software Localization"
+
+#: .\templates\locstar\base.html:84 .\templates\locstar\base.html:347
+#: .\templates\locstar\servicegrid.html:62 .\templates\locstar\website.html:10
+#: .\templates\locstar\website.html:22
+msgid "Lokalizacja witryn internetowych"
+msgstr "Website Localization"
+
+#: .\templates\locstar\base.html:85 .\templates\locstar\base.html:348
+#: .\templates\locstar\other.html:10 .\templates\locstar\other.html:22
+#: .\templates\locstar\servicegrid.html:77
+msgid "Inne usługi"
+msgstr "Other Services"
+
+#: .\templates\locstar\base.html:86 .\templates\locstar\base.html:349
+#: .\templates\locstar\servicegrid.html:88 .\templates\locstar\special.html:13
+#: .\templates\locstar\special.html:25
+msgid "Oferta specjalna"
+msgstr "Special Offer"
+
+#: .\templates\locstar\base.html:87 .\templates\locstar\base.html:350
+#: .\templates\locstar\prices.html:13 .\templates\locstar\prices.html:25
+#: .\templates\locstar\servicegrid.html:99
+msgid "Ceny"
+msgstr "Pricing"
+
+#: .\templates\locstar\base.html:89 .\templates\locstar\base.html:285
+#: .\templates\locstar\base.html:353 .\templates\locstar\locstar.html:237
+#: .\templates\locstar\technologie.html:13
+#: .\templates\locstar\technologie.html:25
+msgid "Technologie"
+msgstr "Technologies"
+
+#: .\templates\locstar\base.html:91 .\templates\locstar\base.html:355
+#: .\templates\locstar\technologie.html:40 .\templates\locstar\tm.html:13
+#: .\templates\locstar\tm.html:25
+msgid "Pamięć tłumaczeń"
+msgstr "Translation Memory"
+
+#: .\templates\locstar\base.html:92 .\templates\locstar\base.html:356
+#: .\templates\locstar\technologie.html:51
+#: .\templates\locstar\terminology.html:13
+#: .\templates\locstar\terminology.html:25
+msgid "Zarządzanie terminologią"
+msgstr "Terminology Management"
+
+#: .\templates\locstar\base.html:93 .\templates\locstar\base.html:357
+#: .\templates\locstar\mt.html:13 .\templates\locstar\mt.html:25
+#: .\templates\locstar\technologie.html:63
+msgid "Tłumaczenie maszynowe"
+msgstr "Machine Translation"
+
+#: .\templates\locstar\base.html:94 .\templates\locstar\base.html:358
+#: .\templates\locstar\tools.html:13 .\templates\locstar\tools.html:25
+msgid "Narzędzia tłumaczeniowe"
+msgstr "Translation Tools"
+
+#: .\templates\locstar\base.html:98 .\templates\locstar\base.html:286
+#: .\templates\locstar\base.html:361 .\templates\locstar\customers.html:9
+#: .\templates\locstar\customers.html:21 .\templates\locstar\locstar.html:263
+msgid "Klienci"
+msgstr "Customers"
+
+#: .\templates\locstar\base.html:99 .\templates\locstar\base.html:178
+#: .\templates\locstar\base.html:287 .\templates\locstar\base.html:362
+#: .\templates\locstar\locstar.html:70 .\templates\locstar\locstar.html:132
+#: .\templates\locstar\locstar.html:195 .\templates\locstar\locstar.html:322
+msgid "Kontakt"
+msgstr "Contact"
+
+#: .\templates\locstar\base.html:103
+msgid "Dział zamówień"
+msgstr "Procurement Department"
+
+#: .\templates\locstar\base.html:115
+msgid "Dział rekrutacji"
+msgstr "Recruitment Department"
+
+#: .\templates\locstar\base.html:171
+msgid "Back to form"
+msgstr "Back to form"
+
+#: .\templates\locstar\base.html:181
+msgid ""
+"Please contact us using the information below. For additional information on "
+"our translation and localization services, please visit the appropriate page "
+"on our site."
+msgstr ""
+"Please contact us using the information below. For additional information on our translation and localization services, please visit the appropriate page on our site."
+
+#: .\templates\locstar\base.html:225
+msgid "Wyślij"
+msgstr "Send"
+
+#: .\templates\locstar\base.html:241
+msgid "Biuro"
+msgstr "Office"
+
+#: .\templates\locstar\base.html:243
+msgid "Budynek:"
+msgstr "Premises:"
+
+#: .\templates\locstar\base.html:245
+msgid "Trzy piętra, sala + 7 pokoi"
+msgstr "Three stories, conference room + 7 rooms"
+
+#: .\templates\locstar\base.html:247
+msgid "Sprzęt: "
+msgstr "Equipment: "
+
+#: .\templates\locstar\base.html:249
+msgid "5 serwerów, 20 stacji roboczych, archiwizery taśmowe"
+msgstr "5 servers, 20 workstations, tape archives"
+
+#: .\templates\locstar\base.html:251
+msgid "Łączność: "
+msgstr "Connection: "
+
+#: .\templates\locstar\base.html:253
+msgid "Łącze optyczne 70 Mbs Downlink + 70 Mbs Uplink"
+msgstr "Fiber optic 70 Mb/s Downlink + 70 Mb/s Uplink"
+
+#: .\templates\locstar\base.html:279
+msgid "Łącza"
+msgstr "Links"
+
+#: .\templates\locstar\base.html:296
+msgid "Media społecznościowe"
+msgstr "Social media"
+
+#: .\templates\locstar\base.html:317
+#, python-format
+msgid ""
+"2017 © All rights reserved by <span><a href=\"%(locstar_url)s\">LocStar</a></"
+"span>"
+msgstr ""
+"2017 © All rights reserved by <span><a href=\"%(locstar_url)s\">LocStar</a></span>"
+
+#: .\templates\locstar\base.html:337
+msgid "Start <i  aria-hidden=\"true\"></i>"
+msgstr "Home <i  aria-hidden=\"true\"></i>"
+
+#: .\templates\locstar\base.html:340
+msgid "O firmie <i  aria-hidden=\"true\"></i>"
+msgstr "About <i  aria-hidden=\"true\"></i>"
+
+#: .\templates\locstar\base.html:343
+msgid "Services <i class=\"fa fa-angle-down\" aria-hidden=\"true\"></i>"
+msgstr "Usługi <i class=\"fa fa-angle-down\" aria-hidden=\"true\"></i>"
+
+#: .\templates\locstar\customers.html:22
+msgid ""
+"„Wiele firm może pochwalić się tłumaczeniami dla znanych firm. Ale to "
+"właśnie LocStar jest firmą, która obsługuje najważniejsze projekty i "
+"sztandarowe produkty liderów w branży.”"
+msgstr ""
+"„A lot of agencies might brag about having done translations for well-known companies. But LocStar is the one out there working on industry leaders' most important projects and flagship products.”"
+
+#: .\templates\locstar\customers.html:27
+#, python-format
+msgid ""
+"Od <span style=\"font-size: 200%%; color: blue;\">A</span> do <span style="
+"\"font-size: 200%%; color: green;\">Z</span>"
+msgstr ""
+"From <span style=\"font-size: 200%%; color: blue;\">A</span> to <span style=\"font-size: 200%%; color: green;\">Z</span>"
+
+#: .\templates\locstar\customers.html:28
+msgid ""
+"Nasze doświadczenie obejmuje tłumaczenia dla następujących klientów "
+"końcowych:"
+msgstr ""
+"Our portfolio includes translations for the following end clients:"
+
+#: .\templates\locstar\customers.html:29
+#, python-format
+msgid ""
+"<span style=\"font-size: 200%%; color: blue;\">A</span>BB, Adobe, Amazon, "
+"Apple, Autodesk, Avast, AVG, Cisco, Clarion, Fluke, F-Secure, General "
+"Electric, Fedex, Google, Godaddy, HP, IBM, Logitech, Nokia, Microsoft, "
+"Novell, Oracle, Pinnacle, Roche, Rockwell, ServiceNow, Siemens, Skype, Sony, "
+"Toshiba, Trend Micro, Yahoo, Y Soft, <span style=\"font-size: 200%%; color: "
+"green;\">Z</span>yxel…"
+msgstr ""
+"<span style=\"font-size: 200%%; color: blue;\">A</span>BB, Adobe, Amazon, Apple, Autodesk, Avast, AVG, Cisco, Clarion, Fluke, F-Secure, General Electric, Fedex, Google, GoDaddy, HP, IBM, Logitech, Nokia, Microsoft, Novell, Oracle, Pinnacle, Roche, Rockwell, ServiceNow, Siemens, Skype, Sony, Toshiba, Trend Micro, Yahoo, Y Soft, and <span style=\"font-size: 200%%; color: green;\">Z</span>yxel..."
+
+#: .\templates\locstar\customers.html:31
+msgid ""
+"Ponadto na bieżąco tłumaczymy  materiały dla wielu innych firm, które mają "
+"równie wysokie oczekiwania co do jakości swoich zlokalizowanych produktów "
+"jak liderzy w branży."
+msgstr ""
+"Moreover, we translate materials on an ongoing basis for many other companies who also have high expectations regarding the quality of their localized products, being industry leaders."
+
+#: .\templates\locstar\customers.html:33
+msgid ""
+"Nasza specjalizacja to tłumaczenia IT, ale również elektronika użytkowa, "
+"przemysł, biznes, turystyka, rozrywka oraz gry komputerowe."
+msgstr ""
+"We specialize in IT translations, as well as consumer electronics, heavy industry, business, tourism, entertainment, and computer games."
+
+#: .\templates\locstar\index.html:34
+msgid "You don't have any termbases."
+msgstr "Nie masz żadnych baz terminologicznych."
+
+#: .\templates\locstar\localization.html:23
+msgid ""
+"„W lokalizacji oprogramowania LocStar ma ułatwione zadanie. Ponieważ od "
+"ponad 20 lat tłumaczą najważniejsze produkty dla polskiej branży "
+"informatycznej, to de facto sami tę terminologią tworzą i nią zarządzają”."
+msgstr ""
+"„When it comes to software localization, LocStar has a huge head start, since, having translated the most important products in Poland's IT industry for over 20 years, it's been de facto creating and managing Polish IT terminology.”"
+
+#: .\templates\locstar\localization.html:27
+msgid ""
+"Lokalizacja jest procesem bardziej kompleksowym niż tłumaczenie, ponieważ ma "
+"na celu również dostosowanie zawartości do potrzeb rynku, uwzględniając jego "
+"specyfikę, normy kulturowe i językowe."
+msgstr ""
+"Localization is a more comprehensive process than translation, because it also aims to adapt content to market needs, taking into account its specificity, as well as cultural and linguistic norms."
+
+#: .\templates\locstar\localization.html:28
+msgid ""
+"Nasza oferta lokalizacji oprogramowania (interfejsu użytkownika) z języka "
+"angielskiego na język polski obejmuje:"
+msgstr ""
+"Our English to Polish localization services for software (the user interface) include:"
+
+#: .\templates\locstar\localization.html:31
+msgid ""
+"oprogramowanie komputerowe (w tym zarówno proste programy, jak i złożone "
+"systemy operacyjne, systemy baz danych, systemy zarządzania itp.)"
+msgstr ""
+"computer software (including both simple programs and complex operating systems, database systems, management systems, etc.)"
+
+#: .\templates\locstar\localization.html:32
+msgid "aplikacje i systemy mobilne"
+msgstr "mobile applications and systems"
+
+#: .\templates\locstar\localization.html:33
+msgid ""
+"dokumentacja i pliki pomocy do oprogramowania (w ramach lokalizacji tych "
+"produktów lub oddzielnie)"
+msgstr ""
+"documentation and help files for software (either as part of the localization of those products, or separately)"
+
+#: .\templates\locstar\localization.html:34
+msgid "oprogramowanie sterujące sprzętu elektronicznego i maszyn"
+msgstr "software that controls electronic equipment and machines"
+
+#: .\templates\locstar\localization.html:35
+msgid "gry i oprogramowanie rozrywkowe"
+msgstr "games and entertainment software"
+
+#: .\templates\locstar\localization.html:36
+msgid "programy edukacyjne"
+msgstr "educational programs"
+
+#: .\templates\locstar\localization.html:37 .\templates\locstar\website.html:37
+msgid "inne"
+msgstr "other"
+
+#: .\templates\locstar\locstar.html:32
+msgid "Zlokalizuj swoje produkty <br>i opanuj nowe rynki"
+msgstr "Localize your products <br>and break into new markets"
+
+#: .\templates\locstar\locstar.html:50
+#| msgid ""
+#| "Przetłumaczyliśmy już ponad 150 milionów słów, a efekty naszej pracy "
+#| "<br>można zobaczyć w postaci zlokalizowanych produktów na każdym "
+#| "komputerze i telefonie. <br>Poznaj naszą ofertę i przekonaj się, dlaczego "
+#| "warto mieć nas jako swojego dostawcę tłumaczeń."
+msgid ""
+"Przetłumaczyliśmy już ponad 150 milionów słów, a efekty naszej pracy można "
+"<br>zobaczyć w postaci zlokalizowanych produktów na każdym komputerze <br>i "
+"telefonie. Poznaj naszą ofertę i przekonaj się, dlaczego warto mieć nas "
+"<br>jako swojego dostawcę tłumaczeń."
+msgstr ""
+"We've translated over 150 million words, and you can see the effects of our work <br>in the form of localized products on every computer and phone. <br>See what we have to offer and find out why it's worth using us as your translation supplier."
+
+#: .\templates\locstar\locstar.html:69 .\templates\locstar\locstar.html:131
+#: .\templates\locstar\locstar.html:228 .\templates\locstar\locstar.html:239
+#: .\templates\locstar\locstar.html:265 .\templates\locstar\locstar.html:288
+#: .\templates\locstar\servicegrid.html:45
+#: .\templates\locstar\servicegrid.html:56
+#: .\templates\locstar\servicegrid.html:68
+#: .\templates\locstar\servicegrid.html:83
+#: .\templates\locstar\servicegrid.html:94
+#: .\templates\locstar\servicegrid.html:105
+#: .\templates\locstar\technologie.html:45
+#: .\templates\locstar\technologie.html:57
+#: .\templates\locstar\technologie.html:68
+#: .\templates\locstar\technologie.html:80
+msgid "Dowiedz się więcej"
+msgstr "Learn more"
+
+#: .\templates\locstar\locstar.html:94
+#| msgid "Sprawdź naszą jakość. Bezpłatnie.<br/> Bez zobowiązań. Bez ryzyka."
+msgid "Oferta specjalna. Bezpłatna.<br>Bez zobowiązań."
+msgstr "Check out our quality. For free.<br/> No obligation. No risk."
+
+#: .\templates\locstar\locstar.html:112
+#| msgid ""
+#| "Jesteśmy przekonani o naszej jakości. <br>Dlatego "
+#| "przetłumaczymy<br>BEZPŁATNIE <br>dowolny kontent z Twojego projektu, "
+#| "<br>tak abyś mógł podjąć świadomą decyzję o dalszej współpracy."
+msgid ""
+"Jesteśmy przekonani o naszej jakości. Dlatego <br>przetłumaczymy BEZPŁATNIE "
+"dowolny kontent <br>z Twojego projektu, tak abyś mógł podjąć <br>świadomą "
+"decyzję o dalszej współpracy."
+msgstr ""
+"We're convinced of our quality. That's why <br>we'll translate any content from your project <br>FREE OF CHARGE, so you can make an informed <br>decision on continuing to work with us."
+
+#: .\templates\locstar\locstar.html:157
+msgid "Tłumaczenie <br>i lokalizacja <br>to nasza pasja"
+msgstr "Translation <br>and localization <br>is our passion"
+
+#: .\templates\locstar\locstar.html:175
+msgid ""
+"Stanowimy dynamiczny zespół doświadczonych specjalistów w branży "
+"tłumaczeniowej. <br>Nasze doświadczenie jest poparte wieloletnią współpracą "
+"z największymi firmami z branży IT. <br>Dowiedz się więcej o naszej firmie i "
+"jej pracownikach."
+msgstr ""
+"We are a dynamic team of experienced translation-industry specialists. <br>Our experience is based on many years of working with the biggest names in the IT industry. <br>Learn more about our company and our employees."
+
+#: .\templates\locstar\locstar.html:209 .\templates\locstar\locstar.html:278
+msgid "Nasza firma"
+msgstr "About Us"
+
+#: .\templates\locstar\locstar.html:227
+msgid ""
+"Specjalizujemy się w lokalizacji oprogramowania oraz tłumaczeniu "
+"dokumentacji i witryn internetowych w parze językowej EN>PL. Świadczymy "
+"również szereg usług dodatkowych związanych z tłumaczeniami."
+msgstr ""
+"We specialize in localizing software, as well as translating documentation and websites in the EN>PL language pair. We also offer a number of additional translation-related services."
+
+#: .\templates\locstar\locstar.html:238
+msgid ""
+"Komputerowe wspomaganie tłumaczeń to bogaty zbiór narzędzi, których głównym "
+"zadaniem jest przyspieszenie pracy tłumacza oraz zapewnienie najwyzszej "
+"jakości finalnego tekstu."
+msgstr ""
+"Computer-aided translation refers to a rich collection of tools whose main task is to speed up the translator's work and ensure that the final text is of the highest quality."
+
+#: .\templates\locstar\locstar.html:264
+msgid ""
+"Wykonujemy projekty lokalizacyjne zlecane przez największe światowe koncerny "
+"z branży IT, a także przez wiele mniejszych firm, które w takim samym "
+"stopniu wymagają najwyższej jakości tłumaczeń."
+msgstr ""
+"We carry out localization projects commissioned by the world's largest IT enterprises, as well as by many smaller companies that also require the highest level of translation quality."
+
+#: .\templates\locstar\locstar.html:285
+msgid ""
+"Nie jesteśmy firmą zajmującą się pośrednictwem między klientem a tłumaczami. "
+"Bazujemy na własnym zespole pracowników z naszego biura w Szczecinie oraz "
+"stałych współpracownikach zdalnych. Są to wysokiej klasy specjaliści z "
+"wieloletnim doświadczeniem, którzy przetłumaczyli setki tysięcy słów w "
+"projektach dla największych światowych firm. Dzięki specjalistycznemu "
+"systemowi do zarządzania pracą zdalną osoby pracujące w siedzibie firmy oraz "
+"w domu stanowią jeden, doskonale komunikujący się zespół."
+msgstr ""
+"We don't act as a middleman between clients and translators. Our backbone is made up of our team of employees at our Szczecin office, as well as our longterm remote partners. They are world-class specialists with many years of experience who have translated hundreds of thousands of words in projects for the world's largest companies. Thanks to our specialized system for managing remote work, both people working at our company headquarters and our telecommuters form a single, well-communicating team."
+
+#: .\templates\locstar\locstar.html:321
+msgid "Zachęcamy do kontaktu z nami"
+msgstr "We look forward to hearing from you"
+
+#: .\templates\locstar\locstar.html:337
+msgid "lata doświadczenia"
+msgstr "years of experience"
+
+#: .\templates\locstar\locstar.html:344
+msgid "zrealizowanych projektów"
+msgstr "completed projects"
+
+#: .\templates\locstar\locstar.html:351
+msgid "przetłumaczonych słów"
+msgstr "translated words"
+
+#: .\templates\locstar\locstar.html:367
+msgid "Tłumaczymy produkty następujących firm:"
+msgstr "We translate products for:"
+
+#: .\templates\locstar\locstar.html:418
+msgid "All other trademarks are the property of their respective owners."
+msgstr "All other trademarks are the property of their respective owners."
+
+#: .\templates\locstar\mt.html:26
+msgid ""
+"„Współcześni klienci dzielą się na takich, którzy nie życzą sobie "
+"tłumaczenia maszynowego albo je wręcz promują. Nasze stanowisko jest "
+"niezmienne – nigdy nie użyjemy tłumaczenia maszynowego w standardowym "
+"projekcie, w szczególności zatajając taki fakt przed klientem.  Równocześnie "
+"jesteśmy w pełni przygotowani na pracę z MT w sytuacji, gdy klient sobie "
+"tego życzy.”"
+msgstr ""
+"„Today's clients can be divided into those who won't have anything to do with machine translation, and those who openly promote it. Our stance is unwavering – we never use machine translation (MT) for a standard project, let alone conceal that fact from the client. Meanwhile, we're fully prepared to work with MT when clients request it.” "
+
+#: .\templates\locstar\mt.html:31
+msgid ""
+"Nasz model biznesowy bazuje na tłumaczeniach tradycyjnych, gdzie główną rolę "
+"odgrywają tłumacze, korektorzy oraz specjaliści językowi/eksperci branżowi."
+msgstr ""
+"Our business model is based on traditional translation, where the starring role is played by translators, proofreaders, and language specialists/industry experts."
+
+#: .\templates\locstar\mt.html:32
+msgid ""
+"Istnieją jednak projekty, w których klienci oczekują zastosowania "
+"tłumaczenia maszynowego (MT) bądź sami przygotowują wstępne tłumaczenie z "
+"wykorzystaniem tej technologii. Wówczas naszą rolą jest post-editing, czyli "
+"weryfikacja i korekta tłumaczeń maszynowych, tak aby finalna jakość "
+"tłumaczeń nie odbiegała od wyników uzyskanych w procesie tradycyjnym."
+msgstr ""
+"There are however projects for which clients expect the use of machine translation (MT), or prepare initial translations using said technology themselves. In that case, our role is post-editing, i.e. verification and proofreading of machine translations so final translation quality doesn't depart from that of results obtained using the traditional process."
+
+#: .\templates\locstar\mt.html:33
+msgid ""
+"Firma LocStar posiada niezbędne doświadczenie w tej dziedzinie i na życzenie "
+"klienta może przygotować silnik tłumaczenia maszynowego na podstawie pamięci "
+"tłumaczeń i słowników klienta oraz swoich autorskich materiałów. Pozwala to "
+"na uzyskanie możliwie najwyższej jakości tłumaczenia wynikowego. Dysponujemy "
+"również zespołem post-edytorów, którzy mają wieloletnie tłumaczenie w "
+"zakresie korekty tłumaczenia maszynowego."
+msgstr ""
+"LocStar possesses the required experience in this field, and upon request, can prepare a machine translation engine based on the client's translation memories and dictionaries, as well as its own, proprietary materials. This allows for the highest output translation quality to be obtained. We also have a team of post-editors who have many years of experience correcting machine translations."
+
+#: .\templates\locstar\mt.html:34
+msgid "Oferta firmy LocStar:"
+msgstr "LocStar offers:"
+
+#: .\templates\locstar\mt.html:37
+msgid "post-editing tłumaczenia maszynowego"
+msgstr "machine translation post-editing"
+
+#: .\templates\locstar\mt.html:38
+msgid "kontrola jakości i optymalizacja silników tłumaczenia maszynowego"
+msgstr "machine-translation engine optimization and quality control"
+
+#: .\templates\locstar\mt.html:39
+msgid "tworzenie silnika tłumaczenia maszynowego"
+msgstr "machine-translation engine creation"
+
+#: .\templates\locstar\mt.html:40
+msgid ""
+"przygotowywanie plików z tłumaczeniem maszynowym do dalszego post-editingu"
+msgstr ""
+"using machine translation to prepare files for subsequent post-editing"
+
+#: .\templates\locstar\onas.html:25
+msgid "Blisko ćwierć wieku sukcesów"
+msgstr "Nearly a quarter century of success"
+
+#: .\templates\locstar\onas.html:26
+msgid ""
+"„Ponad 1 milion słów miesięcznie, zadowoleni klienci końcowi, najwyższe "
+"oceny w zakresie solidności współpracy, terminowości oraz jakości tłumaczeń.”"
+msgstr ""
+"„Over 1 million words a month, happy end clients, and the best ratings for business reliability, timeliness, and translation quality.” "
+
+#: .\templates\locstar\onas.html:30
+msgid ""
+"Od roku 1994 oferujemy nasze usługi w zakresie tłumaczenia i lokalizacji "
+"oprogramowania, stron oraz aplikacji internetowych, dokumentacji online, "
+"materiałów marketingowych, instrukcji obsługi, a także wielu innych treści."
+msgstr ""
+"Since 1994, we have been offering translation and localization services for software, websites and web applications, as well as online documentation, marketing materials, instruction manuals, and many other types of content."
+
+#: .\templates\locstar\onas.html:31
+msgid ""
+"Nasz model biznesowy bazuje na dostarczaniu usług tłumaczeniowych z języka "
+"angielskiego na polski dla dużych firm z branży lokalizacyjnej, którzy "
+"posiadając klientów w skali globalnej, polegają na naszych usługach w "
+"zakresie języka polskiego. Współpracujemy również z klientami bezpośrednimi."
+msgstr ""
+"Our business model is based on providing English to Polish translation services for large companies in the localization industry that operate on a global scale and depend on our Polish language services. We also work with direct clients."
+
+#: .\templates\locstar\onas.html:32
+msgid ""
+"Jesteśmy wiodącą firmą na rynku polskim. Doskonałe oceny jakości naszej "
+"pracy są dla nas niezmiennie motywujące do utrzymywania naszych usług na "
+"najwyższym poziomie. Realizujemy projekty największych producentów branży "
+"IT. Naszą domeną są również tłumaczenia w dziedzinach takich jak biznes, "
+"przemysł, elektronika, nowe technologie, edukacja i rozrywka. Stabilność i "
+"wiarygodność naszej firmy zostały między innymi potwierdzone seryjnym "
+"przyznawaniem nam Certyfikatów Wiarygodności Biznesowej przez Dun & "
+"Bradstreet, a następnie Bisnode Polska."
+msgstr ""
+"We are a market leader in Poland. The high quality ratings our work gets constantly motivate us to keep our services up to the highest standards. We implement projects for the biggest names in the IT industry. Translations in fields like business, industry, electronics, new technologies, education, and entertainment are also our forte. The stability and reliability of our company have been affirmed by Dun & Bradstreet and Bisnode Poland, who award us Business Reliability Certificates year after year."
+
+#: .\templates\locstar\onas.html:33
+msgid ""
+"Nie jesteśmy pośrednikiem – wszystkie prace wykonywane są przez nasz własny "
+"zespół i nadzorowane przez doświadczonych kierowników projektów oraz "
+"specjalistów językowych. W skład naszego stałego zespołu wchodzi "
+"kilkadziesiąt osób o wyjątkowych umiejętnościach i wieloletnim doświadczeniu."
+msgstr ""
+"We are not a middleman – all our work is carried out by our own team and overseen by our experienced project managers and language specialists. Our in-house team includes dozens of employees with exceptional skills and many years of experience."
+
+#: .\templates\locstar\onas.html:34
+msgid ""
+"Nieustannie dostosowujemy się do zmian w branży. Doskonale znamy praktycznie "
+"wszystkie powszechnie używane oprogramowanie lokalizacyjne, dysponujemy "
+"także własnym serwerem terminologii oraz pamięci tłumaczeń. Dynamicznie "
+"dostosowujemy się do potrzeb naszych klientów."
+msgstr ""
+"We constantly adapt to changes in the industry. We are well acquainted with practically all widely used localization software, and we also have our own terminology and translation memory server. We dynamically adapt to our clients' needs."
+
+#: .\templates\locstar\onas.html:35
+msgid ""
+"Ze względu na dużą skalę naszej działalności możemy zaoferować atrakcyjne "
+"stawki. W pojedynczej stawce zawarty jest cały proces lokalizacyjny, "
+"począwszy od przygotowania technicznego, przez tłumaczenie, korektę, "
+"zarządzanie projektem, aż do kontroli jakości i przygotowania wersji "
+"finalnej."
+msgstr ""
+"Thanks to the large scale of our operations, we can offer attractive rates. All rates cover the entire localization process, from technical preparation, translation, proofreading, and project management, on through quality control and preparation of the final version."
+
+#: .\templates\locstar\onas.html:36
+msgid ""
+"Przekonaj się o zaletach współpracy z nami. Poznaj naszą jakość. Jeśli "
+"poszukujesz wiarygodnego dostawcy usług w parze EN-PL, to rozwiązanie dla "
+"Ciebie jest na wyciągnięcie ręki."
+msgstr ""
+"Learn the benefits of working with us. Get to know our quality. If you're looking for a reliable supplier in the EN-PL pair, then your solution is right in front of you."
+
+#: .\templates\locstar\other.html:23
+msgid ""
+"„We współpracy z firmą Locstar doceniam ich wszechstronność. Zamiast "
+"konieczności szukania innego dostawcy na pewne specyficzne usługi, "
+"niejednokrotnie okazuje się, że wszystko może pozostać w jednej firmie. "
+"Powoduje to znaczne oszczędności czasu i środków.”"
+msgstr ""
+"„What I value when working with LocStar is their versatility. Instead of having to look for a separate supplier for each individual service, it often turns out that everything can stay with one company. That leads to significant savings in time and resources.” "
+
+#: .\templates\locstar\other.html:28
+msgid "Usługi językowe"
+msgstr "Language Services"
+
+#: .\templates\locstar\other.html:29
+msgid ""
+"W ramach realizowanych projektów lokalizacyjnych i tłumaczeń lub dodatkowo "
+"oferujemy następujące usługi językowe"
+msgstr ""
+"We provide the following language services as part of localization and translation projects, or as add-ons"
+
+#: .\templates\locstar\other.html:31
+msgid ""
+"zarządzanie terminologią (tworzenie specjalistycznych słowników, "
+"opracowywanie standardów terminologicznych i procedur tłumaczenia "
+"dopasowanych do potrzeb klienta)"
+msgstr ""
+"terminology management (creating specialist dictionaries, developing terminology standards and translation procedures tailored to client needs)"
+
+#: .\templates\locstar\other.html:32
+msgid "korekta merytoryczna i językowa tłumaczeń"
+msgstr "checking translations for correctness in terms of language and faithfulness"
+
+#: .\templates\locstar\other.html:33
+msgid "zapewnianie spójności tłumaczeń"
+msgstr "ensuring translation consistency"
+
+#: .\templates\locstar\other.html:36
+msgid "Kontrola jakości"
+msgstr "Quality Control"
+
+#: .\templates\locstar\other.html:39
+msgid "niezależna kontrola jakości przetłumaczonego materiału"
+msgstr "independent quality control of translated material"
+
+#: .\templates\locstar\other.html:40
+msgid "opracowywanie standardów kontroli jakości"
+msgstr "development of standards for quality control"
+
+#: .\templates\locstar\other.html:43
+msgid "Obsługa techniczna projektów lokalizacyjnych"
+msgstr "Localization Project Technical Support"
+
+#: .\templates\locstar\other.html:44
+msgid ""
+"Przetwarzanie i konwersja formatów plików, przystosowanie zawartości do "
+"potrzeb projektu, automatyzowanie zadań wykonywanych w ramach projektu"
+msgstr ""
+"File format conversion and processing, adjusting content to project requirements, and automating project tasks"
+
+#: .\templates\locstar\other.html:45
+msgid "Testowanie"
+msgstr "Testing"
+
+#: .\templates\locstar\other.html:46
+msgid ""
+"Testowanie to bardzo ważny etap w procesie produkcji oprogramowania. "
+"Umożliwia wykrycie błędów (funkcjonalnych, związanych z interfejsem "
+"użytkownika lub związanych z uwarunkowaniami lokalnymi) powstałych na "
+"wcześniejszych etapach produkcji i poprawienie ich, jeszcze zanim produkt "
+"trafi do klienta."
+msgstr ""
+"Testing is a very important stage in the software development process. It enables errors made at earlier stages of development (be they related to functionality, the user interface, or local conditions) to be identified and fixed before the product reaches the customer."
+
+#: .\templates\locstar\other.html:49
+msgid ""
+"testowanie oprogramowania (weryfikacja tłumaczeń w działającym produkcie)"
+msgstr ""
+"software testing (verifying translations in a working product)"
+
+#: .\templates\locstar\other.html:50
+msgid "testowanie dokumentacji"
+msgstr "documentation testing"
+
+#: .\templates\locstar\other.html:54
+msgid "Studio nagraniowe"
+msgstr "Recording Studio"
+
+#: .\templates\locstar\other.html:55
+msgid ""
+"Jako jedna z nielicznych firm lokalizacyjnych w kraju dysponujemy w pełni "
+"profesjonalnym studiem nagraniowym. Realizujemy projekty typu voice-over, "
+"nagrania lektorskie, muzyczne i e-learningowe. Nasze studio spełnia "
+"najwyższe normy jakościowe i zapewnia doskonałą jakość nagrań. Współpracują "
+"z nami lektorzy znani z radia oraz telewizji."
+msgstr ""
+"We are one of the few localization companies in Poland to have a complete professional recording studio. We carry out voice overs, as well as do audio-book, music, and e-learning recordings. Our studio meets the highest quality standards and ensures excellent recording quality. We work with voice artists who are well known from radio and TV."
+
+#: .\templates\locstar\prices.html:26
+msgid ""
+"„Rynek usług tłumaczeniowych jest prężny i dynamiczny. Zawsze można znaleźć "
+"oferty, które wyglądają bardzo atrakcyjnie cenowo. Jednak jeśli porównamy "
+"uzyskiwaną jakość, to w praktyce tanie oferty niejednokrotnie okazują się "
+"najdroższe. Pod względem stosunku jakości do ceny Locstar wydaje się być "
+"bezkonkurencyjny.”"
+msgstr ""
+"„The translation services market is resilient and dynamic. You can always find offers that look quite attractive in terms of price. However, if we compare the quality you get, then in practice, cheap offers often turn out to be the most expensive ones. In terms of value for money, LocStar is in a league of its own.” "
+
+#: .\templates\locstar\prices.html:31
+msgid "Konkurencyjność poprzez jakość"
+msgstr "We Compete on Quality"
+
+#: .\templates\locstar\prices.html:32
+msgid ""
+"Nasz model biznesowy bazuje na dostarczaniu profesjonalnych tłumaczeń "
+"najwyższej jakości, dzięki czemu nasi klienci oszczędzają czas i nakłady na "
+"weryfikację, poprawianie usterek czy zbędną komunikację w zakresie "
+"pojawiających się problemów. Nie muszą się martwić o terminowość wykonania, "
+"zachowanie właściwych formatów czy stosowanie się do instrukcji. Ponieważ "
+"zależy nam, aby nasi klienci osiągali sukces w branży, niejednokrotnie z "
+"władnej inicjatywy i bezpłatnie wykonujemy nawet szerszy zakres prac niż "
+"samo tłumaczenie. Raportujemy zauważone błędy, sugerujemy lepsze rozwiązania "
+"z zakresu lokalizacji, staramy się nieustannie podnosić jakość wszystkich "
+"materiałów klienta."
+msgstr ""
+"Our business model is based on providing professional translations of the highest quality, thanks to which our clients save time and money on revision, fixing mistakes, and back-and-forth resolving needless problems. They don't have to worry about things getting done on time, formatting being preserved, or instructions being followed. Since it's very important to us that our clients find success in their respective industries, we frequently perform work of a wider scope than just translation on our own initiative and free of cost. We report errors we catch, suggest better localization solutions, and do our best to constantly improve the quality of all our client's materials."
+
+#: .\templates\locstar\prices.html:34
+msgid "Dla firmy branży lokalizacyjnej"
+msgstr "For Localization Companies"
+
+#: .\templates\locstar\prices.html:36
+msgid ""
+"Prosimy o kontakt pod adresem sales@locstar.pl w celu uzyskania naszego "
+"podstawowego cennika tłumaczeń i usług dodatkowych. W zależności od "
+"wolumenów tłumaczeń możliwe są rabaty ilościowe. Wszystkie nasze stawki "
+"obejmują cały zakres prac, czyli tłumaczenie, korektę, przygotowanie plików "
+"do tłumaczenia oraz ich odesłanie, podstawowe testy spójności i zgodności z "
+"zatwierdzoną terminologią. W rozliczeniach z firmami branży lokalizacyjnej "
+"przyjmujemy stosowane przez nich modele rozliczeniowe."
+msgstr ""
+"Please contact us at sales@locstar.pl in order to obtain our basic price list for translations and additional services. Volume discounts are available. All our rates include full service, i.e. translation, proofreading, preparing files for translation, and delivering them, as well as essential checks for consistency and conformity with approved terminology. When billing companies in the localization industry, we adhere to the billing model employed by the client."
+
+#: .\templates\locstar\prices.html:37
+msgid "Rozliczamy się w EUR, USD oraz PLN (zależnie od preferencji klienta)."
+msgstr "We bill in EUR, USD, and PLN (depending on client preference)."
+
+#: .\templates\locstar\prices.html:39
+msgid "Dla klientów bezpośrednich"
+msgstr "For Direct Clients"
+
+#: .\templates\locstar\prices.html:40
+msgid ""
+"Większość agencji tłumaczeniowych oferuje atrakcyjne stawki i model "
+"rozliczania na tzw. strony. Stroną jest najczęściej 1500 lub 1800 znaków. "
+"Klienci, którzy są nieświadomi tego, z czym wiąże się taki system rozliczeń, "
+"przy dłuższej współpracy z taką agencją wielokrotnie przepłacają."
+msgstr ""
+"Most translation agencies offer attractive rates and bill by the so-called page. A page is usually 1,500 to 1,800 characters. Clients who are unaware of what such a billing system entails repeatedly overpay over the course of their business relationship with such agencies."
+
+#: .\templates\locstar\prices.html:41
+#, python-format
+#| msgid ""
+#| "Firma Locstar nigdy nie stosuje rozliczeń za stronę. Nasze wyceny bazują "
+#| "wyłącznie na analizie zawartości plików do tłumaczenia (liczba słów i "
+#| "poziom podobieństwa do tłumaczeń wykonanych już wcześniej). W ten sposób "
+#| "obliczana jest ważona liczba słów do przetłumaczenia, mnożona następnie "
+#| "przez stawkę. Dzięki temu nasi klienci notują znaczne oszczędności przy "
+#| "dłuższej współpracy, czasem sięgające nawet 80% względem niekorzystnych "
+#| "płatności za stronę."
+msgid ""
+"Firma Locstar nigdy nie stosuje rozliczeń za stronę. Nasze wyceny bazują "
+"wyłącznie na analizie zawartości plików do tłumaczenia (liczba słów i poziom "
+"podobieństwa do tłumaczeń wykonanych już wcześniej). W ten sposób obliczana "
+"jest ważona liczba słów do przetłumaczenia, mnożona następnie przez stawkę. "
+"Dzięki temu nasi klienci notują znaczne oszczędności przy dłuższej "
+"współpracy, czasem sięgające nawet 80% względem niekorzystnych płatności za "
+"stronę."
+msgstr ""
+"LocStar never bills by the page. Our price quotes are based solely on an analysis of the content of files for translation (i.e. word count and degree of similarity to previous translations). That way, the weighted number of words for translation is obtained, and subsequently multiplied by the rate. That means our clients enjoy significant savings over the course of a longterm business relationship, saving as much as 80% over disadvantageous billing by the page."
+
+#: .\templates\locstar\prices.html:42
+msgid ""
+"Aby uzyskać wycenę, najlepiej przesłać nam pliki do tłumaczenia, a my "
+"wykonamy w ciągu jednego dnia roboczego dokonamy analizy i przedstawimy "
+"wyniki."
+msgstr ""
+"In order to obtain a price quote, it's best to send us the files for translation. We will perform our analysis within one business day, and send the results."
+
+#: .\templates\locstar\prices.html:43
+msgid ""
+"Zachęcamy do kontaktu pod adresem <a href=\"mailto:sales@locstar.pl\">sales</"
+"a>."
+msgstr ""
+"Please do not hesitate to contact us at our <a href=\"mailto:sales@locstar.pl\">sales</a> address."
+
+#: .\templates\locstar\servicegrid.html:29
+msgid ""
+"Świadczymy kompleksowe usługi związane z <b>lokalizacją oprogramowania i "
+"tłumaczeniem</b>, głównie z języka angielskiego na język polski. "
+"Przetłumaczyliśmy już ponad 150 milionów słów, a efekty naszej pracy można "
+"zobaczyć w postaci zlokalizowanych produktów na prawie każdym komputerze i "
+"telefonie — najbardziej popularny pakiet biurowy i system operacyjny w "
+"języku polskim to przykładowe efekty naszej pracy."
+msgstr ""
+"We provide comprehensive <b>software localization and translation</b> services, primarily from English to Polish. We've translated over 150 million words, and you can see our work in the localized products on practically every computer and telephone — the Polish version of the most popular office suite and operating system are great examples of our work."
+
+#: .\templates\locstar\servicegrid.html:42
+msgid ""
+"Instrukcje obsługi, materiały marketingowe, dokumentacja, artykuły, treści "
+"edukacyjne itd."
+msgstr ""
+"Instruction manuals, marketing materials, documentation, articles, educational content, etc."
+
+#: .\templates\locstar\servicegrid.html:54
+msgid ""
+"Oprogramowanie komputerowe, aplikacje na urządzenia mobilne, systemy "
+"operacyjne, interfejsy sterujące urządzeń, gry itd."
+msgstr ""
+"Computer software, mobile apps, operating systems, device control interfaces, games, etc."
+
+#: .\templates\locstar\servicegrid.html:65
+msgid ""
+"Witryny internetowe, serwisy, portale, sklepy, aplikacje internetowe, "
+"systemy intranetowe itd."
+msgstr ""
+"Websites, services, portals, stores, web apps, intranet systems, etc."
+
+#: .\templates\locstar\servicegrid.html:80
+msgid "Kontrola jakości, usługi językowe, testowanie, studio nagraniowe."
+msgstr "Quality control, language services, testing, recording studio."
+
+#: .\templates\locstar\servicegrid.html:91
+msgid "Sprawdź naszą jakość. Bezpłatnie.<br/> Bez zobowiązań. Bez ryzyka."
+msgstr "Check out our quality. For free.<br/> No obligation. No risk."
+
+#: .\templates\locstar\servicegrid.html:102
+msgid "Wycena, zasady rozliczeń, polityka jakości."
+msgstr "Price quote, billing terms, quality policy."
+
+#: .\templates\locstar\special.html:26
+msgid ""
+"„Nasza oferta jest zupełnie wyjątkowa w świecie tłumaczeń. Pozwala klientom "
+"ocenić jakość bez żadnych zobowiązań co do dalszej współpracy. Klienci nie "
+"otrzymują mało wartościowych próbek tłumaczeń dla kogoś innego, ale mogą "
+"zobaczyć i ocenić tłumaczenie własnych materiałów – zgodnie z ich "
+"wymaganiami i preferencjami. Następnie mogą je wykorzystać do swoich celów i "
+"to całkowicie za darmo.”"
+msgstr ""
+"„Our offer is absolutely exceptional in the translation world. It allows clients to evaluate quality without any obligations regarding our future business relationship. Clients do not obtain low-value samples of translations for somebody else, but can see and evaluate translations of their own materials – in accordance with their requirements and preferences. Next, they can use them for their own ends, and all completely for free.” "
+
+#: .\templates\locstar\special.html:32
+msgid ""
+"Zdajemy sobie sprawę, że znalezienie odpowiedniego dostawcy usług nie jest "
+"proste. Firmy tłumaczeniowe starają się oczarować swoją ofertą i składają "
+"wiele obietnic. Czasem publikują starannie przygotowane próbki tłumaczeń."
+msgstr ""
+"We realize that finding the right service provider is not easy. Translation companies try to promise the moon and put together alluring offers. Sometimes, they publish carefully prepared translation samples."
+
+#: .\templates\locstar\special.html:33
+msgid ""
+"My postanowiliśmy zrobić inaczej. Bez żadnych zobowiązań możesz przekonać "
+"się o naszej jakości w najlepszy dla siebie sposób. Po prostu wyślij nam "
+"dowolny materiał, który potrzebujesz mieć w języku polskim. Przetłumaczymy "
+"go w całości lub jego fragment do 2000 słów. Przekonasz się o naszej "
+"jakości, a także upewnisz się, że poradzimy sobie z formatem Twoich plików "
+"czy stosowanym oprogramowaniem. Zrobimy to bezpłatnie i bez żadnych "
+"zobowiązań."
+msgstr ""
+"We've resolved to do it differently. Without any obligations, you can see our quality for yourself, however suits you best. Just send us any material you need to have in Polish. We'll translate it in full, or an excerpt of up to 2,000 words. You'll see our quality for yourself, and make sure we can handle your file formats and the software you use. We'll do it for free, and you'll be under no obligation."
+
+#: .\templates\locstar\special.html:34
+msgid "Jak sprawdzić naszą jakość? "
+msgstr "How to check our quality?"
+
+#: .\templates\locstar\special.html:35
+msgid ""
+"To bardzo proste - skontaktuj się z nami pod adresem qualitycheck@locstar."
+"pl. Uzgodnimy szczegóły i wkrótce otrzymasz gotowe tłumaczenie."
+msgstr ""
+"It's very easy - contact us at qualitycheck@locstar.pl. We'll work out the details, and you'll soon receive a ready-to-use translation."
+
+#: .\templates\locstar\special.html:37
+msgid "Ważne informacje:"
+msgstr "Important information:"
+
+#: .\templates\locstar\special.html:39
+msgid ""
+"Wszelkie przekazane nam materiały pozostają poufne i nie będą w żaden sposób "
+"wykorzystywane poza standardowym procesem tłumaczenia."
+msgstr ""
+"All materials handed over to us remain confidential, and will not be used outside the standard translation process in any way."
+
+#: .\templates\locstar\special.html:40
+msgid ""
+"Tłumaczenie jest wykonywane nieodpłatnie i bez zobowiązań żadnej ze stron."
+msgstr ""
+"The translation is done free of charge, and neither party will be under any obligation."
+
+#: .\templates\locstar\special.html:41
+msgid ""
+"Skorzystanie z oferty nie wiąże się z koniecznością podpisywania "
+"jakichkolwiek umów (z wyjątkiem ewentualnej umowy NDA na życzenie strony "
+"zlecającej)."
+msgstr ""
+"Taking our offer does not imply the need to sign any contracts (with the possible exception of an NDA, upon the ordering party's request)."
+
+#: .\templates\locstar\special.html:42
+msgid "Oferta ograniczona jest wyłącznie dla:"
+msgstr "This limited offer is exclusively for"
+
+#: .\templates\locstar\special.html:45
+msgid ""
+"Zgodnie z naszą polityką jakości zastrzegamy sobie prawo odmowy wykonania "
+"tłumaczenia, jeśli tematyka będzie wykraczać poza naszą specjalizację."
+msgstr ""
+"In accordance with our quality policy, we reserve the right to decline to do a translation if the subject matter goes beyond our fields of expertise."
+
+#: .\templates\locstar\technologie.html:29
+msgid ""
+"Technologie komputerowego wspomagania tłumaczeń obejmują szereg narzędzi i "
+"usług, których głównym zadaniem jest przyspieszenie pracy tłumacza oraz "
+"zapewnienie najwyższej jakości finalnego tekstu. Sercem każdego "
+"profesjonalnego systemu CAT jest <b>pamięć tłumaczeń</b>, czyli "
+"specjalistyczna baza danych, w której tekst przechowywany jest w postaci "
+"segmentów — fragmentów odpowiednio powiązanych tekstów źródłowych i "
+"przetłumaczonych. "
+msgstr ""
+"Computer aided translation (CAT) technologies include a range of tools and services whose main task is to speed up the translator's work and ensure that the final text is of the highest quality. Lying at the heart of every professional CAT system is a <b>translation memory</b>, i.e. a specialized database in which text is stored in the form of segments — pieces of matched source and translated text."
+
+#: .\templates\locstar\technologie.html:31
+msgid ""
+"Aplikacje wspomagające tłumaczenie to także programy, które wspomagają "
+"lokalizację oprogramowania — możliwe jest więc tłumaczenie oprogramowania na "
+"poziomie zarówno kodu źródłowego, jak i skompilowanego projektu. Tłumacz ma "
+"dzięki temu podgląd wszystkich okien dialogowych, interfejsu użytkownika "
+"itp. "
+msgstr ""
+"Translation aides include programs that facilitate software localization — it's therefore possible to translate software both at the source code level, and that of a compiled project. That means the translator has a view of all dialog windows, the user interface, etc. "
+
+#: .\templates\locstar\technologie.html:43
+msgid ""
+"<b>Pamięć tłumaczeń</b> to baza danych składająca się jednostek "
+"tłumaczeniowych, którymi najczęściej są zdania w języku źródłowym i ich "
+"tłumaczenia w języku docelowym."
+msgstr ""
+"A <b>translation memory</b> is a database consisting of translation units, which are usually sentences in the source language together with their translations into the target language."
+
+#: .\templates\locstar\technologie.html:54
+msgid ""
+"<b>Słowniki, glosariusze i bazy terminologiczne</b> stosowane przy "
+"tłumaczeniach: terminy, synonimy, akronimy oraz dodatkowe informacje."
+msgstr ""
+"<b>Dictionaries, glossaries, and terminology databases</b> used in translations: terms, synonyms, acronyms, and additional information."
+
+#: .\templates\locstar\technologie.html:66
+#: .\templates\locstar\technologie.html:78
+msgid ""
+"<b>Systemy tłumaczenia maszynowego</b> umożliwiają częściowe zredukowanie "
+"pracy tłumacza poprzez automatyczne generowanie tłumaczeń przez komputer."
+msgstr ""
+"<b>Machine translation systems</b> enable a partial reduction in the translator's workload thanks to automated computer generation of translations."
+
+#: .\templates\locstar\technologie.html:75
+msgid "Narzędzia"
+msgstr "Tools"
+
+#: .\templates\locstar\terminology.html:26
+msgid ""
+"„W tłumaczeniach z różnych dziedzin zawsze staramy się wejść mentalnie w "
+"specyficzne słownictwo branżowe. Stajemy się operatorami od maszyn "
+"przemysłowych, wcielamy się w bohaterów gier komputerowych, poznajemy "
+"specyficzne słownictwo związane ze sportem, zakładami bukmacherskimi czy "
+"telekomunikacją. Nasze precyzyjne i fachowe tłumaczenie dokumentacji IT "
+"bardzo różni się od przyjaznego i kreatywnego tłumaczenia marketingowego.”"
+msgstr ""
+"„In translations from various fields, we always try to mentally enter industry-specific terminology. We become the operators of industrial machinery, we morph into computer game characters, we become acquainted with specific terminology related to sports, betting, or telecommunications. Our precise and professional translations of IT documentation are very different from our friendly and creative marketing translations.” "
+
+#: .\templates\locstar\terminology.html:31
+msgid ""
+"Słowniki, glosariusze i bazy terminologiczne zawierają terminy, synonimy, "
+"akronimy stosowane przy tłumaczeniach oraz dodatkowe informacje takie jak "
+"definicje, określenie części mowy, rodzaju, kontekstu, itp."
+msgstr ""
+"Dictionaries, glossaries, and terminology databases contain terms, synonyms, and acronyms used in translations, as well as additional information, such as definitions, parts of speech, gender, context, etc."
+
+#: .\templates\locstar\terminology.html:32
+msgid ""
+"Prawidłowe zarządzanie terminologią w procesie tłumaczenia i lokalizacji:"
+msgstr ""
+"During the translation and localization process, proper terminology management:"
+
+#: .\templates\locstar\terminology.html:35
+msgid "zapewnia poprawę spójności"
+msgstr "improves consistency"
+
+#: .\templates\locstar\terminology.html:36
+msgid "ułatwia zrozumienie tekstu przez stosowanie zatwierdzonych terminów"
+msgstr "facilitates text comprehensibility through the use of approved terms"
+
+#: .\templates\locstar\terminology.html:37
+msgid ""
+"w wersji serwerowej ułatwia dostęp dla wszystkich uczestników procesu "
+"przygotowania wersji wielojęzycznych"
+msgstr ""
+"facilitates the work of all project participants using the server version to create multilingual content"
+
+#: .\templates\locstar\terminology.html:38
+msgid ""
+"redukuje koszty i spójność tłumaczenia dzięki zdefiniowaniu terminologii na "
+"etapie powstawania dokumentacji"
+msgstr ""
+"reduces translation costs and improves consistency by defining terminology at the documentation creation stage"
+
+#: .\templates\locstar\terminology.html:39
+msgid "eliminuje błędy i rozbieżności przy tworzeniu nowej terminologii"
+msgstr "eliminates errors and discrepancies when creating new terminology"
+
+#: .\templates\locstar\terminology.html:42
+msgid ""
+"W ramach procesu tłumaczenia i lokalizacji firma LocStar zapewnia "
+"kompleksową obsługę zarządzania terminoilogią, która obejmuje:"
+msgstr ""
+"As part of the translation and localization process, LocStar provides comprehensive terminology management service that includes:"
+
+#: .\templates\locstar\terminology.html:46
+msgid "opracowanie słowników dla tłumaczonych materiałów"
+msgstr "developing dictionaries for translated materials"
+
+#: .\templates\locstar\terminology.html:47
+msgid "esktrakcje terminologii z już przetłumaczonych materiałów"
+msgstr "extracting terminology from already translated materials"
+
+#: .\templates\locstar\terminology.html:48
+msgid ""
+"udostępnianie aktualnej terminologii wszystkim uczestnikom procesu "
+"tłumaczenia"
+msgstr ""
+"providing all participants in the translation process with up-to-date terminology"
+
+#: .\templates\locstar\terminology.html:49
+msgid "weryfikację prawidłowego użycia terminologii w tłumaczonych materiałach"
+msgstr "verification of the proper use of terminology in translated materials"
+
+#: .\templates\locstar\terminology.html:52
+msgid ""
+"Firma LocStar używa systemów baz terminologicznych wielu producentów m.in. "
+"SDL MultiTerm, , memoQ, jak również własne autorskie rozwiazanie "
+"terminologii online LocTerms."
+msgstr ""
+"LocStar uses the terminology database systems of many software companies, including SDL MultiTerm and memoQ, as well as its own, proprietary online terminology solution: LocTerms."
+
+#: .\templates\locstar\tm.html:26
+msgid ""
+"„Nigdy nie przejmujemy się pamięciami tłumaczeń. Locstar robi to za nas, "
+"nieustannie je aktualizując, usuwając niespójności i wprowadzając zmiany "
+"globalne. Możemy wręcz o tym zapomnieć, mając równocześnie gwarancję, że "
+"nasze tłumaczenia będą zawierać najnowsze zmiany i pozostaną spójne. "
+"Pozytywny wpływ na jakość jest szczególnie widoczny przy długotrwałej "
+"współpracy.”"
+msgstr ""
+"„We never have to worry about translation memories. LocStar takes care of them for us by constantly updating them, removing inconsistencies, and introducing across-the-board changes. We can just forget about it, while having a guarantee that our translations contain the latest changes and remain consistent. The positive impact on quality is especially visible over the longterm.” "
+
+#: .\templates\locstar\tm.html:31
+msgid ""
+"Pamięć tłumaczeń to baza danych składająca się jednostek tłumaczeniowych, "
+"którymi najczęściej są zdania w języku źródłowym i ich tłumaczenia w języku "
+"docelowym. Każde nowe zdanie przed tłumaczeniem jest porównywane z "
+"zawartością pamięci tłumaczeń (czyli wszystkimi poprzednio przetłumaczonymi "
+"zdaniami) w poszukiwaniu podobieństw."
+msgstr ""
+"A translation memory is a database consisting of translation units, which are most often sentences in the source language together with their translations into the target language. Before translation, each new sentence is compared against the contents of the translation memory (i.e. all previously translated sentences) in search of similarities."
+
+#: .\templates\locstar\tm.html:32
+msgid ""
+"Po przetłumaczeniu każde zdanie źródłowe jest wraz z tłumaczeniem jest "
+"dopisywane do pamięci tłumaczeń. Pamięć tłumaczeń umieszczona na serwerze "
+"umożliwia pracę wielu tłumaczy i korektorów nad tym samym projektem. Każdy z "
+"uczestników procesu tłumaczeniowego widzi dzięki temu  nie tylko swoje "
+"tłumaczenia, ale również innych osób. Zapewnia to wysoką jakość tłumaczenia "
+"dzięki spójności stylu i terminologii w obrębie tłumaczenia, przyspiesza "
+"tłumaczenie, zmniejsza jego koszty – nigdy nie tłumaczy się tego samego "
+"zdania dwukrotnie i eliminuje się wiele cyklów korekty."
+msgstr ""
+"Upon translation, each source sentence is written to the translation memory together with its translation. A translation memory hosted on a server enables multiple translators and proofreaders to work together on the same project. That allows each participant in the translation process to see not only their own translations, but those of others as well. That ensures high translation quality thanks to consistency of style and terminology throughout, speeds up translation, and cuts costs – the same sentence never needs to be translated twice, and many rounds of proofreading are eliminated."
+
+#: .\templates\locstar\tm.html:33
+msgid ""
+"Od ponad 20 lat w każdym realizowanym przez nas projekcie używamy pamięci "
+"tłumaczeń, które zawierają wszystkie tłumaczenia wykonane dla danego "
+"klienta, danej dziedziny lub danego produktu. Dzięki temu pamięci tłumaczeń "
+"naszych klientów przekraczają nieraz kilka milionów zdań (kilkanaście "
+"milinów wyrazów) co przekłada się bezpośrednio na malejący koszt i czas "
+"realizacji kolejnych tłumaczeń przy jednoczesnym zachowaniu wysokiej jakości."
+msgstr ""
+"For over 20 years, we've been using translation memories that contain all the translations done for a given client, in a given field, or for a given product. That means our clients' translation memories sometimes exceed several million segments (a dozen or so million words), which directly translates into reduced costs and turnaround times for subsequent translations, while maintaining high quality."
+
+#: .\templates\locstar\tm.html:34
+msgid ""
+"Firma LocStar używa systemów pamięci tłumaczeń wielu producentów m.in. SDL "
+"Trados Studio, SDL Trados GroupShare, memoQ, IBM Translation Manager, XTM "
+"Cloud, Memsource, Google Translation Toolkit, jak również własne autorskie "
+"rozwiązanie serwerowej pamięci tłumaczeń LocTM."
+msgstr ""
+"LocStar uses the translation memory systems of many software companies, including SDL Trados Studio, SDL Trados GroupShare, memoQ, IBM Translation Manager, XTM Cloud, Memsource, and Google Translation Toolkit, as well as LocTM, its own proprietary server translation memory solution."
+
+#: .\templates\locstar\tools.html:26
+msgid ""
+"„Praca z narzędziami tłumaczeniowymi nie ogranicza się u nas wyłącznie do "
+"roli użytkowników. Mamy wystarczające doświadczenie, aby optymalizować "
+"proces tłumaczenia w każdym narzędziu. Wprowadzamy rozwiązania, o których "
+"nie pomyśleli nawet autorzy danego oprogramowania. Gdy sytuacje są "
+"szczególnie trudne, z pomocą idzie nasz autorski program LocX, który radzi "
+"sobie w każdej sytuacji.”"
+msgstr ""
+"„We are more than just users of translation tools. We have the experience needed to know how to optimize the translation process using each tool. We implement solutions that not even the developers of given software thought of. For especially tough cases, our proprietary program LocX comes to the rescue, and can handle any situation.” "
+
+#: .\templates\locstar\tools.html:31
+msgid ""
+"W realizowanych przez nas projektach tłumaczeniowych wykorzystujemy "
+"praktycznie wszystkie narzędzia CAT dostępne na rynku. W ich wyborze do "
+"konkretnych projektów dostosowujemy się do oczekiwań klientów bądź "
+"proponujemy najlepsze rozwiązania dla danej zawartości źródłowej. "
+msgstr ""
+"We use practically all CAT tools on the market for our projects. When selecting tools for individual projects, we adjust to meet clients' expectations, or propose the best solutions for the given source content. "
+
+#: .\templates\locstar\tools.html:32
+msgid ""
+"Narzędzia i systemy używane w naszej firmie umożliwiają konwersję formatów "
+"plików, pamięci tłumaczeń oraz słowników i glosariuszy, co pozwala na "
+"zastosowanie najbardziej odpowiednich procesów dla danego klienta i jego "
+"produktów."
+msgstr ""
+"The tools and systems we use enable the conversion of file formats, translation memories, dictionaries, and glossaries, allowing us to apply the most appropriate processes for a given client and their products."
+
+#: .\templates\locstar\tools.html:33
+msgid "Przykłady używanego oprogramowania:"
+msgstr "Examples of software we use:"
+
+#: .\templates\locstar\translation.html:23
+msgid ""
+"„W marketingu kluczową kwestią jest doskonały styl i umiejętność zręcznej "
+"gry słowami. Tłumaczenia dostarczane przez Locstar wyróżniają się doskonałą "
+"jakością wynikającą z głębokiej znajomości tematu, ale przede wszystkim są "
+"świetne stylistycznie i przyciągają uwagę czytelnika.”"
+msgstr ""
+"„In marketing, the key issue is great style and deft wordplay. Translations delivered by LocStar stand out thanks to their excellent quality, which flows from in-depth familiarity with their subject. But above all else, they've got great style, and grab the reader's attention.” "
+
+#: .\templates\locstar\translation.html:27
+msgid ""
+"Tłumaczenie to nasza domena - możemy poszczycić się ponad 20 letnim "
+"doświadczeniem w branży i czołową pozycją wśród firm branży tłumaczeniowej w "
+"Polsce."
+msgstr ""
+"Translation is our forte - we can boast over 20 years of experience in the industry, and a leading position among companies in Poland's translation industry."
+
+#: .\templates\locstar\translation.html:28
+msgid ""
+"Dostarczamy tłumaczenia dla firm z branży IT, przemysłu (m.in. elektronika, "
+"motoryzacja i sprzęt medyczny), handlu oraz produktów konsumenckich. Nasza "
+"oferta dotyczy tłumaczeń w parze językowej EN -> PL i obejmuje między innymi:"
+msgstr ""
+"We supply translations for companies in IT, manufacturing (including consumer electronics, automobiles, and medical equipment), commerce, and consumer goods. We work in the EN -> PL language pair, and with materials such as:"
+
+#: .\templates\locstar\translation.html:32
+msgid "instrukcje obsługi"
+msgstr "instruction manuals"
+
+#: .\templates\locstar\translation.html:33
+msgid "dokumentację techniczną"
+msgstr "technical documentation"
+
+#: .\templates\locstar\translation.html:34
+msgid "materiały marketingowe, broszury reklamowe itp."
+msgstr "marketing materials, advertising brochures, etc."
+
+#: .\templates\locstar\translation.html:35
+msgid "materiały szkoleniowe"
+msgstr "training materials"
+
+#: .\templates\locstar\translation.html:36
+msgid "wewnętrzne materiały firmowe"
+msgstr "internal company documents"
+
+#: .\templates\locstar\translation.html:38
+msgid ""
+"W ramach usługi tłumaczenia jesteśmy w stanie zaoferować również szereg "
+"usług dodatkowych, takich jak zapewnienie spójności, zarządzanie "
+"terminologią i wiele innych. Zobacz: "
+msgstr ""
+"As part of our translation services, we're able to offer a number of add-on services, such as consistency checks, terminology management, and much more. See "
+
+#: .\templates\locstar\translation.html:38
+msgid "Usługi dodatkowe.</a>"
+msgstr "Additional Services.</a>"
+
+#: .\templates\locstar\website.html:23
+msgid ""
+"„Witryny internetowe to w dzisiejszych czasach nie tylko wizytówki firm, ale "
+"rozbudowane narzędzia informatyczne, które z poziomu przeglądarki zapewniają "
+"dostęp do zaawansowanych funkcji. Skoro współczesna witryna internetowa jest "
+"bardziej aplikacją komputerową niż zbiorem tekstów, to niezwykle przydatne "
+"okazuje się doświadczenie firmy Locstar z dziedziny lokalizacji "
+"oprogramowania.” "
+msgstr ""
+"„In today's world, a website is not only a company's calling card, but also a powerful IT tool that provides access to advanced features from a web browser. Since the modern website is more of a computer program than a collection of texts, LocStar's software localization experience is immensely helpful.” "
+
+#: .\templates\locstar\website.html:27
+msgid ""
+"W lokalizacji zawartości internetowej niezwykle ważne jest wykorzystanie "
+"odpowiednich narzędzi do tłumaczenia oraz testowania. Konieczne jest "
+"zabezpieczenie wrażliwego kodu i zachowanie prawidłowego wyświetlania strony "
+"po jej przetłumaczeniu. Z naszej oferty korzystają firmy, które potrafią "
+"docenić nie tylko walory techniczne tłumaczenia, ale przede wszystkim "
+"doskonałą jakość i atrakcyjny styl tłumaczeń."
+msgstr ""
+"When localizing web content, using the right translation tools and testing are especially important. It's essential to protect delicate code and keep the page displaying correctly after translation. Companies that take advantage of what we offer appreciate not only technical accuracy, but also great quality and smooth style in a translation."
+
+#: .\templates\locstar\website.html:28
+msgid ""
+"Oferujemy lokalizację (z języka angielskiego na język polski) następującej "
+"zawartości:"
+msgstr ""
+"We offer localization of the following types of content (from English to Polish):"
+
+#: .\templates\locstar\website.html:31
+msgid "witryny internetowe"
+msgstr "websites"
+
+#: .\templates\locstar\website.html:32
+msgid "portale intranetowe"
+msgstr "intranet portals"
+
+#: .\templates\locstar\website.html:33
+msgid "aplikacje internetowe"
+msgstr "web applications"
+
+#: .\templates\locstar\website.html:34
+msgid "sklepy internetowe"
+msgstr "online stores"
+
+#: .\templates\locstar\website.html:35
+msgid "serwisy internetowe"
+msgstr "web services"
+
+#: .\templates\locstar\website.html:36
+msgid "usługi online"
+msgstr "online services"
+
+#~ msgid "Localize your products<br>and break into new markets"
+#~ msgstr "Localize your products<br>and break into new markets"
+
+#~ msgid "Special offer. For free.<br>Without commitment."
+#~ msgstr "Special offer. For free.<br>No commitment."
+
+#~ msgid "Translation and localization <br>is our passion"
+#~ msgstr "Translation and localization <br>is our passion"

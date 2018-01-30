@@ -1,0 +1,67 @@
+
+
+{% extends "locstar/base.html" %}
+{% load i18n static %}
+
+
+
+{% block content %}
+
+<section class="banner-section">
+                <div class="container">
+                    <div class="header-title2 text-center">
+                        <h2 class="title">{% trans 'Zarządzanie terminologią' %}</h2>
+                        
+                    </div> <!-- header-title -->
+                </div>
+            </section> <!-- banner-section -->
+			
+			 <section class="working-section section-padding-start">
+                <div class="working-section-two">
+                    <div class="container">
+                        <div class="header">
+                            <div class="row">
+                                <div class="col-sm-4">
+                                    <h2>{% trans 'Zarządzanie terminologią' %}</h2>
+                                    <p><i>{% trans '„W tłumaczeniach z różnych dziedzin zawsze staramy się wejść mentalnie w specyficzne słownictwo branżowe. Stajemy się operatorami od maszyn przemysłowych, wcielamy się w bohaterów gier komputerowych, poznajemy specyficzne słownictwo związane ze sportem, zakładami bukmacherskimi czy telekomunikacją. Nasze precyzyjne i fachowe tłumaczenie dokumentacji IT bardzo różni się od przyjaznego i kreatywnego tłumaczenia marketingowego.”' %}</i></p>
+                                    <img src="{% static "assets/images/terms.jpg" %}" alt="image">
+                                </div>
+
+                                <div class="col-sm-8">
+                                    <h4>{% trans 'Słowniki, glosariusze i bazy terminologiczne zawierają terminy, synonimy, akronimy stosowane przy tłumaczeniach oraz dodatkowe informacje takie jak definicje, określenie części mowy, rodzaju, kontekstu, itp.' %} </h4>                          
+<h4>{% trans 'Prawidłowe zarządzanie terminologią w procesie tłumaczenia i lokalizacji:' %} </h4>                          
+<h4>
+<ul class="fa-ul">
+<li><i class="fa-li fa fa-cog fa-spin"></i>{% trans 'zapewnia poprawę spójności' %}</li>
+<li> <i class="fa-li fa fa-cog fa-spin"></i>{% trans 'ułatwia zrozumienie tekstu przez stosowanie zatwierdzonych terminów' %}</li>
+<li> <i class="fa-li fa fa-cog fa-spin"></i>{% trans 'w wersji serwerowej ułatwia dostęp dla wszystkich uczestników procesu przygotowania wersji wielojęzycznych' %}</li>
+<li> <i class="fa-li fa fa-cog fa-spin"></i>{% trans 'redukuje koszty i spójność tłumaczenia dzięki zdefiniowaniu terminologii na etapie powstawania dokumentacji' %}</li>
+<li> <i class="fa-li fa fa-cog fa-spin"></i>{% trans 'eliminuje błędy i rozbieżności przy tworzeniu nowej terminologii' %}</li>
+</ul>
+</h4>                          
+<h4>{% trans 'W ramach procesu tłumaczenia i lokalizacji firma LocStar zapewnia kompleksową obsługę zarządzania terminoilogią, która obejmuje:' %}</h4>
+                        
+<h4>
+<ul class="fa-ul">
+<li> <i class="fa-li fa fa-cog fa-spin"></i>{% trans 'opracowanie słowników dla tłumaczonych materiałów' %} </li>
+<li> <i class="fa-li fa fa-cog fa-spin"></i>{% trans 'esktrakcje terminologii z już przetłumaczonych materiałów' %}</li>
+<li> <i class="fa-li fa fa-cog fa-spin"></i>{% trans 'udostępnianie aktualnej terminologii wszystkim uczestnikom procesu tłumaczenia' %}</li>
+<li> <i class="fa-li fa fa-cog fa-spin"></i>{% trans 'weryfikację prawidłowego użycia terminologii w tłumaczonych materiałach' %} </li>
+</ul>
+</h4>                          
+<h4>{% trans 'Firma LocStar używa systemów baz terminologicznych wielu producentów m.in. SDL MultiTerm, , memoQ, jak również własne autorskie rozwiazanie terminologii online LocTerms.' %}</h4>
+
+
+
+                                </div>
+                            </div>
+                        </div> <!-- header -->
+
+                       
+                    </div>
+                </div> <!-- working-section-two -->
+            </section>
+
+           
+
+{% endblock %}

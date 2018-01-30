@@ -1,0 +1,29 @@
+﻿{% extends "locstar/baselsp.html" %}
+{% load i18n %}
+{% block title %}Page not found{% endblock %}
+{% block content %}
+<section id="futures-sec">
+        <div class="container">
+           <div class="row text-center" >
+				<div class="col-md-6">
+ <h1>Nie znaleziono strony</h1>
+ <p>Przepraszamy, ale żądana strona nie istnieje...</p>
+ <p>Jeżeli błąd będzie się powtarzał, powiadom nas o tym, pisząc na adres <a href="mailto:info@lspsoftware.pl">email</a> lub dzwoniąc pod numer 91 4325407.</p>
+ </div>
+ </div>
+ <div class="row text-center" >
+				<div class="col-md-6">
+ <a href="javascript:window.history.back();" class="btn btn-primary">Przejdź do poprzedniej strony</a>
+</div>
+  </div>
+  <br>
+  <div class="row text-center" >
+				<div class="col-md-6">
+ <a href=""{% url 'index' %}"" class="btn btn-primary">Przejdź do strony głównej</a>
+ 
+ </div>
+  </div>
+   </div>
+   </section>
+{% endblock %}
+ 

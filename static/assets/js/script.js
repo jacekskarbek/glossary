@@ -16,9 +16,11 @@ jQuery(function ($) {
 
                 if (110 < top && !scrolled) {
                     nav.addClass('sticky animated fadeInDown');
+            	//	nav.addClass('sticky ');
                     scrolled = true;
                 } else {
                     nav.removeClass('sticky animated fadeInDown');
+            	//		nav.removeClass('sticky ');
                     scrolled = false;
                 }
             }

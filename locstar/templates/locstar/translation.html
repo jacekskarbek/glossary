@@ -1,0 +1,51 @@
+
+{% extends "locstar/base.html" %}
+{% load i18n static %}
+
+{% block content %}
+
+<section class="banner-section">
+                <div class="container">
+                    <div class="header-title2 text-center">
+                        <h2 class="title">{% trans 'Tłumaczenie' %}</h2>
+                        
+                    </div> <!-- header-title -->
+                </div>
+            </section> <!-- banner-section -->
+			
+			 <section class="working-section section-padding">
+                <div class="working-section-two">
+                    <div class="container">
+                        <div class="header">
+                            <div class="row">
+                                <div class="col-sm-4">
+                                    <h2>{% trans 'Tłumaczenie' %}</h2>
+                                    <p><i>{% trans '„W marketingu kluczową kwestią jest doskonały styl i umiejętność zręcznej gry słowami. Tłumaczenia dostarczane przez Locstar wyróżniają się doskonałą jakością wynikającą z głębokiej znajomości tematu, ale przede wszystkim są świetne stylistycznie i przyciągają uwagę czytelnika.”' %}</i></p>
+                                    <img src="{% static "assets/images/translate400.jpg" %}" alt="image">
+                                </div>
+                                <div class="col-sm-8">
+                                <h4>{% trans 'Tłumaczenie to nasza domena - możemy poszczycić się ponad 20 letnim doświadczeniem w branży i czołową pozycją wśród firm branży tłumaczeniowej w Polsce.' %}</h4>
+<h4>{% trans 'Dostarczamy tłumaczenia dla firm z branży IT, przemysłu (m.in. elektronika, motoryzacja i sprzęt medyczny), handlu oraz produktów konsumenckich. Nasza oferta dotyczy tłumaczeń w parze językowej EN -> PL i obejmuje między innymi:' %}</h4>
+<h4>                                 
+
+<ul class="fa-ul">                                  
+<li><i class="fa-li fa fa-cog fa-spin"></i>{% trans 'instrukcje obsługi' %}</li>
+<li><i class="fa-li fa fa-cog fa-spin"></i>{% trans 'dokumentację techniczną' %}</li>
+<li><i class="fa-li fa fa-cog fa-spin"></i>{% trans 'materiały marketingowe, broszury reklamowe itp.' %}</li>
+<li><i class="fa-li fa fa-cog fa-spin"></i>{% trans 'materiały szkoleniowe' %}</li>
+<li><i class="fa-li fa fa-cog fa-spin"></i>{% trans 'wewnętrzne materiały firmowe' %}</li>
+</ul>
+<h4>{% trans 'W ramach usługi tłumaczenia jesteśmy w stanie zaoferować również szereg usług dodatkowych, takich jak zapewnienie spójności, zarządzanie terminologią i wiele innych. Zobacz: ' %}<a href="{% url  'other'  %}" >{% trans 'Usługi dodatkowe.</a>' %}</h4>
+
+                                </div>
+                            </div>
+                        </div> <!-- header -->
+
+                        
+                    </div>
+                </div> <!-- working-section-two -->
+            </section>
+
+           
+
+{% endblock %}

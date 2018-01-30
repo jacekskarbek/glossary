@@ -45,3 +45,16 @@ $RECYCLE.BIN/
 Network Trash Folder
 Temporary Items
 .apdisk
+
+
+#Python, Django
+__pycache__/
+*.py[cod]
+.env
+settings.ini
+venv/
+
+
+# SQLite database files
+
+*.sqlite3

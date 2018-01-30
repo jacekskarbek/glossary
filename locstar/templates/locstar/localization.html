@@ -1,0 +1,52 @@
+
+{% extends "locstar/base.html" %}
+{% load i18n static %}
+
+{% block content %}
+
+<section class="banner-section">
+                <div class="container">
+                    <div class="header-title2 text-center">
+                        <h2 class="title">{% trans 'Lokalizacja oprogramowania' %}</h2>
+                        
+                    </div> <!-- header-title -->
+                </div>
+            </section> <!-- banner-section -->
+			
+			 <section class="working-section section-padding">
+                <div class="working-section-two">
+                    <div class="container">
+                        <div class="header">
+                            <div class="row">
+                                <div class="col-sm-4">
+                                    <h2><span style="font-size: 90%">{% trans 'Lokalizacja oprogramowania' %}</span></h2>
+                                    <p><i>{% trans '„W lokalizacji oprogramowania LocStar ma ułatwione zadanie. Ponieważ od ponad 20 lat tłumaczą najważniejsze produkty dla polskiej branży informatycznej, to de facto sami tę terminologią tworzą i nią zarządzają”.' %}</i></p>
+                                    <img src="{% static "assets/images/softwareloc.jpg" %}" alt="image">
+                                </div>
+                                <div class="col-sm-8">
+<h4>{% trans 'Lokalizacja jest procesem bardziej kompleksowym niż tłumaczenie, ponieważ ma na celu również dostosowanie zawartości do potrzeb rynku, uwzględniając jego specyfikę, normy kulturowe i językowe.' %} </h4>
+<h4>{% trans 'Nasza oferta lokalizacji oprogramowania (interfejsu użytkownika) z języka angielskiego na język polski obejmuje:' %}</h4>
+<h4>                                 
+<ul class="fa-ul">                                  
+<li><i class="fa-li fa fa-cog fa-spin"></i>{% trans 'oprogramowanie komputerowe (w tym zarówno proste programy, jak i złożone systemy operacyjne, systemy baz danych, systemy zarządzania itp.)' %}</li>
+<li><i class="fa-li fa fa-cog fa-spin"></i>{% trans 'aplikacje i systemy mobilne' %}</li>
+<li><i class="fa-li fa fa-cog fa-spin"></i>{% trans 'dokumentacja i pliki pomocy do oprogramowania (w ramach lokalizacji tych produktów lub oddzielnie)' %}</li>
+<li><i class="fa-li fa fa-cog fa-spin"></i>{% trans 'oprogramowanie sterujące sprzętu elektronicznego i maszyn' %}</li>
+<li><i class="fa-li fa fa-cog fa-spin"></i>{% trans 'gry i oprogramowanie rozrywkowe' %}</li>
+<li><i class="fa-li fa fa-cog fa-spin"></i>{% trans 'programy edukacyjne' %}</li>
+<li><i class="fa-li fa fa-cog fa-spin"></i>{% trans 'inne' %}</li>
+</ul>
+</h4>
+
+                                </div>
+                            </div>
+                        </div> <!-- header -->
+
+                        
+                    </div>
+                </div> <!-- working-section-two -->
+            </section>
+
+           
+
+{% endblock %}

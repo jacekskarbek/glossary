@@ -1,0 +1,58 @@
+
+
+{% extends "locstar/base.html" %}
+{% load i18n static %}
+
+
+
+{% block content %}
+
+<section class="banner-section">
+                <div class="container">
+                    <div class="header-title2 text-center">
+                        <h2 class="title">{% trans 'Oferta specjalna' %}</h2>
+                        
+                    </div> <!-- header-title -->
+                </div>
+            </section> <!-- banner-section -->
+			
+			 <section class="working-section section-padding-start">
+                <div class="working-section-two">
+                    <div class="container">
+                        <div class="header">
+                            <div class="row">
+                                <div class="col-sm-4">
+                                    <h2>{% trans 'Oferta specjalna' %}</h2>
+                                    <p><i>{% trans '„Nasza oferta jest zupełnie wyjątkowa w świecie tłumaczeń. Pozwala klientom ocenić jakość bez żadnych zobowiązań co do dalszej współpracy. Klienci nie otrzymują mało wartościowych próbek tłumaczeń dla kogoś innego, ale mogą zobaczyć i ocenić tłumaczenie własnych materiałów – zgodnie z ich wymaganiami i preferencjami. Następnie mogą je wykorzystać do swoich celów i to całkowicie za darmo.”' %}</i></p>
+                                    <img src="{% static "assets/images/offer.jpg" %}" alt="image">
+                                </div>
+
+                                <div class="col-sm-8">
+                                
+<h4>{% trans 'Zdajemy sobie sprawę, że znalezienie odpowiedniego dostawcy usług nie jest proste. Firmy tłumaczeniowe starają się oczarować swoją ofertą i składają wiele obietnic. Czasem publikują starannie przygotowane próbki tłumaczeń.' %}</h4>
+<h4>{% trans 'My postanowiliśmy zrobić inaczej. Bez żadnych zobowiązań możesz przekonać się o naszej jakości w najlepszy dla siebie sposób. Po prostu wyślij nam dowolny materiał, który potrzebujesz mieć w języku polskim. Przetłumaczymy go w całości lub jego fragment do 2000 słów. Przekonasz się o naszej jakości, a także upewnisz się, że poradzimy sobie z formatem Twoich plików czy stosowanym oprogramowaniem. Zrobimy to bezpłatnie i bez żadnych zobowiązań.' %}</h4>
+<h4>{% trans 'Jak sprawdzić naszą jakość? ' %}</h4>
+<h4>{% trans 'To bardzo proste - skontaktuj się z nami pod adresem qualitycheck@locstar.pl. Uzgodnimy szczegóły i wkrótce otrzymasz gotowe tłumaczenie.' %}</h4>
+
+<h4>{% trans 'Ważne informacje:' %}</h4>
+<ul class="fa-ul">               
+<li><i class="fa-li fa fa-cog fa-spin"></i>{% trans 'Wszelkie przekazane nam materiały pozostają poufne i nie będą w żaden sposób wykorzystywane poza standardowym procesem tłumaczenia.' %}</li>
+<li><i class="fa-li fa fa-cog fa-spin"></i>{% trans 'Tłumaczenie jest wykonywane nieodpłatnie i bez zobowiązań żadnej ze stron.' %}</li>
+<li><i class="fa-li fa fa-cog fa-spin"></i>{% trans 'Skorzystanie z oferty nie wiąże się z koniecznością podpisywania jakichkolwiek umów (z wyjątkiem ewentualnej umowy NDA na życzenie strony zlecającej).' %}</li>
+<li><i class="fa-li fa fa-cog fa-spin"></i>{% trans 'Oferta ograniczona jest wyłącznie dla:' %}</li>
+{% trans- firm tłumaczeniowych, które oferują swoim klientom tłumaczenia na wiele języków, w tym na język polski (multi-lingual vendors),<br>
+- firm dowolnej branży, które tłumaczą materiały własne.' %}
+<li><i class="fa-li fa fa-cog fa-spin"></i>{% trans 'Zgodnie z naszą polityką jakości zastrzegamy sobie prawo odmowy wykonania tłumaczenia, jeśli tematyka będzie wykraczać poza naszą specjalizację.' %}</li>
+</ul>
+                                </div>
+                            </div>
+                        </div> <!-- header -->
+
+                       
+                    </div>
+                </div> <!-- working-section-two -->
+            </section>
+
+           
+
+{% endblock %}

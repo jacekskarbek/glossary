@@ -1,0 +1,48 @@
+<!-- Off-Canvas View Only -->
+        <span class="menu-toggle navbar visible-xs visible-sm"><i class="fa fa-bars" aria-hidden="true"></i></span>
+
+        <div id="offcanvas-menu" class="visible-xs visible-sm">
+            
+            <span class="close-menu"><i class="fa fa-times" aria-hidden="true"></i></span>
+
+            <ul class="menu-wrapper">
+                <li>
+                    <a  href="{% url  'locstar'  %}">{% trans 'Start <i  aria-hidden="true"></i>' %}</a>
+                    
+                </li><!-- end of li -->
+
+                <li>
+                    <a href="{% url  'onas'  %}" >{% trans 'O firmie <i  aria-hidden="true"></i>' %}</a>
+                                    
+                </li><!-- end of li -->
+
+                <li>
+                    <a href="{% url  'servicegrid'  %}" class="dropBar"> {% trans 'Services <i class="fa fa-angle-down" aria-hidden="true"></i>' %}</a>
+                    <ul class="dropMenu sub-menu">
+                        <li><a href="{% url  'translation'  %}">{% trans 'T³umaczenie' %}</a></li>
+                                        <li><a href="{% url  'localization'  %}">{% trans 'Lokalizacja oprogramowania' %}</a></li>
+                                        <li><a href="{% url  'website'  %}">{% trans 'Lokalizacja witryn internetowych' %}</a></li>
+                                        <li><a href="{% url  'other'  %}">{% trans 'Inne us³ugi' %}</a></li>
+                                        <li><a href="{% url  'special'  %}">{% trans 'Oferta specjalna' %}</a></li>
+                                        <li><a href="{% url  'prices'  %}">{% trans 'Ceny' %}</a></li>
+                  </ul><!-- end of dropdown -->
+                </li><!-- end of li -->
+
+
+               <li class="dropdown"><a href="{% url  'technologie'  %}">{% trans 'Technologie' %} <i class="fa fa-angle-down" aria-hidden="true"></i></a>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="{% url  'tm'  %}">{% trans 'Pamiêæ t³umaczeñ' %}</a></li>
+                                        <li><a href="{% url  'terminology'  %}">{% trans 'Zarz¹dzanie terminologi¹' %}</a></li>
+                                        <li><a href="{% url  'mt'  %}">{% trans 'T³umaczenie maszynowe' %}</a></li>
+                                        <li><a href="{% url  'tools'  %}">{% trans 'Narzêdzia t³umaczeniowe' %}</a></li>
+                                        </ul><!-- end of dropdown -->
+                                    </ul><!-- end of li -->
+
+
+                <li><a href="{% url  'customers'  %}">{% trans 'Klienci' %}</a></li>
+                                <li class="mapdrop"><a href="{% url  'contact'  %}">{% trans 'Kontakt' %}</a><!-- end of li -->
+
+               
+            </ul> <!-- menu-wrapper -->      
+        </div>
+        <!-- Off-Canvas View Only -->

@@ -1,0 +1,67 @@
+
+{% extends "locstar/base.html" %}
+{% load i18n static %}
+
+{% block content %}
+
+<section class="banner-section">
+                <div class="container">
+                    <div class="header-title2 text-center">
+                        <h2 class="title">{% trans 'Inne usługi' %}</h2>
+                        
+                    </div> <!-- header-title -->
+                </div>
+            </section> <!-- banner-section -->
+			
+			 <section class="working-section section-padding">
+                <div class="working-section-two">
+                    <div class="container">
+                        <div class="header">
+                            <div class="row">
+                                <div class="col-sm-4">
+                                    <h2>{% trans 'Inne usługi' %}</h2>
+                                    <p><i>{% trans '„We współpracy z firmą Locstar doceniam ich wszechstronność. Zamiast konieczności szukania innego dostawcy na pewne specyficzne usługi, niejednokrotnie okazuje się, że wszystko może pozostać w jednej firmie. Powoduje to znaczne oszczędności czasu i środków.”' %}</i></p>
+                                    <img src="{% static "assets/images/ekran400.jpg" %}" alt="image">
+                                </div>
+                                <div class="col-sm-8">
+
+<h3>{% trans 'Usługi językowe' %}</h3>
+<h4>{% trans 'W ramach realizowanych projektów lokalizacyjnych i tłumaczeń lub dodatkowo oferujemy następujące usługi językowe' %}</h4><h4>                                
+<ul class="fa-ul">                                  
+<li><i class="fa-li fa fa-cog fa-spin"></i>{% trans 'zarządzanie terminologią (tworzenie specjalistycznych słowników, opracowywanie standardów terminologicznych i procedur tłumaczenia dopasowanych do potrzeb klienta)' %} </li>
+<li><i class="fa-li fa fa-cog fa-spin"></i>{% trans 'korekta merytoryczna i językowa tłumaczeń' %}</li>
+<li><i class="fa-li fa fa-cog fa-spin"></i>{% trans 'zapewnianie spójności tłumaczeń' %}</li>
+</ul>
+</h4>
+<h3>{% trans 'Kontrola jakości' %}</h3>
+<h4>                                 
+<ul class="fa-ul">                                  
+<li><i class="fa-li fa fa-cog fa-spin"></i>{% trans 'niezależna kontrola jakości przetłumaczonego materiału' %} </li>
+<li><i class="fa-li fa fa-cog fa-spin"></i>{% trans 'opracowywanie standardów kontroli jakości' %}</li>
+</ul>
+</h4>
+<h3>{% trans 'Obsługa techniczna projektów lokalizacyjnych' %}</h3>
+<h4>{% trans 'Przetwarzanie i konwersja formatów plików, przystosowanie zawartości do potrzeb projektu, automatyzowanie zadań wykonywanych w ramach projektu' %}</h4>
+<h3>{% trans 'Testowanie' %}</h3>
+<h4>{% trans 'Testowanie to bardzo ważny etap w procesie produkcji oprogramowania. Umożliwia wykrycie błędów (funkcjonalnych, związanych z interfejsem użytkownika lub związanych z uwarunkowaniami lokalnymi) powstałych na wcześniejszych etapach produkcji i poprawienie ich, jeszcze zanim produkt trafi do klienta.' %}</h4>
+<h4>                         
+<ul class="fa-ul">                                  
+<li><i class="fa-li fa fa-cog fa-spin"></i>{% trans 'testowanie oprogramowania (weryfikacja tłumaczeń w działającym produkcie)' %} </li>
+<li><i class="fa-li fa fa-cog fa-spin"></i>{% trans 'testowanie dokumentacji' %}</li>
+</ul>
+</h4>
+
+<h3>{% trans 'Studio nagraniowe' %}</h3>
+<h4>{% trans 'Jako jedna z nielicznych firm lokalizacyjnych w kraju dysponujemy w pełni profesjonalnym studiem nagraniowym. Realizujemy projekty typu voice-over, nagrania lektorskie, muzyczne i e-learningowe. Nasze studio spełnia najwyższe normy jakościowe i zapewnia doskonałą jakość nagrań. Współpracują z nami lektorzy znani z radia oraz telewizji.' %}</h4>
+                                </div>
+                            </div>
+                        </div> <!-- header -->
+
+                        
+                    </div>
+                </div> <!-- working-section-two -->
+            </section>
+
+           
+
+{% endblock %}

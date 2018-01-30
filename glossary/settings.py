@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/1.10/ref/settings/
 """
 
 import os
+from decouple import config, Csv
 from django.utils.translation import ugettext_lazy as _
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
@@ -21,12 +22,12 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/1.10/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'vjcfvm3di5jtw1wcxrg(o4x4hg7em%fd)j28cb97+yo^*h9c&8'
+SECRET_KEY = config('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 #DEBUG = False
-ALLOWED_HOSTS = ['188.226.133.246', 'terminologia-online.pl', '127.0.0.1']
+ALLOWED_HOSTS = config('ALLOWED_HOSTS', cast=Csv())
 
 LOGIN_REDIRECT_URL='/'
 
@@ -35,17 +36,15 @@ SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 # Application definition
 
 INSTALLED_APPS = [
-	'glos.apps.GlosConfig',
+	'locstar'
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    #'channels',
-    #'django_extensions',
     'rest_framework',
-  #  'haystack',
+ 
 ]
 
 MIDDLEWARE = [
@@ -88,7 +87,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'glossary.wsgi.application'
+WSGI_APPLICATION = 'locstar.wsgi.application'
 
 
 # Database
@@ -97,17 +96,15 @@ WSGI_APPLICATION = 'glossary.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'locstardb',
-        #'NAME': 'LSPSOFTWARE',
-		'USER': 'postgres', 
-		'PASSWORD': 'Zto32k1@149',
-		'HOST': 'localhost',
+        'NAME': config('DB_NAME'),
+        'USER': config('DB_USER'),
+        'PASSWORD': config('DB_PASSWORD'),
+        'HOST': config('DB_HOST'),
+
 		'PORT': '5432', 
 	
     }
 }
-
-
 
 # Password validation
 # https://docs.djangoproject.com/en/1.10/ref/settings/#auth-password-validators
@@ -147,22 +144,6 @@ USE_L10N = True
 
 USE_TZ = True
 
-
-# Static files (CSS, JavaScript, Images)
-# https://docs.djangoproject.com/en/1.10/howto/static-files/
-
-
-
-
-#CHANNEL_LAYERS = {
-#    "default": {
-#        "BACKEND": "asgi_redis.RedisChannelLayer",
-#        "CONFIG": {
-#            "hosts": [os.environ.get('REDIS_URL', 'redis://localhost:6379')],
-#        },
-#        "ROUTING": "glossary.routing.channel_routing",
-#    },
-#}
 
 REST_FRAMEWORK = {
     # Use Django's standard `django.contrib.auth` permissions,
