@@ -196,8 +196,6 @@ msgid "Łączność: "
 msgstr "Connection: "
 
 #: .\templates\locstar\base.html:253
-#, fuzzy
-#| msgid "Łącze optyczne 70 Mbs Downlink + 70 Mbs Uplink"
 msgid "Łącze optyczne 70 Mb/s Downlink + 70 Mb/s Uplink"
 msgstr "Fiber optic 70 Mb/s Downlink + 70 Mb/s Uplink"
 
@@ -360,8 +358,6 @@ msgid "inne"
 msgstr "other"
 
 #: .\templates\locstar\locstar.html:33
-#, fuzzy
-#| msgid "Zlokalizuj swoje produkty <br>i opanuj nowe rynki"
 msgid "Zlokalizuj swoje produkty <br>i zdobądź nowe rynki"
 msgstr "Localize your products <br>and break into new markets"
 
@@ -541,15 +537,6 @@ msgstr ""
 "depart from that of results obtained using the traditional process."
 
 #: .\templates\locstar\mt.html:33
-#, fuzzy
-#| msgid ""
-#| "Firma LocStar posiada niezbędne doświadczenie w tej dziedzinie i na "
-#| "życzenie klienta może przygotować silnik tłumaczenia maszynowego na "
-#| "podstawie pamięci tłumaczeń i słowników klienta oraz swoich autorskich "
-#| "materiałów. Pozwala to na uzyskanie możliwie najwyższej jakości "
-#| "tłumaczenia wynikowego. Dysponujemy również zespołem post-edytorów, "
-#| "którzy mają wieloletnie tłumaczenie w zakresie korekty tłumaczenia "
-#| "maszynowego."
 msgid ""
 "Firma LocStar posiada niezbędne doświadczenie w tej dziedzinie i na życzenie "
 "klienta może przygotować silnik tłumaczenia maszynowego na podstawie pamięci "
@@ -881,15 +868,6 @@ msgstr ""
 "their business relationship with such agencies."
 
 #: .\templates\locstar\prices.html:41
-#, fuzzy, python-format
-#| msgid ""
-#| "Firma Locstar nigdy nie stosuje rozliczeń za stronę. Nasze wyceny bazują "
-#| "wyłącznie na analizie zawartości plików do tłumaczenia (liczba słów i "
-#| "poziom podobieństwa do tłumaczeń wykonanych już wcześniej). W ten sposób "
-#| "obliczana jest ważona liczba słów do przetłumaczenia, mnożona następnie "
-#| "przez stawkę. Dzięki temu nasi klienci notują znaczne oszczędności przy "
-#| "dłuższej współpracy, czasem sięgające nawet 80% względem niekorzystnych "
-#| "płatności za stronę."
 msgid ""
 "Firma Locstar nigdy nie stosuje rozliczeń za stronę. Nasze wyceny bazują "
 "wyłącznie na analizie zawartości plików do tłumaczenia (liczba słów i poziom "
@@ -971,8 +949,6 @@ msgid "Sprawdź naszą jakość. Bezpłatnie.<br/> Bez zobowiązań. Bez ryzyka.
 msgstr "Check out our quality. For free.<br/> No obligation. No risk."
 
 #: .\templates\locstar\servicegrid.html:102
-#, fuzzy
-#| msgid "Wycena, zasady rozliczeń, polityka jakości."
 msgid "Analiza, wycena, zasady rozliczeń, polityka jakości."
 msgstr "Price quote, billing terms, quality policy."
 
@@ -1060,8 +1036,6 @@ msgstr ""
 "possible exception of an NDA, upon the ordering party's request)."
 
 #: .\templates\locstar\special.html:43
-#, fuzzy
-#| msgid "Oferta ograniczona jest wyłącznie dla:"
 msgid "Oferta ograniczona jest wyłącznie dla: "
 msgstr "This limited offer is exclusively for"
 
@@ -1209,10 +1183,6 @@ msgid "eliminuje błędy i rozbieżności przy tworzeniu nowej terminologii"
 msgstr "eliminates errors and discrepancies when creating new terminology"
 
 #: .\templates\locstar\terminology.html:42
-#, fuzzy
-#| msgid ""
-#| "W ramach procesu tłumaczenia i lokalizacji firma LocStar zapewnia "
-#| "kompleksową obsługę zarządzania terminoilogią, która obejmuje:"
 msgid ""
 "W ramach procesu tłumaczenia i lokalizacji firma LocStar zapewnia "
 "kompleksową obsługę zarządzania terminologią, która obejmuje:"
