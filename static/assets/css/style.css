@@ -25,7 +25,9 @@ body {
 /*  color: #99a4b0; */
   color: #686F77;
   background-color: #ffffff;
-  overflow-x: hidden; }
+  overflow-x: hidden; 
+  text-align: justify;
+  }
 
 html {
 /*  font-family: "Lato", sans-serif; }  */
@@ -70,7 +72,8 @@ h1, h2, h3, h4, h5, h6 {
 /*  font-family: "Roboto Slab", serif; */
   font-family: "Amiko", sans-serif;
   font-weight: 400;
-  margin: 0 0 20px; }
+  margin: 0 0 20px; 
+  text-align: justify;}
 
 h1 {
   font-size: 72px;
@@ -1185,19 +1188,28 @@ button,
         .working-section .working-section-two h2::before {
           display: none; } }
   .working-section .working-section-two p {
-    font-size: 20px;
+  /*  font-size: 20px; */
+  
+  font-size: 18px; 
+  
     line-height: 30px;
   /*  color: #999999; } */
     color: #686F77; }
     @media only screen and (max-width: 991px) {
       .working-section .working-section-two p {
-        margin-bottom: 50px;
-        font-size: 18px;
+       margin-bottom: 50px;
+    /*     font-size: 18px; */
+    
+    font-size: 16px;
+    
         line-height: 27px; } }
     @media only screen and (max-width: 767px) {
       .working-section .working-section-two p {
         margin-bottom: 50px;
-        font-size: 18px; } }
+    /*    font-size: 18px; */
+        
+        font-size: 16px;
+        } }
   .working-section .working-section-two .wrapper-content img {
     width: 100%; }
   .working-section .working-section-two .wrapper-content h3 {
@@ -4012,10 +4024,10 @@ button,
 .homePageFour a {
  /* ZMIANA
   color: #FFFFFF; } */
-  color: #FFFFFF; }
+  color: #54bc73; }
 .homePageFour a:focus, .homePageFour a:hover {
   /* color: #FFFFFF; } */
-  color: #FFFFFF; }
+  color: #000000; }
 .homePageFour .title-bar .title-border {
   /* ZMIANA
       background-color: #1CC700; */
