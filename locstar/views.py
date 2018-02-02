@@ -8,6 +8,7 @@ def emailform():
 			'form': form,
 			'email': True,
 	}
+	print('FORM',form)
 	return context
 	
 def emailformOK(req):
