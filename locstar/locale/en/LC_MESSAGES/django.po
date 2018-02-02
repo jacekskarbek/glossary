@@ -179,7 +179,7 @@ msgid "Budynek:"
 msgstr "Premises:"
 
 #: .\templates\locstar\base.html:244
-msgid "Trzy piętra, sala + 7 pokoi"
+msgid "Trzy piętra, sala konferencyjna + 7 pokoi"
 msgstr "Three stories, conference room + 7 rooms"
 
 #: .\templates\locstar\base.html:246
