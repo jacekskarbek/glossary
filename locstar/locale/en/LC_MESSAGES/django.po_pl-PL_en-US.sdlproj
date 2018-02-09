@@ -3040,7 +3040,7 @@
             <NewLearnings Words="0" Characters="0" Segments="0" Placeables="0" Tags="0" />
             <Locked Words="0" Characters="0" Segments="0" Placeables="0" Tags="0" />
           </AnalysisStatistics>
-          <ConfirmationStatistics FileTimeStamp="2018-02-09T07:18:43.3860854Z" Status="Complete">
+          <ConfirmationStatistics FileTimeStamp="2018-02-09T08:51:29.13668Z" Status="Complete">
             <Unspecified Words="0" Characters="0" Segments="0" Placeables="0" Tags="0" />
             <Draft Words="35" Characters="213" Segments="1" Placeables="4" Tags="3" />
             <Translated Words="3052" Characters="21391" Segments="197" Placeables="104" Tags="45" />

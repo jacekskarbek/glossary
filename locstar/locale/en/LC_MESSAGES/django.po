@@ -1262,7 +1262,7 @@ msgid ""
 "usług dodatkowych, takich jak zapewnienie spójności, zarządzanie "
 "terminologią i wiele innych. Zobacz: "
 msgstr ""
-"As part of our translation services, we're able to offer a number of add-on services, such as consistency checks, terminology management, and much more. See"
+"As part of our translation services, we're able to offer a number of add-on services, such as consistency checks, terminology management, and much more. See: "
 
 #: .\templates\locstar\translation.html:38
 msgid "Usługi dodatkowe.</a>"
