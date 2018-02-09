@@ -33,6 +33,10 @@ body {
     color: #1CC700; 
  }
 
+.about {
+	text-align: left;
+	}
+
 html {
 /*  font-family: "Lato", sans-serif; }  */
   font-family: "Amiko", sans-serif;  }
@@ -89,8 +93,11 @@ h2 {
   font-size: 48px;
   line-height: 50px;
   font-weight: 700;
+/*  text-align: left; */
+  
 /*  color: #031633; } */
 	color: #0f408a; }
+	
   @media only screen and (max-width: 991px) {
     h2 {
       font-size: 35px;
@@ -1042,6 +1049,13 @@ button,
   font-weight: 700;
   line-height: 90px;
   color: #FFFFFF; }
+  .slider-section .large-text-black {
+/*  font-family: "Roboto Slab", serif; */
+	font-family: "Amiko", sans-serif;
+  font-size: 72px;
+  font-weight: 700;
+  line-height: 90px;
+  color: #000000; }
 .slider-section .small-text {
  /*  font-family: "Lato", sans-serif; */
   font-family: "Amiko", sans-serif;
@@ -2190,17 +2204,19 @@ button,
     .contact-section .contact-section-two .contact-wrapper-two .location li {
       margin-bottom: 20px; }
       .contact-section .contact-section-two .contact-wrapper-two .location li i {
+       
         font-size: 30px;
         float: left;
         width: 30px;
         line-height: 40px;
         text-align: center;
-        padding: 3px 50px 22px 0;
+        padding: 3px 50px 2px 0;
         color: #54be73; }
         @media (min-width: 768px) and (max-width: 1199px) {
           .contact-section .contact-section-two .contact-wrapper-two .location li i {
             padding-right: 45px; } }
       .contact-section .contact-section-two .contact-wrapper-two .location li .text {
+       list-style-position: outside;
         font-size: 18px;
         line-height: 30px;
         color: #FFFFFF; }

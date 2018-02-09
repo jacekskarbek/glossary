@@ -4,7 +4,7 @@
 
 {% block content %}
 
-<section class="slider-section">
+<section class="slider-section" hidden-sm hidden-xs>
                 <div class="tp-banner-container">
                     <div class="tp-banner" >
                         <ul>
@@ -25,7 +25,7 @@
                                     data-start="500"
                                     data-easing="Power3.easeInOut"
                                     data-splitin="none"
-                                    data-splitout="none"
+                                    data-splitout="chars"
                                     data-elementdelay="0.08"
                                     data-endelementdelay="0.08"
                                     data-end="8000"
@@ -87,7 +87,7 @@
                                     data-start="500"
                                     data-easing="Power3.easeInOut"
                                     data-splitin="none"
-                                    data-splitout="none"
+                                    data-splitout="chars"
                                     data-elementdelay="0.08"
                                     data-endelementdelay="0.08"
                                     data-end="8000"
@@ -99,7 +99,7 @@
                                 <!-- LAYER NR. 2 -->
                                 <div class="tp-caption small-text customin customout rs-parallaxlevel-0"
                                     data-x="600" 
-                                    data-y="300"
+                                    data-y="400"
                                     data-customin="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0;scaleY:0;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;"
                                     data-customout="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0;scaleY:0;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;"
                                     data-speed="2000"
@@ -116,7 +116,7 @@
                                 <!-- LAYER NR. 3 -->
                                 <div class="tp-caption lfb ltt"
                                     data-x="600"
-                                    data-y="500"
+                                    data-y="600"
                                     data-speed="1800"
                                     data-start="4500"
                                     data-easing="Power4.easeOut"
@@ -135,33 +135,33 @@
                                 </div>
                             </li>
 
-                            <li data-transition="fade" data-slotamount="7" data-masterspeed="1000" data-thumb="{% static "assets/images/slider/slider11t.jpg" %}" data-delay="13000" data-title="LocStar" >
+                            <li data-transition="fade" data-slotamount="7" data-masterspeed="1000" data-thumb="{% static "assets/images/slider/slider-66m.jpg" %}" data-delay="13000" data-title="LocStar" >
                                 <!-- MAIN IMAGE -->
-                                <img src="{% static "assets/images/slider/slider11.jpg" %}" alt="newslide2014_1"  data-bgposition="center top" data-bgfit="cover" data-bgrepeat="no-repeat">
+                                <img src="{% static "assets/images/slider/slider-66.jpg" %}" alt="newslide2014_1"  data-bgposition="center top" data-bgfit="cover" data-bgrepeat="no-repeat">
                                 <!-- LAYERS -->
 
                                 <!-- LAYER NR. 1 -->
                                 <div class="tp-caption large-text text-left customin customout"
-                                    data-x="500"
+                                    data-x="100"
                                     data-y="50"
                                     data-customin="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0;scaleY:0;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;"
                                     data-customout="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0;scaleY:0;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;"
                                     data-speed="1800"
                                     data-start="500"
                                     data-easing="Power3.easeInOut"
-                                    data-splitin="chars"
+                                    data-splitin="none"
                                     data-splitout="chars"
                                     data-elementdelay="0.08"
                                     data-endelementdelay="0.08"
                                     data-end="8000"
                                     data-endspeed="500"
-                                    style="z-index: 2;"> <h1>{% trans 'Tłumaczenie <br>i lokalizacja <br>to nasza pasja' %}</h1>
+                                    style="z-index: 2;"> <h1>{% trans 'Tłumaczenie i lokalizacja <br>to nasza pasja' %}</h1>
                                 </div>
                                 
 
                                 <!-- LAYER NR. 2 -->
                                 <div class="tp-caption small-text text-left customin customout rs-parallaxlevel-0"
-                                    data-x="200" 
+                                    data-x="100" 
                                     data-y="550"
                                     data-customin="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0;scaleY:0;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;"
                                     data-customout="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0;scaleY:0;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;"
@@ -226,7 +226,9 @@
                                 <div class="research-content">
                                    <div class="content-bar right-content">
                                         <h3>{% trans 'Usługi' %}</h3>
-                                        <p>{% trans 'Specjalizujemy się w lokalizacji oprogramowania oraz tłumaczeniu dokumentacji i witryn internetowych w parze językowej EN>PL. Świadczymy również szereg usług dodatkowych związanych z tłumaczeniami.' %}</p>
+                                    <!--    <p>{% trans 'Specjalizujemy się w lokalizacji oprogramowania oraz tłumaczeniu dokumentacji i witryn internetowych w parze językowej EN>PL. Świadczymy również szereg usług dodatkowych związanych z tłumaczeniami.' %}</p>  -->
+                                        
+                                        <p>{% trans 'Nasze doświadczenie obejmuje różnorodne dziedziny, od tłumaczeń ogólnych, przez biznes i marketing, aż do zaawansowanych treści z branży IT. Specjalizujemy się w lokalizacji oprogramowania oraz tłumaczeniu dokumentacji i witryn internetowych w parze językowej EN>PL. Świadczymy również szereg usług dodatkowych związanych z tłumaczeniami.' %} </p>
                                         <a href="{% url  'servicegrid'  %}" class="btn btn-primary">{% trans 'Dowiedz się więcej' %}</a>
                                     </div> <!-- content-bar -->
                                 </div> <!-- research-content -->
@@ -237,7 +239,7 @@
                                 <div class="research-content">
                                     <div class="content-bar left-content">
                                         <h3>{% trans 'Technologie' %}</h3>
-                                        <p>{% trans 'Komputerowe wspomaganie tłumaczeń to bogaty zbiór narzędzi, których głównym zadaniem jest przyspieszenie pracy tłumacza oraz zapewnienie najwyzszej jakości finalnego tekstu.' %}</p>
+                                  <p>{% trans "Komputerowe wspomaganie tłumaczeń to bogaty zbiór narzędzi, których głównym zadaniem jest przyspieszenie pracy tłumacza oraz zapewnienie oczekiwanej jakości finalnego tekstu. W naszej pracy wykorzystujemy najnowsze osiągnięcia w zakresie oprogramowania translatorskiego oraz własny system zarządzania o nazwie EMTRA." %}</p>
                                         <a href="{% url  'technologie'  %}" class="btn btn-primary">{% trans 'Dowiedz się więcej' %}</a>
                                     </div> <!-- content-bar -->
                                 </div> <!-- research-content -->
@@ -263,7 +265,7 @@
                                 <div class="research-content">
                                    <div class="content-bar right-content">
                                         <h3>{% trans 'Klienci' %}</h3>
-                                        <p>{% trans 'Wykonujemy projekty lokalizacyjne zlecane przez największe światowe koncerny z branży IT, a także przez wiele mniejszych firm, które w takim samym stopniu wymagają najwyższej jakości tłumaczeń.' %} </p>
+                                        <p>{% trans "Wykonujemy projekty lokalizacyjne zlecane przez największe światowe koncerny z branży IT, a także przez wiele mniejszych firm, które w takim samym stopniu wymagają najwyższej jakości tłumaczeń. Odbiorcami większości tłumaczeń są uznane międzynarodowe firmy tłumaczeniowe, które powierzają nam obsługę pary językowej EN-PL." %} </p>
                                         <a href="{% url  'customers'  %}" class="btn btn-primary">{% trans 'Dowiedz się więcej' %}</a>
                                     </div> <!-- content-bar -->
                                 </div> <!-- research-content -->
@@ -273,8 +275,7 @@
             </section> <!-- research-section -->
 
 
-
-            <section class="working-section">
+            <section class="working-section section-padding">
                 <div class="container">
                     <div class="title-bar text-center">
                         <h2 class="title">{% trans 'Nasza firma' %}</h2>
@@ -342,7 +343,7 @@
                         <div class="counting-wrapper">
                             <div class="count-description inline-block">
                                 <span class="timer">2500</span>
-                            </div>
+                            </div><br>
                             <p>{% trans 'zrealizowanych projektów' %}</p>
                         </div>  <!-- counting-wrapper -->
 
@@ -366,8 +367,10 @@
  <section class="client-section section-padding">
                 <div class="container">
                     <div class="title-bar text-center">
-                        <h2 class="title">{% trans 'Tłumaczymy produkty następujących firm:' %}</h2>
+                        <h2 class="title">{% trans "Tłumaczymy produkty następujących firm:" %}</h2>
                         <span class="title-border"></span>
+                        <h3 class="title">{% trans "(jako dostawca bezpośredni lub dla międzynarodowych firm tłumaczeniowych)" %}</h3>
+                        
                     </div> <!-- title-bar -->
 
                     <div class="row">
@@ -416,9 +419,13 @@
                                 <li>Sony</li>
                                 <li>Toshiba</li>
                                 <li>Trend Micro</li>
+                                </ul>
+                                <ul class="client-wrapper text-center">
+                                <li>... i innych</li>
+                                </ul> <!-- client-wrapper -->
                                 </h3>
-                                <p>{% trans 'All other trademarks are the property of their respective owners.' %}</p>
-                            </ul> <!-- client-wrapper -->
+                                <p>{% trans 'Wszystkie znaki towarowe należą do odpowiednich właścicieli.' %}</p>
+                            <!-- <p>{% trans 'All other trademarks are the property of their respective owners.' %}</p> -->
                             
                              
                         </div>

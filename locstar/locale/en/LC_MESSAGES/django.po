@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-02-02 13:13+0100\n"
+"POT-Creation-Date: 2018-02-09 08:04+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,9 +18,9 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: .\forms.py:7 .\forms.py:10
+#: .\forms.py:7
 msgid "Imię i nazwisko"
-msgstr "Name	"
+msgstr "Name"
 
 #: .\forms.py:8
 msgid "Adres email"
@@ -54,94 +54,93 @@ msgstr "Find Us"
 msgid "E-mail"
 msgstr "E-mail"
 
-#: .\templates\locstar\base.html:79 .\templates\locstar\base.html:283
+#: .\templates\locstar\base.html:79 .\templates\locstar\base.html:314
 #: .\templates\locstar\locstar.html:195 .\templates\locstar\onas.html:13
 msgid "O firmie"
 msgstr "About"
 
-#: .\templates\locstar\base.html:80 .\templates\locstar\base.html:284
+#: .\templates\locstar\base.html:80 .\templates\locstar\base.html:315
 #: .\templates\locstar\locstar.html:228 .\templates\locstar\servicegrid.html:13
 #: .\templates\locstar\servicegrid.html:25
 msgid "Usługi"
 msgstr "Services"
 
-#: .\templates\locstar\base.html:82 .\templates\locstar\base.html:347
+#: .\templates\locstar\base.html:82 .\templates\locstar\base.html:378
 #: .\templates\locstar\servicegrid.html:39
 #: .\templates\locstar\translation.html:10
 #: .\templates\locstar\translation.html:22
 msgid "Tłumaczenie"
 msgstr "Translation"
 
-#: .\templates\locstar\base.html:83 .\templates\locstar\base.html:348
+#: .\templates\locstar\base.html:83 .\templates\locstar\base.html:379
 #: .\templates\locstar\localization.html:10
 #: .\templates\locstar\localization.html:22
 #: .\templates\locstar\servicegrid.html:51
 msgid "Lokalizacja oprogramowania"
 msgstr "Software Localization"
 
-#: .\templates\locstar\base.html:84 .\templates\locstar\base.html:349
+#: .\templates\locstar\base.html:84 .\templates\locstar\base.html:380
 #: .\templates\locstar\servicegrid.html:62 .\templates\locstar\website.html:10
 #: .\templates\locstar\website.html:22
 msgid "Lokalizacja witryn internetowych"
 msgstr "Website Localization"
 
-#: .\templates\locstar\base.html:85 .\templates\locstar\base.html:350
+#: .\templates\locstar\base.html:85 .\templates\locstar\base.html:381
 #: .\templates\locstar\other.html:10 .\templates\locstar\other.html:22
 #: .\templates\locstar\servicegrid.html:77
 msgid "Inne usługi"
 msgstr "Other Services"
 
-#: .\templates\locstar\base.html:86 .\templates\locstar\base.html:351
-#: .\templates\locstar\servicegrid.html:88 .\templates\locstar\special.html:13
-#: .\templates\locstar\special.html:25
-msgid "Oferta specjalna"
+#: .\templates\locstar\base.html:86
+#| msgid "Oferta specjalna"
+msgid " Oferta specjalna "
 msgstr "Special Offer"
 
-#: .\templates\locstar\base.html:87 .\templates\locstar\base.html:352
+#: .\templates\locstar\base.html:87 .\templates\locstar\base.html:383
 #: .\templates\locstar\prices.html:13 .\templates\locstar\prices.html:25
 #: .\templates\locstar\servicegrid.html:99
 msgid "Ceny"
 msgstr "Pricing"
 
-#: .\templates\locstar\base.html:89 .\templates\locstar\base.html:285
-#: .\templates\locstar\base.html:355 .\templates\locstar\locstar.html:239
+#: .\templates\locstar\base.html:89 .\templates\locstar\base.html:316
+#: .\templates\locstar\base.html:386 .\templates\locstar\locstar.html:241
 #: .\templates\locstar\technologie.html:13
 #: .\templates\locstar\technologie.html:25
 msgid "Technologie"
 msgstr "Technologies"
 
-#: .\templates\locstar\base.html:91 .\templates\locstar\base.html:357
+#: .\templates\locstar\base.html:91 .\templates\locstar\base.html:388
 #: .\templates\locstar\technologie.html:40 .\templates\locstar\tm.html:13
 #: .\templates\locstar\tm.html:25
 msgid "Pamięć tłumaczeń"
 msgstr "Translation Memory"
 
-#: .\templates\locstar\base.html:92 .\templates\locstar\base.html:358
+#: .\templates\locstar\base.html:92 .\templates\locstar\base.html:389
 #: .\templates\locstar\technologie.html:51
 #: .\templates\locstar\terminology.html:13
 #: .\templates\locstar\terminology.html:25
 msgid "Zarządzanie terminologią"
 msgstr "Terminology Management"
 
-#: .\templates\locstar\base.html:93 .\templates\locstar\base.html:359
+#: .\templates\locstar\base.html:93 .\templates\locstar\base.html:390
 #: .\templates\locstar\mt.html:13 .\templates\locstar\mt.html:25
 #: .\templates\locstar\technologie.html:63
 msgid "Tłumaczenie maszynowe"
 msgstr "Machine Translation"
 
-#: .\templates\locstar\base.html:94 .\templates\locstar\base.html:360
-#: .\templates\locstar\tools.html:13 .\templates\locstar\tools.html:25
+#: .\templates\locstar\base.html:94 .\templates\locstar\base.html:391
+#: .\templates\locstar\tools.html:9 .\templates\locstar\tools.html:21
 msgid "Narzędzia tłumaczeniowe"
 msgstr "Translation Tools"
 
-#: .\templates\locstar\base.html:98 .\templates\locstar\base.html:286
-#: .\templates\locstar\base.html:363 .\templates\locstar\customers.html:9
-#: .\templates\locstar\customers.html:21 .\templates\locstar\locstar.html:265
+#: .\templates\locstar\base.html:98 .\templates\locstar\base.html:317
+#: .\templates\locstar\base.html:395 .\templates\locstar\customers.html:9
+#: .\templates\locstar\customers.html:21 .\templates\locstar\locstar.html:267
 msgid "Klienci"
 msgstr "Customers"
 
-#: .\templates\locstar\base.html:99 .\templates\locstar\base.html:177
-#: .\templates\locstar\base.html:287 .\templates\locstar\base.html:364
+#: .\templates\locstar\base.html:99 .\templates\locstar\base.html:176
+#: .\templates\locstar\base.html:318 .\templates\locstar\base.html:396
 #: .\templates\locstar\locstar.html:71 .\templates\locstar\locstar.html:133
 #: .\templates\locstar\locstar.html:196 .\templates\locstar\locstar.html:324
 msgid "Kontakt"
@@ -159,54 +158,78 @@ msgstr "Recruitment Department"
 msgid "Back to form"
 msgstr "Back to form"
 
-#: .\templates\locstar\base.html:180
+#: .\templates\locstar\base.html:179
 msgid ""
 "Użyj poniższych informacji kontaktowych. Aby uzyskać szczegółowe informacje "
 "o naszych usługach, odwiedź odpowiednią stronę naszej witryny."
 msgstr ""
 "Please contact us using the information below. For additional information on our translation and localization services, please visit the appropriate page on our site."
 
-#: .\templates\locstar\base.html:224
+#: .\templates\locstar\base.html:213
 msgid "Wyślij"
 msgstr "Send"
 
-#: .\templates\locstar\base.html:240
+#: .\templates\locstar\base.html:230
 msgid "Biuro"
 msgstr "Office"
 
-#: .\templates\locstar\base.html:242
+#: .\templates\locstar\base.html:232
 msgid "Budynek:"
 msgstr "Premises:"
 
-#: .\templates\locstar\base.html:244
-msgid "Trzy piętra, sala konferencyjna + 7 pokoi"
-msgstr "Three stories, conference room + 7 rooms"
+#: .\templates\locstar\base.html:240
+msgid ""
+"Trzy kondygnacje, sala open space, 6 pomieszczeń roboczych i pokój "
+"konferencyjny"
+msgstr ""
+"Three stories, one open space room + 6 working rooms + conference room."
 
-#: .\templates\locstar\base.html:246
+#: .\templates\locstar\base.html:249
+msgid "Dwa niezależne pomieszczenia studia nagrań"
+msgstr "Voiceover studio with two separate rooms."
+
+#: .\templates\locstar\base.html:254
 msgid "Sprzęt: "
 msgstr "Equipment:"
 
-#: .\templates\locstar\base.html:248
-msgid "5 serwerów, 20 stacji roboczych, archiwizery taśmowe"
-msgstr "5 servers, 20 workstations, tape archives"
+#: .\templates\locstar\base.html:261
+msgid ""
+"Infrastruktura: W pełni zwirtualizowane środowisko serwerowe na bazie "
+"oprogramowania VMware vSphere. Główny klaster z 3 serwerami fizycznymi i 2 "
+"urządzeniami typu NAS. Osobny serwer kontroli domeny i usług sieciowych. "
+"Sieć firmowa z 20 stacjami roboczymi oraz znaczną liczbą komputerów "
+"pracujących zdalnie"
+msgstr ""
+"Framework: Fully virtualized server infrastructure controlled by VMware vSphere software. Main cluster of 3 physical servers and 2 NAS devices. A separate server for domain control and network services. 20 local workstations and a number of remote computers within the company network."
 
-#: .\templates\locstar\base.html:250
+#: .\templates\locstar\base.html:270
+msgid ""
+"Bezpieczeństwo: Kontrola dostępu na kartę, monitoring i system alarmowy, "
+"system kopii bezpieczeństwa na bazie urządzeń RDX, podtrzymanie bateryjne "
+"UPS, niezależny generator prądu"
+msgstr ""
+"Security: Card access control, security monitoring and alarm system, RDX based backup system, UPS battery backups, independent electric power generator."
+
+#: .\templates\locstar\base.html:275
 msgid "Łączność: "
 msgstr "Connection:"
 
-#: .\templates\locstar\base.html:252
-msgid "Łącze optyczne 70 Mb/s Downlink + 70 Mb/s Uplink"
-msgstr "Fiber optic 70 Mb/s Downlink + 70 Mb/s Uplink"
+#: .\templates\locstar\base.html:282
+msgid ""
+"Łącze światłowodowe 70 Mb/s Downlink + 70 Mb/s Uplink, <br>awaryjne łacze "
+"internetowe: ADSL (osobna linia)"
+msgstr ""
+"Fiber optic 70 Mb/s Downlink + 70 Mb/s Uplink. <br>Backup Internet connection: ADSL (separate line)"
 
-#: .\templates\locstar\base.html:279
+#: .\templates\locstar\base.html:310
 msgid "Łącza"
 msgstr "Links"
 
-#: .\templates\locstar\base.html:298
+#: .\templates\locstar\base.html:329
 msgid "Media społecznościowe"
 msgstr "Social media"
 
-#: .\templates\locstar\base.html:319
+#: .\templates\locstar\base.html:350
 #, python-format
 msgid ""
 "<span><a href=\"%(locstar_url)s\">LocStar </a></span>2018 © Wszelkie prawa "
@@ -214,17 +237,23 @@ msgid ""
 msgstr ""
 "2018 © All rights reserved by <span><a href=\"%(locstar_url)s\">LocStar </a></span>"
 
-#: .\templates\locstar\base.html:339
+#: .\templates\locstar\base.html:370
 msgid "Start <i  aria-hidden=\"true\"></i>"
 msgstr "Home <i  aria-hidden=\"true\"></i>"
 
-#: .\templates\locstar\base.html:342
+#: .\templates\locstar\base.html:373
 msgid "O firmie <i  aria-hidden=\"true\"></i>"
 msgstr "About <i  aria-hidden=\"true\"></i>"
 
-#: .\templates\locstar\base.html:345
-msgid "Services <i class=\"fa fa-angle-down\" aria-hidden=\"true\"></i>"
-msgstr "Usługi <i class=\"fa fa-angle-down\" aria-hidden=\"true\"></i>"
+#: .\templates\locstar\base.html:376
+#| msgid "Services <i class=\"fa fa-angle-down\" aria-hidden=\"true\"></i>"
+msgid "Usługi <i class=\"fa fa-angle-down\" aria-hidden=\"true\"></i>"
+msgstr "Services <i class=\"fa fa-angle-down\" aria-hidden=\"true\"></i>"
+
+#: .\templates\locstar\base.html:382 .\templates\locstar\servicegrid.html:88
+#: .\templates\locstar\special.html:13 .\templates\locstar\special.html:25
+msgid "Oferta specjalna"
+msgstr "Special Offer"
 
 #: .\templates\locstar\customers.html:22
 msgid ""
@@ -348,11 +377,11 @@ msgid ""
 "telefonie. Poznaj naszą ofertę i przekonaj się, dlaczego warto mieć nas "
 "<br>jako swojego dostawcę tłumaczeń."
 msgstr ""
-"We've translated over 150 million words, and you can see the effects of our work <br>in the form of localized products on every computer and phone. <br>See what we have to offer and find out why it's worth using us as your translation supplier."
+"We've translated over 150 million words, and you can see the effects of our work <br>in the form of localized products on every computer and phone. <br>See what we have to offer and find out why it's worth <br>using us as your translation supplier."
 
 #: .\templates\locstar\locstar.html:70 .\templates\locstar\locstar.html:132
-#: .\templates\locstar\locstar.html:230 .\templates\locstar\locstar.html:241
-#: .\templates\locstar\locstar.html:267 .\templates\locstar\locstar.html:290
+#: .\templates\locstar\locstar.html:232 .\templates\locstar\locstar.html:243
+#: .\templates\locstar\locstar.html:269 .\templates\locstar\locstar.html:290
 #: .\templates\locstar\servicegrid.html:45
 #: .\templates\locstar\servicegrid.html:56
 #: .\templates\locstar\servicegrid.html:68
@@ -379,8 +408,9 @@ msgstr ""
 "We're convinced of our quality. That's why <br>we'll translate any content from your project <br>FREE OF CHARGE, so you can make an informed <br>decision on continuing to work with us."
 
 #: .\templates\locstar\locstar.html:158
-msgid "Tłumaczenie <br>i lokalizacja <br>to nasza pasja"
-msgstr "Translation <br>and localization <br>is our passion"
+#| msgid "Tłumaczenie <br>i lokalizacja <br>to nasza pasja"
+msgid "Tłumaczenie i lokalizacja <br>to nasza pasja"
+msgstr "Translation and localization <br>is our passion"
 
 #: .\templates\locstar\locstar.html:176
 msgid ""
@@ -403,21 +433,47 @@ msgid ""
 msgstr ""
 "We specialize in localizing software, as well as translating documentation and websites in the EN>PL language pair. We also offer a number of additional translation-related services."
 
-#: .\templates\locstar\locstar.html:240
+#: .\templates\locstar\locstar.html:231
+#| msgid ""
+#| "Specjalizujemy się w lokalizacji oprogramowania oraz tłumaczeniu "
+#| "dokumentacji i witryn internetowych w parze językowej EN>PL. Świadczymy "
+#| "również szereg usług dodatkowych związanych z tłumaczeniami."
+msgid ""
+"Nasze doświadczenie obejmuje różnorodne dziedziny, od tłumaczeń ogólnych, "
+"przez biznes i marketing, aż do zaawansowanych treści z branży IT. "
+"Specjalizujemy się w lokalizacji oprogramowania oraz tłumaczeniu "
+"dokumentacji i witryn internetowych w parze językowej EN>PL. Świadczymy "
+"również szereg usług dodatkowych związanych z tłumaczeniami."
+msgstr ""
+"Our expertise covers a broad variety of domains from general translation, through business and marketing, to highly specialized IT content. We specialize in localizing software, as well as translating documentation and websites in the EN>PL language pair. We also offer a number of additional translation-related services."
+
+#: .\templates\locstar\locstar.html:242
+#| msgid ""
+#| "Komputerowe wspomaganie tłumaczeń to bogaty zbiór narzędzi, których "
+#| "głównym zadaniem jest przyspieszenie pracy tłumacza oraz zapewnienie "
+#| "najwyzszej jakości finalnego tekstu."
 msgid ""
 "Komputerowe wspomaganie tłumaczeń to bogaty zbiór narzędzi, których głównym "
-"zadaniem jest przyspieszenie pracy tłumacza oraz zapewnienie najwyzszej "
-"jakości finalnego tekstu."
+"zadaniem jest przyspieszenie pracy tłumacza oraz zapewnienie oczekiwanej "
+"jakości finalnego tekstu. W naszej pracy wykorzystujemy najnowsze "
+"osiągnięcia w zakresie oprogramowania translatorskiego oraz własny system "
+"zarządzania o nazwie EMTRA."
 msgstr ""
-"Computer-aided translation refers to a rich collection of tools whose main task is to speed up the translator's work and ensure that the final text is of the highest quality."
+"Computer-aided translation refers to a rich collection of tools whose main task is to speed up the translator's work and ensure that the final text is of the highest quality. State-of-the-art software and advanced EMTRA system is a foundation of our localization workflow."
 
-#: .\templates\locstar\locstar.html:266
+#: .\templates\locstar\locstar.html:268
+#| msgid ""
+#| "Wykonujemy projekty lokalizacyjne zlecane przez największe światowe "
+#| "koncerny z branży IT, a także przez wiele mniejszych firm, które w takim "
+#| "samym stopniu wymagają najwyższej jakości tłumaczeń."
 msgid ""
 "Wykonujemy projekty lokalizacyjne zlecane przez największe światowe koncerny "
 "z branży IT, a także przez wiele mniejszych firm, które w takim samym "
-"stopniu wymagają najwyższej jakości tłumaczeń."
+"stopniu wymagają najwyższej jakości tłumaczeń. Odbiorcami większości "
+"tłumaczeń są uznane międzynarodowe firmy tłumaczeniowe, które powierzają nam "
+"obsługę pary językowej EN-PL."
 msgstr ""
-"We carry out localization projects commissioned by the world's largest IT enterprises, as well as by many smaller companies that also require the highest level of translation quality."
+"We carry out localization projects commissioned by the world's largest IT enterprises, as well as by many smaller companies that also require the highest level of translation quality. Most of our work is delivered to most renowned multilingual translation companies that entrust their EN-PL projects to Locstar as production center."
 
 #: .\templates\locstar\locstar.html:280
 msgid "Nasza firma"
@@ -455,7 +511,17 @@ msgstr "translated words"
 msgid "Tłumaczymy produkty następujących firm:"
 msgstr "We translate products for:"
 
-#: .\templates\locstar\locstar.html:420
+#: .\templates\locstar\locstar.html:371
+msgid ""
+"(jako dostawca bezpośredni lub dla międzynarodowych firm tłumaczeniowych)"
+msgstr ""
+"(as a direct vendor or through multilingual translation companies)."
+
+#: .\templates\locstar\locstar.html:426
+msgid "Wszystkie znaki towarowe należą do odpowiednich właścicieli."
+msgstr "All other trademarks are the property of their respective owners"
+
+#: .\templates\locstar\locstar.html:427
 msgid "All other trademarks are the property of their respective owners."
 msgstr "All other trademarks are the property of their respective owners."
 
@@ -738,7 +804,7 @@ msgid ""
 "terminologią. W rozliczeniach z firmami branży lokalizacyjnej przyjmujemy "
 "stosowane przez nich modele rozliczeniowe."
 msgstr ""
-"Please contact us at <a href=\"mailto:sales@locstar.pl\" >sales@locstar.pl</a>in order to obtain our basic price list for translations and additional services. Volume discounts are available. All our rates include full service, i.e. translation, proofreading, preparing files for translation, and delivering them, as well as essential checks for consistency and conformity with approved terminology. When billing companies in the localization industry, we adhere to the billing model employed by the client."
+"Please contact us at <a href=\"mailto:sales@locstar.pl\" >sales@locstar.pl</a> in order to obtain our basic price list for translations and additional services. Volume discounts are available. All our rates include full service, i.e. translation, proofreading, preparing files for translation, and delivering them, as well as essential checks for consistency and conformity with approved terminology. When billing companies in the localization industry, we adhere to the billing model employed by the client."
 
 #: .\templates\locstar\prices.html:37
 msgid "Rozliczamy się w EUR, USD oraz PLN (zależnie od preferencji klienta)."
@@ -1099,15 +1165,20 @@ msgstr ""
 "For over 20 years, we've been using translation memories that contain all the translations done for a given client, in a given field, or for a given product. That means our clients' translation memories sometimes exceed several million segments (a dozen or so million words), which directly translates into reduced costs and turnaround times for subsequent translations, while maintaining high quality."
 
 #: .\templates\locstar\tm.html:34
+#| msgid ""
+#| "Firma LocStar używa systemów pamięci tłumaczeń wielu producentów m.in. "
+#| "SDL Trados Studio, SDL Trados GroupShare, memoQ, IBM Translation Manager, "
+#| "XTM Cloud, Memsource, Google Translation Toolkit, jak również własne "
+#| "autorskie rozwiązanie serwerowej pamięci tłumaczeń LocTM."
 msgid ""
 "Firma LocStar używa systemów pamięci tłumaczeń wielu producentów m.in. SDL "
 "Trados Studio, SDL Trados GroupShare, memoQ, IBM Translation Manager, XTM "
-"Cloud, Memsource, Google Translation Toolkit, jak również własne autorskie "
-"rozwiązanie serwerowej pamięci tłumaczeń LocTM."
+"Cloud i Memsource, jak również własne autorskie rozwiązanie serwerowej "
+"pamięci tłumaczeń LocTM."
 msgstr ""
-"LocStar uses the translation memory systems of many software companies, including SDL Trados Studio, SDL Trados GroupShare, memoQ, IBM Translation Manager, XTM Cloud, Memsource, and Google Translation Toolkit, as well as LocTM, its own proprietary server translation memory solution."
+"LocStar uses the translation memory systems of many software companies, including SDL Trados Studio, SDL Trados GroupShare, memoQ, IBM Translation Manager, XTM Cloud and Memsource, as well as LocTM, its own proprietary server translation memory solution."
 
-#: .\templates\locstar\tools.html:26
+#: .\templates\locstar\tools.html:22
 msgid ""
 "„Praca z narzędziami tłumaczeniowymi nie ogranicza się u nas wyłącznie do "
 "roli użytkowników. Mamy wystarczające doświadczenie, aby optymalizować "
@@ -1118,7 +1189,7 @@ msgid ""
 msgstr ""
 "„We are more than just users of translation tools. We have the experience needed to know how to optimize the translation process using each tool. We implement solutions that not even the developers of given software thought of. For especially tough cases, our proprietary program LocX comes to the rescue, and can handle any situation.”"
 
-#: .\templates\locstar\tools.html:31
+#: .\templates\locstar\tools.html:27
 msgid ""
 "W realizowanych przez nas projektach tłumaczeniowych wykorzystujemy "
 "praktycznie wszystkie narzędzia CAT dostępne na rynku. W ich wyborze do "
@@ -1127,7 +1198,7 @@ msgid ""
 msgstr ""
 "We use practically all CAT tools on the market for our projects. When selecting tools for individual projects, we adjust to meet clients' expectations, or propose the best solutions for the given source content."
 
-#: .\templates\locstar\tools.html:32
+#: .\templates\locstar\tools.html:28
 msgid ""
 "Narzędzia i systemy używane w naszej firmie umożliwiają konwersję formatów "
 "plików, pamięci tłumaczeń oraz słowników i glosariuszy, co pozwala na "
@@ -1136,7 +1207,7 @@ msgid ""
 msgstr ""
 "The tools and systems we use enable the conversion of file formats, translation memories, dictionaries, and glossaries, allowing us to apply the most appropriate processes for a given client and their products."
 
-#: .\templates\locstar\tools.html:33
+#: .\templates\locstar\tools.html:29
 msgid "Przykłady używanego oprogramowania:"
 msgstr "Examples of software we use:"
 
@@ -1249,3 +1320,12 @@ msgstr "web services"
 #: .\templates\locstar\website.html:36
 msgid "usługi online"
 msgstr "online services"
+
+#~ msgid "Trzy piętra, sala konferencyjna + 7 pokoi"
+#~ msgstr "Three stories, conference room + 7 rooms"
+
+#~ msgid "5 serwerów, 20 stacji roboczych, archiwizery taśmowe"
+#~ msgstr "5 servers, 20 workstations, tape archives"
+
+#~ msgid "Łącze optyczne 70 Mb/s Downlink + 70 Mb/s Uplink"
+#~ msgstr "Fiber optic 70 Mb/s Downlink + 70 Mb/s Uplink"

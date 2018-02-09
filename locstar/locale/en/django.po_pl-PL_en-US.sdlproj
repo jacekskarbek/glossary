@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
-<Project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Guid="0dd2361c-735b-4d36-ae4a-1c38cf1d64a0" SettingsBundleGuid="3fecf134-f3b3-4660-817a-22c3ffddc249" Version="4.0.0.0" Owner="MORAVIAPL\jaceks" ProjectTemplateGuid="10004f3b-4acf-4425-a3e3-38d3b3514276" ReferenceProjectGuid="00000000-0000-0000-0000-000000000000">
+<Project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Guid="d134429e-9ced-445b-935c-3ef8074e23e0" SettingsBundleGuid="a9478161-96c2-4267-ad5b-dfab5d336910" Version="4.0.0.0" Owner="MORAVIAPL\jaceks" ProjectTemplateGuid="10004f3b-4acf-4425-a3e3-38d3b3514276" ReferenceProjectGuid="00000000-0000-0000-0000-000000000000">
   <LanguageDirections>
-    <LanguageDirection Guid="edccc0fa-9ce5-41ea-906c-9af754db5c2c" SettingsBundleGuid="7ed1b17f-6914-4c35-b3ed-b3143fb31cd4" TargetLanguageCode="en-US" SourceLanguageCode="pl-PL">
+    <LanguageDirection Guid="c0c89032-3b5f-43a6-9521-d7a737632192" SettingsBundleGuid="ed17d762-8e42-4962-bf24-ee719ac31c6f" TargetLanguageCode="en-US" SourceLanguageCode="pl-PL">
       <AutoSuggestDictionaries />
       <CascadeItem OverrideParent="false" StopSearchingWhenResultsFound="false" />
     </LanguageDirection>
@@ -48,7 +48,7 @@
     </RecognitionOptions>
   </TermbaseConfiguration>
   <SettingsBundles>
-    <SettingsBundle Guid="3fecf134-f3b3-4660-817a-22c3ffddc249">
+    <SettingsBundle Guid="a9478161-96c2-4267-ad5b-dfab5d336910">
       <SettingsBundle>
         <SettingsGroup Id="FileTypeManagerConfigurationSettingsGroup">
           <Setting Id="FileTypeManagerConfigurationSettings">
@@ -2964,20 +2964,6 @@
         </SettingsGroup>
       </SettingsBundle>
     </SettingsBundle>
-    <SettingsBundle Guid="7cf8e65f-67ed-4885-ac57-87c8d3f43d84">
-      <SettingsBundle>
-        <SettingsGroup Id="IgnoredMessagesSettings">
-          <Setting Id="IgnoredMessagesData">
-            <IgnoredMessagesData xmlns:i="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.datacontract.org/2004/07/Sdl.ProjectApi">
-              <IgnoredMessageIds>
-              </IgnoredMessageIds>
-              <IgnoredMessageTypes xmlns:d2p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays">
-              </IgnoredMessageTypes>
-            </IgnoredMessagesData>
-          </Setting>
-        </SettingsGroup>
-      </SettingsBundle>
-    </SettingsBundle>
   </SettingsBundles>
   <AnalysisBands>
     <AnalysisBand MinimumMatchValue="50" />
@@ -2994,15 +2980,15 @@
       <MainTranslationProviderItem Uri="sdltm.file:///E:/Dropbox/LocStar/WebPageTranslation/Locstar.sdltm" Enabled="true" />
     </CascadeEntryItem>
   </CascadeItem>
-  <GeneralProjectInfo StartedAt="2018-02-02T12:14:32.6455986Z" IsInPlace="true" IsImported="false" Name="django.po_pl-PL_en-US" Status="Started" CreatedBy="MORAVIAPL\jaceks" CreatedAt="2018-02-02T12:14:32.5635986Z" />
+  <GeneralProjectInfo StartedAt="2018-02-08T10:01:46.1378557Z" IsInPlace="true" IsImported="false" Name="django.po_pl-PL_en-US" Status="Started" CreatedBy="MORAVIAPL\jaceks" CreatedAt="2018-02-08T10:01:46.0588557Z" />
   <SourceLanguageCode>pl-PL</SourceLanguageCode>
   <ProjectFiles>
-    <ProjectFile Guid="1b25df1d-5a79-4880-901f-a5ca2fe75a9e" Path="" Role="Translatable" Name="django.po" ParentProjectFileGuid="00000000-0000-0000-0000-000000000000" FilterDefinitionId="PO files v 1.0.0.0">
+    <ProjectFile Guid="b61b1dc1-f529-4502-8349-9803615c4c48" Path="" Role="Translatable" Name="django.po_pl-PL_en-US.sdlxliff" ParentProjectFileGuid="00000000-0000-0000-0000-000000000000" FilterDefinitionId="SDL XLIFF 1.0 v 1.0.0.0">
       <SpecificTargetLanguages />
       <LanguageFiles>
-        <LanguageFile Guid="92ff833f-58f3-432d-acbd-6cc5dfa46c42" SettingsBundleGuid="5de7c0b2-0871-40ac-aa2d-c678cc285c66" LanguageCode="pl-PL">
+        <LanguageFile Guid="be18f41c-1fda-4314-85c4-9158ae2f6bfa" SettingsBundleGuid="0476ffec-758a-49e9-bec8-1d1e75a860e4" LanguageCode="pl-PL">
           <FileVersions>
-            <FileVersion Guid="190f46df-2557-42b7-8102-76c257176faa" VersionNumber="1" Size="42342" FileName="django.po" PhysicalPath="django.po" CreatedBy="MORAVIAPL\jaceks" CreatedAt="2018-02-02T12:14:32.6445986Z" FileTimeStamp="2018-02-02T12:13:45.7005986Z" IsAutoUpload="false" />
+            <FileVersion Guid="ca1662e3-23ff-4b0c-9a46-72084911b721" VersionNumber="1" Size="276246" FileName="django.po_pl-PL_en-US.sdlxliff" PhysicalPath="django.po_pl-PL_en-US.sdlxliff" CreatedBy="MORAVIAPL\jaceks" CreatedAt="2018-02-08T10:01:46.1368557Z" FileTimeStamp="2018-02-02T12:26:42.3063907Z" IsAutoUpload="false" />
           </FileVersions>
           <AnalysisStatistics WordCountStatus="None" AnalysisStatus="None">
             <Total Words="0" Characters="0" Segments="0" Placeables="0" Tags="0" />
@@ -3023,11 +3009,9 @@
           </AnalysisStatistics>
           <ChildFiles />
         </LanguageFile>
-        <LanguageFile Guid="b90284a3-d571-481b-8cb4-cfc3482adef3" SettingsBundleGuid="7cf8e65f-67ed-4885-ac57-87c8d3f43d84" LanguageCode="en-US">
+        <LanguageFile Guid="8d4577a9-4f5b-4a91-a75b-6408d87a8053" SettingsBundleGuid="0a134c42-0928-4be2-be70-78080ced48b9" LanguageCode="en-US">
           <FileVersions>
-            <FileVersion Guid="b450846a-6912-41c9-b2ff-c7663e922908" VersionNumber="2" Size="42342" FileName="django.po" PhysicalPath="django.po" CreatedBy="MORAVIAPL\jaceks" CreatedAt="2018-02-02T12:14:32.9165986Z" FileTimeStamp="2018-02-02T12:13:45.7005986Z" IsAutoUpload="false" />
-            <FileVersion Guid="850e62d1-edf5-465b-b0be-89a03ec8e1ea" VersionNumber="3" Size="217071" FileName="django.po_pl-PL_en-US.sdlxliff" PhysicalPath="django.po_pl-PL_en-US.sdlxliff" Comment="" CreatedBy="MORAVIAPL\jaceks" CreatedAt="2018-02-02T12:16:26.8505986Z" FileTimeStamp="2018-02-02T12:16:26.8115986Z" IsAutoUpload="false" />
-            <FileVersion Guid="63bee646-bd07-451f-90d9-05129573fbe3" VersionNumber="4" Size="267476" FileName="django.po_pl-PL_en-US.sdlxliff" PhysicalPath="django.po_pl-PL_en-US.sdlxliff" Comment="Created by 'Pre-translate Files'" CreatedBy="MORAVIAPL\jaceks" CreatedAt="2018-02-02T12:16:43.1585986Z" FileTimeStamp="2018-02-02T12:16:43.1535986Z" IsAutoUpload="false" />
+            <FileVersion Guid="10f8850c-4af3-44c4-be0a-450e9cfa0783" VersionNumber="2" Size="276246" FileName="django.po_pl-PL_en-US.sdlxliff" PhysicalPath="django.po_pl-PL_en-US.sdlxliff" CreatedBy="MORAVIAPL\jaceks" CreatedAt="2018-02-08T10:01:46.2338557Z" FileTimeStamp="2018-02-02T12:26:42.3063907Z" IsAutoUpload="false" />
           </FileVersions>
           <AnalysisStatistics WordCountStatus="None" AnalysisStatus="None">
             <Total Words="0" Characters="0" Segments="0" Placeables="0" Tags="0" />
@@ -3046,10 +3030,10 @@
             <NewLearnings Words="0" Characters="0" Segments="0" Placeables="0" Tags="0" />
             <Locked Words="0" Characters="0" Segments="0" Placeables="0" Tags="0" />
           </AnalysisStatistics>
-          <ConfirmationStatistics FileTimeStamp="2018-02-02T12:26:42.3063907Z" Status="Complete">
+          <ConfirmationStatistics FileTimeStamp="2018-02-08T15:04:38.7668557Z" Status="Complete">
             <Unspecified Words="0" Characters="0" Segments="0" Placeables="0" Tags="0" />
-            <Draft Words="2627" Characters="18414" Segments="173" Placeables="81" Tags="36" />
-            <Translated Words="297" Characters="2035" Segments="19" Placeables="16" Tags="12" />
+            <Draft Words="2600" Characters="18216" Segments="170" Placeables="81" Tags="36" />
+            <Translated Words="324" Characters="2233" Segments="22" Placeables="16" Tags="12" />
             <RejectedTranslation Words="0" Characters="0" Segments="0" Placeables="0" Tags="0" />
             <ApprovedTranslation Words="0" Characters="0" Segments="0" Placeables="0" Tags="0" />
             <RejectedSignOff Words="0" Characters="0" Segments="0" Placeables="0" Tags="0" />
@@ -3061,24 +3045,5 @@
       <PreviousBilingualFiles />
     </ProjectFile>
   </ProjectFiles>
-  <Tasks>
-    <AutomaticTask Guid="c1dbdf7c-5d15-4bce-bef7-1cc166dec9ec" Status="Completed" CompletedAt="2018-02-02T12:16:43.1765986Z" PercentComplete="100" CreatedAt="2018-02-02T12:16:42.3705986Z" PredecessorTaskGuid="00000000-0000-0000-0000-000000000000" StartedAt="2018-02-02T12:16:42.4135986Z" CreatedBy="MORAVIAPL\jaceks">
-      <TaskTemplateIds>
-        <TaskTemplateId>Sdl.ProjectApi.AutomaticTasks.Translate</TaskTemplateId>
-      </TaskTemplateIds>
-      <Files>
-        <TaskFile Guid="b4c7daa1-255b-4db5-9255-05ed32fc9607" Completed="true" ParentTaskFileGuid="00000000-0000-0000-0000-000000000000" LanguageFileGuid="b90284a3-d571-481b-8cb4-cfc3482adef3" Purpose="WorkFile">
-          <Result Guid="00000000-0000-0000-0000-000000000000" />
-        </TaskFile>
-      </Files>
-      <OutputFiles>
-        <OutputFile LanguageFileGuid="b90284a3-d571-481b-8cb4-cfc3482adef3" Purpose="WorkFile" />
-      </OutputFiles>
-      <Reports>
-        <Report Guid="a4905014-ff3e-4f69-80ee-f597c2bce794" Name="Pre-translate Files Report" Description="Results of applying the translation memories to the files." TaskTemplateId="Sdl.ProjectApi.AutomaticTasks.Translate" LanguageDirectionGuid="edccc0fa-9ce5-41ea-906c-9af754db5c2c" PhysicalPath="Reports\Pre-translate Files pl-PL_en-US.xml" />
-      </Reports>
-      <Parameters />
-      <Result Guid="00000000-0000-0000-0000-000000000000" />
-    </AutomaticTask>
-  </Tasks>
+  <Tasks />
 </Project>
