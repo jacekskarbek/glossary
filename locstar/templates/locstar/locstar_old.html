@@ -1,0 +1,439 @@
+
+{% extends "locstar/base.html" %}
+{% load i18n static %}
+
+{% block content %}
+
+<section class="slider-section" hidden-sm hidden-xs>
+                <div class="tp-banner-container">
+                    <div class="tp-banner" >
+                        <ul>
+                            <!-- SLIDE  -->
+                            <li data-transition="fade" data-slotamount="7" data-masterspeed="1000" data-thumb="{% static "assets/images/slider/slider22t.jpg" %}" data-delay="13000" data-title="LocStar" >
+                                <!-- MAIN IMAGE -->
+                                <img src="{% static "assets/images/slider/slider22.jpg" %}" alt="newslide2014_1"  data-bgposition="center top" data-bgfit="cover" data-bgrepeat="no-repeat">
+                                <!-- LAYERS -->
+
+                                <!-- LAYER NR. 1 -->
+                                <div class="tp-caption large-text customin customout"
+                                
+                                    data-x="50"
+                                    data-y="100"
+                                    data-customin="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0;scaleY:0;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;"
+                                    data-customout="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0;scaleY:0;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;"
+                                    data-speed="1800"
+                                    data-start="500"
+                                    data-easing="Power3.easeInOut"
+                                    data-splitin="none"
+                                    data-splitout="chars"
+                                    data-elementdelay="0.08"
+                                    data-endelementdelay="0.08"
+                                    data-end="8000"
+                                    data-endspeed="500"
+                                    style="z-index: 2; " > <h1>{% trans 'Zlokalizuj swoje produkty <br>i zdobądź nowe rynki' %}</h1>
+                                </div>
+                                
+
+                                <!-- LAYER NR. 2 -->
+                                <div class="tp-caption small-text customin customout rs-parallaxlevel-0"
+                                    data-x="50" 
+                                    data-y="400"
+                                    data-customin="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0;scaleY:0;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;"
+                                    data-customout="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0;scaleY:0;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;"
+                                    data-speed="2000"
+                                    data-start="3300"
+                                    data-easing="Power3.easeInOut"
+                                    data-splitin="none"
+                                    data-splitout="none"
+                                    data-end="11000"
+                                    data-endspeed="2000"
+                                    data-linktoslide="next"
+                style="z-index: 8;"> {% trans 'Przetłumaczyliśmy już ponad 150 milionów słów, a efekty naszej pracy można <br>zobaczyć w postaci zlokalizowanych produktów na każdym komputerze <br>i telefonie. Poznaj naszą ofertę i przekonaj się, dlaczego warto mieć nas <br>jako swojego dostawcę tłumaczeń.' %}
+                                </div>
+
+                                <!-- LAYER NR. 3 -->
+                                <div class="tp-caption lfb ltt"
+                                    data-x="430"
+                                    data-y="600"
+                                    data-speed="1800"
+                                    data-start="4500"
+                                    data-easing="Power4.easeOut"
+                                    data-splitin="none"
+                                    data-splitout="none"
+                                    data-elementdelay="0.01"
+                                    data-endelementdelay="0.1"
+                                    data-end="12000"
+                                    data-endspeed="1800"
+                                    data-endeasing="Power4.easeIn"
+                                    style="z-index: 3;">
+                                    <div class="link-button hidden-xs">
+                                        <a href="{% url  'servicegrid'  %}" class="btn btn-primary">{% trans 'Dowiedz się więcej' %}</a>
+                                        <a href="{% url  'contact'  %}" class="btn btn-default">{% trans 'Kontakt' %}</a>
+                                    </div> <!-- link-button -->
+                                </div>
+                            </li>
+<li data-transition="fade" data-slotamount="7" data-masterspeed="1000" data-thumb="{% static "assets/images/slider/slider55t.jpg" %}" data-delay="13000" data-title="LocStar" >
+                                <!-- MAIN IMAGE -->
+                                <img src="{% static "assets/images/slider/slider55.jpg" %}" alt="newslide2014_1"  data-bgposition="center top" data-bgfit="cover" data-bgrepeat="no-repeat">
+                                <!-- LAYERS -->
+
+                                <!-- LAYER NR. 1 -->
+                                <div class="tp-caption large-text customin customout"
+                                    data-x="50"
+                                    data-y="100"
+                                    data-customin="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0;scaleY:0;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;"
+                                    data-customout="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0;scaleY:0;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;"
+                                    data-speed="1800"
+                                    data-start="500"
+                                    data-easing="Power3.easeInOut"
+                                    data-splitin="none"
+                                    data-splitout="chars"
+                                    data-elementdelay="0.08"
+                                    data-endelementdelay="0.08"
+                                    data-end="8000"
+                                    data-endspeed="500"
+                                    style="z-index: 2;"> <h1>{% trans 'Oferta specjalna. Bezpłatna.<br>Bez zobowiązań.' %}</h1>
+                                </div>
+                                
+
+                                <!-- LAYER NR. 2 -->
+                                <div class="tp-caption small-text customin customout rs-parallaxlevel-0"
+                                    data-x="600" 
+                                    data-y="400"
+                                    data-customin="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0;scaleY:0;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;"
+                                    data-customout="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0;scaleY:0;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;"
+                                    data-speed="2000"
+                                    data-start="3300"
+                                    data-easing="Power3.easeInOut"
+                                    data-splitin="none"
+                                    data-splitout="none"
+                                    data-end="11000"
+                                    data-endspeed="2000"
+                                    data-linktoslide="next"
+                                    style="z-index: 8;">{% trans 'Jesteśmy przekonani o naszej jakości. Dlatego <br>przetłumaczymy BEZPŁATNIE dowolny kontent <br>z Twojego projektu, tak abyś mógł podjąć <br>świadomą decyzję o dalszej współpracy.' %}
+                                </div>
+
+                                <!-- LAYER NR. 3 -->
+                                <div class="tp-caption lfb ltt"
+                                    data-x="600"
+                                    data-y="600"
+                                    data-speed="1800"
+                                    data-start="4500"
+                                    data-easing="Power4.easeOut"
+                                    data-splitin="none"
+                                    data-splitout="none"
+                                    data-elementdelay="0.01"
+                                    data-endelementdelay="0.1"
+                                    data-end="12000"
+                                    data-endspeed="1800"
+                                    data-endeasing="Power4.easeIn"
+                                    style="z-index: 3;">
+                                    <div class="link-button hidden-xs">
+                                        <a href="{% url  'special'  %}" class="btn btn-primary">{% trans 'Dowiedz się więcej' %}</a>
+                                        <a href="{% url  'contact'  %}" class="btn btn-default">{% trans 'Kontakt' %}</a>
+                                    </div> <!-- link-button -->
+                                </div>
+                            </li>
+
+                            <li data-transition="fade" data-slotamount="7" data-masterspeed="1000" data-thumb="{% static "assets/images/slider/slider-66m.jpg" %}" data-delay="13000" data-title="LocStar" >
+                                <!-- MAIN IMAGE -->
+                                <img src="{% static "assets/images/slider/slider-66.jpg" %}" alt="newslide2014_1"  data-bgposition="center top" data-bgfit="cover" data-bgrepeat="no-repeat">
+                                <!-- LAYERS -->
+
+                                <!-- LAYER NR. 1 -->
+                                <div class="tp-caption large-text text-left customin customout"
+                                    data-x="100"
+                                    data-y="50"
+                                    data-customin="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0;scaleY:0;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;"
+                                    data-customout="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0;scaleY:0;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;"
+                                    data-speed="1800"
+                                    data-start="500"
+                                    data-easing="Power3.easeInOut"
+                                    data-splitin="none"
+                                    data-splitout="chars"
+                                    data-elementdelay="0.08"
+                                    data-endelementdelay="0.08"
+                                    data-end="8000"
+                                    data-endspeed="500"
+                                    style="z-index: 2;"> <h1>{% trans 'Tłumaczenie i lokalizacja <br>to nasza pasja' %}</h1>
+                                </div>
+                                
+
+                                <!-- LAYER NR. 2 -->
+                                <div class="tp-caption small-text text-left customin customout rs-parallaxlevel-0"
+                                    data-x="100" 
+                                    data-y="550"
+                                    data-customin="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0;scaleY:0;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;"
+                                    data-customout="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0;scaleY:0;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;"
+                                    data-speed="2000"
+                                    data-start="3300"
+                                    data-easing="Power3.easeInOut"
+                                    data-splitin="none"
+                                    data-splitout="none"
+                                    data-end="11000"
+                                    data-endspeed="2000"
+                                    data-linktoslide="next"
+                                    style="z-index: 8;"> {% trans 'Stanowimy dynamiczny zespół doświadczonych specjalistów w branży tłumaczeniowej. <br>Nasze doświadczenie jest poparte wieloletnią współpracą z największymi firmami z branży IT. <br>Dowiedz się więcej o naszej firmie i jej pracownikach.' %}
+                                </div>
+
+                                <!-- LAYER NR. 3 -->
+                                <div class="tp-caption lfb ltt"
+                                    data-x="450"
+                                    data-y="680"
+                                    data-speed="1800"
+                                    data-start="4500"
+                                    data-easing="Power4.easeOut"
+                                    data-splitin="none"
+                                    data-splitout="none"
+                                    data-elementdelay="0.01"
+                                    data-endelementdelay="0.1"
+                                    data-end="12000"
+                                    data-endspeed="1800"
+                                    data-endeasing="Power4.easeIn"
+                                    style="z-index: 3;">
+                                    <div class="link-button hidden-xs">
+                                        <a href="{% url  'onas'  %}" class="btn btn-primary">{% trans 'O firmie' %}</a>
+                                        <a href="{% url  'contact'  %}" class="btn btn-default">{% trans 'Kontakt' %}</a>
+                                    </div> <!-- link-button -->
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </section> <!-- slider-section -->
+
+
+
+             <section class="research-section">
+                <div class="container">
+                
+                    <div class="title-bar text-center">
+                        <h2 class="title">{% trans 'LocStar' %}</h2>
+                        <span class="title-border"></span>
+                    </div> <!-- title-bar -->
+
+                    <div class="section-wrapper">
+                        <div class="row">
+                            <div class="col-md-6 padding-right">
+                                <div class="research-content">
+                                   <div id="lightBox" class="research-caption">
+                                        <a href="assets/images/r2.jpg"><img src="{% static "assets/images/r2b.jpg" %}" alt="image"></a>
+                                    </div> <!-- research-caption -->
+
+                                </div> <!-- research-content -->
+                            </div>
+							<div class="col-md-6 padding-left">
+                                <div class="research-content">
+                                   <div class="content-bar right-content">
+                                        <h3>{% trans 'Usługi' %}</h3>
+                                    <!--    <p>{% trans 'Specjalizujemy się w lokalizacji oprogramowania oraz tłumaczeniu dokumentacji i witryn internetowych w parze językowej EN>PL. Świadczymy również szereg usług dodatkowych związanych z tłumaczeniami.' %}</p>  -->
+                                        
+                                        <p>{% trans 'Nasze doświadczenie obejmuje różnorodne dziedziny, od tłumaczeń ogólnych, przez biznes i marketing, aż do zaawansowanych treści z branży IT. Specjalizujemy się w lokalizacji oprogramowania oraz tłumaczeniu dokumentacji i witryn internetowych w parze językowej EN>PL. Świadczymy również szereg usług dodatkowych związanych z tłumaczeniami.' %} </p>
+                                        <a href="{% url  'servicegrid'  %}" class="btn btn-primary">{% trans 'Dowiedz się więcej' %}</a>
+                                    </div> <!-- content-bar -->
+                                </div> <!-- research-content -->
+                            </div>
+						</div>
+						<div class="row">
+                            <div class="col-md-6 padding-right">
+                                <div class="research-content">
+                                    <div class="content-bar left-content">
+                                        <h3>{% trans 'Technologie' %}</h3>
+                                  <p>{% trans "Komputerowe wspomaganie tłumaczeń to bogaty zbiór narzędzi, których głównym zadaniem jest przyspieszenie pracy tłumacza oraz zapewnienie oczekiwanej jakości finalnego tekstu. W naszej pracy wykorzystujemy najnowsze osiągnięcia w zakresie oprogramowania translatorskiego oraz własny system zarządzania o nazwie EMTRA." %}</p>
+                                        <a href="{% url  'technologie'  %}" class="btn btn-primary">{% trans 'Dowiedz się więcej' %}</a>
+                                    </div> <!-- content-bar -->
+                                </div> <!-- research-content -->
+                            </div>
+                             <div class="col-md-6 padding-left">
+                                <div class="research-content">
+                            		<div id="lightBox" class="research-caption">
+                                        <a href="assets/images/r2.jpg"><img src="{% static "assets/images/r3b.jpg" %}" alt="image"></a>
+                                    </div> <!-- research-caption -->
+                            	</div> <!-- research-content -->
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6 padding-right">
+                                <div class="research-content">
+                                   <div id="lightBox" class="research-caption">
+                                        <a href="assets/images/r2.jpg"><img src="{% static "assets/images/r1b.jpg" %}" alt="image"></a>
+                                    </div> <!-- research-caption -->
+
+                                </div> <!-- research-content -->
+                            </div>
+							<div class="col-md-6 padding-left">
+                                <div class="research-content">
+                                   <div class="content-bar right-content">
+                                        <h3>{% trans 'Klienci' %}</h3>
+                                        <p>{% trans "Wykonujemy projekty lokalizacyjne zlecane przez największe światowe koncerny z branży IT, a także przez wiele mniejszych firm, które w takim samym stopniu wymagają najwyższej jakości tłumaczeń. Odbiorcami większości tłumaczeń są uznane międzynarodowe firmy tłumaczeniowe, które powierzają nam obsługę pary językowej EN-PL." %} </p>
+                                        <a href="{% url  'customers'  %}" class="btn btn-primary">{% trans 'Dowiedz się więcej' %}</a>
+                                    </div> <!-- content-bar -->
+                                </div> <!-- research-content -->
+                            </div>
+						</div>
+                </div>
+            </section> <!-- research-section -->
+
+
+            <section class="working-section section-padding">
+                <div class="container">
+                    <div class="title-bar text-center">
+                        <h2 class="title">{% trans 'Nasza firma' %}</h2>
+                    </div> <!-- title-bar -->
+
+                    <div class="working-wrapper">
+                        <div class="row">
+                            <div class="col-md-5">
+                                <div class="wrapper-content">
+                                    <p>{% trans 'Nie jesteśmy firmą zajmującą się pośrednictwem między klientem a tłumaczami. Bazujemy na własnym zespole pracowników z naszego biura w Szczecinie oraz stałych współpracownikach zdalnych. Są to wysokiej klasy specjaliści z wieloletnim doświadczeniem, którzy przetłumaczyli setki tysięcy słów w projektach dla największych światowych firm. Dzięki specjalistycznemu systemowi do zarządzania pracą zdalną osoby pracujące w siedzibie firmy oraz w domu stanowią jeden, doskonale komunikujący się zespół.' %}
+</p>
+
+                                    <a href="{% url  'onas'  %}" class="btn btn-primary">{% trans 'Dowiedz się więcej' %}</a>
+                                </div>
+                            </div>
+
+                            <div class="col-md-7">
+                                <div id="working-carousel" class="carousel slide" data-ride="carousel">
+                                    <div class="carousel-inner" role="listbox">
+                                        <div class="item active">
+                                            <img src="{% static "assets/images/work/w1b.jpg"  %}" alt="image">
+                                        </div>
+
+                                        <div class="item">
+                                            <img src="{% static "assets/images/work/w2b.jpg"  %}" alt="image">
+                                        </div>
+                                         <div class="item active">
+                                            <img src="{% static "assets/images/work/w3b.jpg"  %}" alt="image">
+                                        </div>
+                                        
+                                    </div>
+                                      <a class="left carousel-control" href="#working-carousel" role="button" data-slide="prev">
+                                          <i class="fa fa-angle-left" aria-hidden="true"></i>
+                                      </a>
+                                      <a class="right carousel-control" href="#working-carousel" role="button" data-slide="next"><i class="fa fa-angle-right" aria-hidden="true"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div> <!-- working-wrapper -->
+                </div>
+            </section> <!-- working-section -->
+
+ 
+            <section class="information-section">
+                <div class="container">
+                    <h3>{% trans 'Zachęcamy do kontaktu z nami' %}</h3>
+                    <a href="{% url  'contact'  %}" class="btn btn-primary pull-right">{% trans 'Kontakt' %}</a>
+                </div>
+            </section> <!-- information-section -->
+
+
+
+             <section class="counting-section">
+                <div class="container text-center">
+                    <h2 class="hidden">counting-title</h2>
+
+                    <div class="counting-pusher">
+                        <div class="counting-wrapper">
+                            <div class="count-description inline-block">
+                                <span class="timer">23</span>
+                            </div><br>
+                            <p>{% trans 'lata doświadczenia' %}</p>
+                        </div>  <!-- counting-wrapper --> 
+
+                        <div class="counting-wrapper">
+                            <div class="count-description inline-block">
+                                <span class="timer">2500</span>
+                            </div><br>
+                            <p>{% trans 'zrealizowanych projektów' %}</p>
+                        </div>  <!-- counting-wrapper -->
+
+                        <div class="counting-wrapper">
+                            <div class="count-description inline-block">
+                                <span class="timer">150</span> mln
+                            </div>
+                            <p>{% trans 'przetłumaczonych słów' %}</p>
+                        </div>  <!-- counting-wrapper -->
+<!--
+                        <div class="counting-wrapper">
+                            <div class="count-description inline-block">
+                                <span class="timer">65</span>
+                            </div>
+                            <p>zadowolonych klientów</p>
+                        </div>  <!-- counting-wrapper -->  -->
+                    </div> <!-- /.counting-pusher -->
+                </div>
+            </section> <!-- counting-section -->
+
+ <section class="client-section section-padding">
+                <div class="container">
+                    <div class="title-bar text-center">
+                        <h2 class="title">{% trans "Tłumaczymy produkty następujących firm:" %}</h2>
+                        <span class="title-border"></span>
+                        <h3 class="title">{% trans "(jako dostawca bezpośredni lub dla międzynarodowych firm tłumaczeniowych)" %}</h3>
+                        
+                    </div> <!-- title-bar -->
+
+                    <div class="row">
+                        <div class="col-md-12">
+                        <h3>
+                            <ul class="client-wrapper text-center">
+                                <li>Microsoft</li>
+                                <li>Google</li>
+                                <li>Apple</li>
+                                <li>Amazon</li>
+                                <li>Adobe</li>
+                                </ul>
+                                <ul class="client-wrapper text-center">
+                                <li>Cisco</li>
+                                <li>IBM</li>
+                                <li>HP</li>
+                                <li>ABB</li>
+                                <li>Autodesk</li>
+                                <li>Y Soft</li>
+                                </ul>
+                                <ul class="client-wrapper text-center">
+                                <li>Avast</li>
+                                <li>AVG</li>
+                                <li>Clarion</li>
+                                <li>Fluke</li>
+                                <li>F-Secure</li>
+                                <li>Zyxel</li>
+                                 </ul>
+                                <ul class="client-wrapper text-center">
+                                <li>General Electric</li>
+                                <li>Fedex</li>
+                                <li>Godaddy</li>
+                                <li>Logitech</li>
+                                <li>Nokia</li>
+                                 </ul>
+                                <ul class="client-wrapper text-center">
+                                <li>Oracle</li>
+                                <li>Pinnacle</li>
+                                <li>Roche</li>
+                                <li>Rockwell</li>
+                                <li>ServiceNow</li>
+                                </ul>
+                                <ul class="client-wrapper text-center">
+                                <li>Siemens</li>
+                                <li>Skype</li>
+                                <li>Sony</li>
+                                <li>Toshiba</li>
+                                <li>Trend Micro</li>
+                                </ul>
+                                <ul class="client-wrapper text-center">
+                                <li>... i innych</li>
+                                </ul> <!-- client-wrapper -->
+                                </h3>
+                                <p>{% trans 'Wszystkie znaki towarowe należą do odpowiednich właścicieli.' %}</p>
+                            <!-- <p>{% trans 'All other trademarks are the property of their respective owners.' %}</p> -->
+                            
+                             
+                        </div>
+                       
+                    </div>
+                </div>
+            </section> <!-- client-section -->
+
+            
+
+{% endblock %}
