@@ -26,5 +26,6 @@ urlpatterns = [
     url(r'^contact/', viewslocstar.contact, name='contact'),
     url(r'^special/', viewslocstar.special, name='special'),
     url(r'^prices/', viewslocstar.prices, name='prices'),
+    url(r'^people/', viewslocstar.people, name='people'),
 ]
 

@@ -34,6 +34,13 @@ def locstar (request):
 	else:
 		return render(request, 'locstar/locstar.html', emailform())
 		
+def people (request):
+	if request.method == 'POST':
+		#emailformOK(request)
+		return render(request, 'locstar/email.html', emailformOK(request))
+	else:
+		return render(request, 'locstar/people.html', emailform())
+		
 def onas (request):
 	if request.method == 'POST':
 		#emailformOK(request)
