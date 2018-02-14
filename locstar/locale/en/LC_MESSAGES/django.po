@@ -148,7 +148,7 @@ msgstr "Contact"
 
 #: .\templates\locstar\base.html:103
 msgid "Dział zamówień"
-msgstr "Procurement Department"
+msgstr "Customer Service Department"
 
 #: .\templates\locstar\base.html:114
 msgid "Dział rekrutacji"
@@ -182,7 +182,7 @@ msgid ""
 "Trzy kondygnacje, sala open space, 6 pomieszczeń roboczych i pokój "
 "konferencyjny"
 msgstr ""
-"Three stories, one open space room + 6 working rooms + conference room."
+"Three floors, one open space room + 6 workrooms + conference room."
 
 #: .\templates\locstar\base.html:249
 msgid "Dwa niezależne pomieszczenia studia nagrań"
@@ -200,7 +200,7 @@ msgid ""
 "Sieć firmowa z 20 stacjami roboczymi oraz znaczną liczbą komputerów "
 "pracujących zdalnie"
 msgstr ""
-"Framework: Fully virtualized server infrastructure controlled by VMware vSphere software. Main cluster of 3 physical servers and 2 NAS devices. A separate server for domain control and network services. 20 local workstations and a number of remote computers within the company network."
+"Framework: Fully virtualized server infrastructure managed by VMware vSphere. Main cluster of 3 physical servers and 2 NAS devices.  Separate server for domain control and network services. 20 local workstations and several remote computers within the company network."
 
 #: .\templates\locstar\base.html:270
 msgid ""
@@ -445,7 +445,7 @@ msgid ""
 "dokumentacji i witryn internetowych w parze językowej EN>PL. Świadczymy "
 "również szereg usług dodatkowych związanych z tłumaczeniami."
 msgstr ""
-"Our expertise covers a broad variety of domains from general translation, through business and marketing, to highly specialized IT content. We specialize in localizing software, as well as translating documentation and websites in the EN>PL language pair. We also offer a number of additional translation-related services."
+"Our expertise covers a broad variety of domains, from general translation to business and marketing, as well as highly specialized IT content. We specialize in localizing software, as well as translating documentation and websites in the EN>PL language pair. We also offer a number of additional translation-related services."
 
 #: .\templates\locstar\locstar.html:242
 #| msgid ""
@@ -459,7 +459,7 @@ msgid ""
 "osiągnięcia w zakresie oprogramowania translatorskiego oraz własny system "
 "zarządzania o nazwie EMTRA."
 msgstr ""
-"Computer-aided translation refers to a rich collection of tools whose main task is to speed up the translator's work and ensure that the final text is of the highest quality. State-of-the-art software and advanced EMTRA system is a foundation of our localization workflow."
+"Computer-aided translation refers to a rich collection of tools whose main task is to speed up the translator's work and ensure that the final text is of the highest quality. State-of-the-art software and advanced EMTRA system lay the foundation of our localization workflow."
 
 #: .\templates\locstar\locstar.html:268
 #| msgid ""
@@ -473,7 +473,7 @@ msgid ""
 "tłumaczeń są uznane międzynarodowe firmy tłumaczeniowe, które powierzają nam "
 "obsługę pary językowej EN-PL."
 msgstr ""
-"We carry out localization projects commissioned by the world's largest IT enterprises, as well as by many smaller companies that also require the highest level of translation quality. Most of our work is delivered to most renowned multilingual translation companies that entrust their EN-PL projects to Locstar as production center."
+"We carry out localization projects commissioned by the world's largest IT enterprises, as well as by many smaller companies that also require the highest level of translation quality. Most of our work is delivered to most renowned multilingual translation companies, who entrust their EN-PL projects to Locstar as their production center."
 
 #: .\templates\locstar\locstar.html:280
 msgid "Nasza firma"
@@ -515,7 +515,7 @@ msgstr "We translate products for:"
 msgid ""
 "(jako dostawca bezpośredni lub dla międzynarodowych firm tłumaczeniowych)"
 msgstr ""
-"(as a direct vendor or through multilingual translation companies)."
+"(either as a direct vendor or through multilingual translation companies)."
 
 #: .\templates\locstar\locstar.html:426
 msgid "Wszystkie znaki towarowe należą do odpowiednich właścicieli."
@@ -1196,7 +1196,7 @@ msgid ""
 "konkretnych projektów dostosowujemy się do oczekiwań klientów bądź "
 "proponujemy najlepsze rozwiązania dla danej zawartości źródłowej. "
 msgstr ""
-"We use practically all CAT tools on the market for our projects. When selecting tools for individual projects, we adjust to meet clients' expectations, or propose the best solutions for the given source content."
+"At LocStar, you will find practically every CAT tool on the market being used on all kind of projects. When selecting tools for individual projects, we adjust to meet clients' expectations, or propose the best solutions for the given source content."
 
 #: .\templates\locstar\tools.html:28
 msgid ""
