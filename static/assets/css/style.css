@@ -457,7 +457,7 @@ button,
 .title-bar {
   position: relative; }
   .title-bar .title {
-    margin-bottom: 77px;
+    margin-bottom: 47px;
     padding-bottom: 20px; }
     @media only screen and (max-width: 991px) {
       .title-bar .title {
@@ -1060,7 +1060,7 @@ button,
  /*  font-family: "Lato", sans-serif; */
   font-family: "Amiko", sans-serif;
   font-size: 30px;
-  line-height: 34px;
+  line-height: 38px;
   color: #FFFFFF; }
 .slider-section .link-button .btn-primary {
   color: #FFFFFF !important;
@@ -2038,6 +2038,7 @@ button,
   background-color: #FFFFFF; }
   .contact-section .map-section {
     padding-top: 90px;
+    padding-bottom: 130px;
     text-align: center; }
     .contact-section .map-section #googleMap {
       width: 100%;
@@ -2173,7 +2174,7 @@ button,
     background-size: cover;
     background-attachment: fixed;
     padding: 65px 0 58px;
-    margin-top: 220px; }
+    margin-top: 50px; }
     @media only screen and (max-width: 767px) {
       .contact-section .contact-section-two {
         padding-bottom: 0;
