@@ -188,7 +188,7 @@ msgid ""
 "Użyj poniższych informacji kontaktowych. Szczegółowe informacje o naszych "
 "usługach można znaleźć "
 msgstr ""
-"Please contact us using the information below. Detailed information about our services can be found"
+"Please contact us using the information below. Detailed information about our services can be found "
 
 #: .\templates\locstar\base.html:179
 msgid "tutaj"
