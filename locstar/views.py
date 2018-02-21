@@ -1,6 +1,10 @@
 from django.shortcuts import render
 from .forms import ContactForm
 from django.core.mail import EmailMessage
+from django.http import HttpResponse, JsonResponse, HttpResponseRedirect
+
+def facebook (request):
+	return HttpResponseRedirect('https://www.facebook.com/Locstar-136863929657219/')
 
 def emailform():
 	form=ContactForm()

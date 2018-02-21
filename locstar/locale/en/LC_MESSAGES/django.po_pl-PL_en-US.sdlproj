@@ -2964,6 +2964,20 @@
         </SettingsGroup>
       </SettingsBundle>
     </SettingsBundle>
+    <SettingsBundle Guid="c50a25af-722b-4e79-8edc-97f3d4f914ba">
+      <SettingsBundle>
+        <SettingsGroup Id="IgnoredMessagesSettings">
+          <Setting Id="IgnoredMessagesData">
+            <IgnoredMessagesData xmlns:i="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.datacontract.org/2004/07/Sdl.ProjectApi">
+              <IgnoredMessageIds>
+              </IgnoredMessageIds>
+              <IgnoredMessageTypes xmlns:d2p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays">
+              </IgnoredMessageTypes>
+            </IgnoredMessagesData>
+          </Setting>
+        </SettingsGroup>
+      </SettingsBundle>
+    </SettingsBundle>
   </SettingsBundles>
   <AnalysisBands>
     <AnalysisBand MinimumMatchValue="50" />
@@ -3030,10 +3044,10 @@
             <NewLearnings Words="0" Characters="0" Segments="0" Placeables="0" Tags="0" />
             <Locked Words="0" Characters="0" Segments="0" Placeables="0" Tags="0" />
           </AnalysisStatistics>
-          <ConfirmationStatistics Status="None">
+          <ConfirmationStatistics FileTimeStamp="2018-02-21T09:05:05.2573477Z" Status="Complete">
             <Unspecified Words="0" Characters="0" Segments="0" Placeables="0" Tags="0" />
-            <Draft Words="0" Characters="0" Segments="0" Placeables="0" Tags="0" />
-            <Translated Words="0" Characters="0" Segments="0" Placeables="0" Tags="0" />
+            <Draft Words="74" Characters="459" Segments="2" Placeables="6" Tags="3" />
+            <Translated Words="3013" Characters="21145" Segments="196" Placeables="102" Tags="45" />
             <RejectedTranslation Words="0" Characters="0" Segments="0" Placeables="0" Tags="0" />
             <ApprovedTranslation Words="0" Characters="0" Segments="0" Placeables="0" Tags="0" />
             <RejectedSignOff Words="0" Characters="0" Segments="0" Placeables="0" Tags="0" />
@@ -3046,4 +3060,10 @@
     </ProjectFile>
   </ProjectFiles>
   <Tasks />
+  <PackageOperations>
+    <ProjectPackageCreationOperations />
+    <ProjectPackageImportOperations />
+    <ReturnPackageCreationOperations />
+    <ReturnPackageImportOperations />
+  </PackageOperations>
 </Project>
