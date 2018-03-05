@@ -1226,7 +1226,8 @@ button,
       width: 80px;
       height: 2px;
       right: 21px;
-      bottom: 7px;
+ /*     bottom: 7px; */
+ 	bottom: 1px;
       background-color: #54be73; }
       @media only screen and (max-width: 1200px) {
         .working-section .working-section-two h2::before {

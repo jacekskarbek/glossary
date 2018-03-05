@@ -174,15 +174,15 @@
                 <div class="section-one-wrapper">
                     <div class="row">
                         <h3>{% trans 'Kontakt' %}</h3>
-                        <div class="col-md-11 section-left">
+                        <div class="col-md-7 section-left">
                             <div class="contact-wrapper">
-                                <p>{% trans 'Aby skontaktować się z nami, skorzystaj z poniższego formularza kontaktowego.' %}</p>
+                                <p>{% trans 'Użyj poniższych informacji kontaktowych. Szczegółowe informacje o naszych usługach można znaleźć '%}<a href="{% url  'servicegrid'  %}">{% trans 'tutaj' %}.</a></p>
 								<ul class="location">
                                 	<li>
                                     	<i class="fa fa-map-marker" aria-hidden="true"></i>
                                         <div class="content">
                                             <span class="text">ul. Bajana 8A <br> 71-330 Szczecin <br> Poland</span>
-                                            <span class="map-view"><i class="fa fa-street-view" aria-hidden="true"></i>{% trans ' pokaż na mapie' %}</span>
+                                            <span class="map-view"><i class="fa fa-street-view" aria-hidden="true"></i> pokaż na mapie</span>
                                         </div>
                                     </li>
                                     <li>
@@ -195,6 +195,8 @@
                                     </li>
                                 </ul>
                             </div> <!-- contact-wrapper -->
+                        </div>
+                        <div class="col-md-5">
                             <div class="contact-wrapper">
                                 <form class="contact-form" action="" method="post">
                                  {% csrf_token %}
@@ -213,7 +215,6 @@
                                 </form>
                             </div> <!-- contact-wrapper -->
                         </div>
-                       
                     </div>
                 </div> <!-- section-one-wrapper -->
                 
