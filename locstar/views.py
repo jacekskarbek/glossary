@@ -5,6 +5,12 @@ from django.http import HttpResponse, JsonResponse, HttpResponseRedirect
 
 def facebook (request):
 	return HttpResponseRedirect('https://www.facebook.com/Locstar-136863929657219/')
+	
+
+def error_404(request):
+    data = {}
+    print('HALO')
+    return render(request,'404.html', data)
 
 def emailform():
 	form=ContactForm()

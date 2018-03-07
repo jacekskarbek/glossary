@@ -1,16 +1,19 @@
 from django.conf.urls import url
-#from glos import views
+#from . import views
 from locstar import views as viewslocstar
 from django.conf.urls import include, url
-#from django.conf.urls import handler404, handler500
+from django.conf.urls import handler404, handler500
 
-#handler404 = views.error_404
+#handler404 = viewslocstar.error_404
+#handler404 = 'glossary.views.my_custom_page_not_found_view'
+
 #app_name = 'glos'
 urlpatterns = [
    
     #url(r'^$', views.index, name='index'),
     #url(r'^locstar/', viewslocstar.locstar, name='locstar'),
     url(r'^$', viewslocstar.locstar, name='locstar'),
+    #url(r'^onas/', viewslocstar.error_404, name='onas'),
     url(r'^onas/', viewslocstar.onas, name='onas'),
     url(r'^servicegrid/', viewslocstar.servicegrid, name='servicegrid'),
     url(r'^translation/', viewslocstar.translation, name='translation'),
