@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-03-12 10:13+0100\n"
+"POT-Creation-Date: 2018-03-12 14:03+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -225,6 +225,10 @@ msgstr "Customer Service Department"
 #: .\templates\locstar\base_old.html:114
 msgid "Dział rekrutacji"
 msgstr "Recruitment Department"
+
+#: .\templates\locstar\base.html:126
+msgid "praca@locstar.pl"
+msgstr "job@locstar.pl"
 
 #: .\templates\locstar\base.html:174 .\templates\locstar\base20180305.html:170
 msgid "Wróć do formularza"
@@ -1229,7 +1233,6 @@ msgstr ""
 "<b>Dictionaries, glossaries, and terminology databases</b> used in translations: terms, synonyms, acronyms, and additional information."
 
 #: .\templates\locstar\technologie.html:66
-#: .\templates\locstar\technologie.html:78
 msgid ""
 "<b>Systemy tłumaczenia maszynowego</b> umożliwiają częściowe zredukowanie "
 "pracy tłumacza poprzez automatyczne generowanie tłumaczeń przez komputer."
@@ -1239,6 +1242,13 @@ msgstr ""
 #: .\templates\locstar\technologie.html:75
 msgid "Narzędzia"
 msgstr "Tools"
+
+#: .\templates\locstar\technologie.html:78
+msgid ""
+"<b>Narzędzia CAT</b> przesądzają o wydajności procesu tłumaczenia, a także o "
+"spójności i jakości technicznej (zachowanie poprawności kodu i formatowania)."
+msgstr ""
+"<b>CAT tools</b> are crucial to ensure effectivity of translation process, as well as consistency and technical quality (code integrity and formatting.)"
 
 #: .\templates\locstar\terminology.html:26
 msgid ""
@@ -1523,6 +1533,10 @@ msgstr "web services"
 #: .\templates\locstar\website.html:36
 msgid "usługi online"
 msgstr "online services"
+
+#: .\views.py:41 .\views.py:43
+msgid "Zapytanie ze strony Locstar: "
+msgstr "Inquiry from Locstar site: "
 
 #~ msgid ""
 #~ "Aby skontaktować się z nami, skorzystaj z poniższego formularza "
