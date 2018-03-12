@@ -55,11 +55,13 @@
 	
 	</head>
 
-	
 	<body>
 		
 		<!-- HEADER -->
-	
+		<article class="content">
+			<!-- Add your site or application content here -->
+			
+		</article>
 		
 		<!-- SLIDER EXAMPLE -->
 		<section class="example">
@@ -149,7 +151,8 @@
 						<div class="tp-caption   rs-parallaxlevel-1" 
 							 id="slide-34-layer-14" 
 							 data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']" 
-							 data-y="['middle','middle','middle','middle']" data-voffset="['-67','-67','-47','-67']" 
+							 data-y="['top','top','top','top']" data-voffset="['0','0','0','0']" 
+							 
 							data-fontsize="['250','250','200','150']"
 							data-lineheight="['250','250','200','150']"
 							data-width="none"
@@ -174,7 +177,7 @@
 						<div class="tp-caption   rs-parallaxlevel-1" 
 							 id="slide-34-layer-13" 
 							 data-x="['center','center','center','center']" data-hoffset="['-3','-3','-3','-3']" 
-							 data-y="['middle','middle','middle','middle']" data-voffset="['-70','-70','-50','-70']" 
+							 data-y="['top','top','top','top']" data-voffset="['-5','-5','-5','-5']" 
 							data-fontsize="['250','250','200','150']"
 							data-lineheight="['250','250','200','150']"
 							data-width="none"
@@ -199,7 +202,7 @@
 						<div class="tp-caption   rs-parallaxlevel-1" 
 							 id="slide-34-layer-12" 
 							 data-x="['center','center','center','center']" data-hoffset="['3','3','3','3']" 
-							 data-y="['middle','middle','middle','middle']" data-voffset="['-70','-70','-50','-70']" 
+							 data-y="['top','top','top','top']" data-voffset="['5','5','5','5']" 
 							data-fontsize="['250','250','200','150']"
 							data-lineheight="['250','250','200','150']"
 							data-width="none"
@@ -224,7 +227,7 @@
 						<div class="tp-caption   rs-parallaxlevel-1" 
 							 id="slide-34-layer-11" 
 							 data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']" 
-							 data-y="['middle','middle','middle','middle']" data-voffset="['-70','-70','-50','-70']" 
+							 data-y="['top','top','top','top']" data-voffset="['5','5','-5','-5']" 
 							data-fontsize="['250','250','200','150']"
 							data-lineheight="['250','250','200','150']"
 							data-width="none"
@@ -241,13 +244,13 @@
 							data-paddingbottom="[0,0,0,0]"
 							data-paddingleft="[0,0,0,0]"
 
-							style="z-index: 11; white-space: nowrap; font-size: 250px; line-height: 250px; font-weight: 700; color: rgba(255,255,255,1);font-family:Poppins;letter-spacing:-10px;">404 </div>
+							style="z-index: 11; white-space: nowrap; font-size: 250px; line-height: 250px; font-weight: 700; color: rgba(100,100,100,1);font-family:Poppins;letter-spacing:-10px;">404 </div>
 
 						<!-- LAYER NR. 8 -->
 						<div class="tp-caption   rs-parallaxlevel-1" 
 							 id="slide-34-layer-2" 
 							 data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']" 
-							 data-y="['middle','middle','middle','middle']" data-voffset="['70','70','70','15']" 
+							 data-y="['middle','middle','middle','middle']" data-voffset="['255','255','265','215']" 
 							data-fontsize="['50','50','40','30']"
 							data-lineheight="['50','50','40','30']"
 							data-width="none"
@@ -264,13 +267,13 @@
 							data-paddingbottom="[0,0,0,0]"
 							data-paddingleft="[0,0,0,0]"
 
-							style="z-index: 12; white-space: nowrap; font-size: 50px; line-height: 50px; font-weight: 700; color: rgba(255,255,255,1);font-family:Poppins;">{% trans 'NIE MA TAKIEJ STRONY ' %}</div>
+							style="z-index: 12; white-space: nowrap; font-size: 50px; line-height: 50px; font-weight: 700; color: rgba(20,20,20,1);font-family:Poppins;">NIE MA TAKIEj STRONY </div>
 
-						<!-- LAYER NR. 9 -->
+							<!-- LAYER NR. 9 -->
 						<div class="tp-caption   rs-parallaxlevel-1" 
 							 id="slide-34-layer-9" 
 							 data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']" 
-							 data-y="['middle','middle','middle','middle']" data-voffset="['160','160','150','80']" 
+							 data-y="['middle','middle','middle','middle']" data-voffset="['340','340','330','80']" 
 							data-width="none"
 							data-height="none"
 							data-whitespace="nowrap"
@@ -286,8 +289,9 @@
 							data-paddingleft="[0,0,0,0]"
 
 							style="z-index: 13; white-space: nowrap; font-size: 50px; line-height: 55px; font-weight: 700; color: rgba(255,255,255,1);font-family:Open Sans;">
-							<a style="color: red;" href="{% url 'locstar' %}" >{% trans 'Przejdź do strony głównej' %}</a>
+							<a style="color: red;" href="{% url 'locstar' %}" >Przejdź do strony głównej</a>
 							</div>
+					
 					</li>
 				</ul>
 			<div class="tp-bannertimer tp-bottom" style="visibility: hidden !important;"></div>	</div>
@@ -363,10 +367,11 @@
 		</article>
 	</section>
 	
-	
+
+    <div class="clearfix"></div>
 
     
- 
+ 	<script type="text/javascript" src="{% static "assets/warning.js" %}"></script>
 
 	</body>
 </html>
