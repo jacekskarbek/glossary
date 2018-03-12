@@ -31,5 +31,7 @@ urlpatterns = [
     url(r'^prices/', viewslocstar.prices, name='prices'),
     url(r'^people/', viewslocstar.people, name='people'),
     url(r'^facebook/', viewslocstar.facebook, name='facebook'),
+    url(r'^twitter/', viewslocstar.twitter, name='twitter'),
+    url(r'^linkedin/', viewslocstar.linkedin, name='linkedin'),
 ]
 

@@ -2,11 +2,18 @@ from django.shortcuts import render
 from .forms import ContactForm
 from django.core.mail import EmailMessage
 from django.http import HttpResponse, JsonResponse, HttpResponseRedirect
+from django.utils.translation import ugettext_lazy as _
 
 def facebook (request):
 	return HttpResponseRedirect('https://www.facebook.com/Locstar-136863929657219/')
 	
-
+def twitter (request):
+	return HttpResponseRedirect('https://twitter.com/LocStarPL')
+	
+def linkedin (request):
+	return HttpResponseRedirect('https://www.linkedin.com/company/2171495/')
+	
+	
 def error_404(request):
     data = {}
     print('HALO')
@@ -31,9 +38,9 @@ def emailformOK(req):
 		'form': form,
 		'email': False,
 		}
-		email = EmailMessage('Zapytanie ze strony Locstar: '+name+', '+emaila, message, to=['info@locstar.pl'])
+		email = EmailMessage(_(u'Zapytanie ze strony Locstar: ')+name+', '+emaila, message, to=['info@locstar.pl'])
 		email.send()
-		email = EmailMessage('Zapytanie ze strony Locstar: '+name+', '+emaila, message, to=[emaila])
+		email = EmailMessage(_(u'Zapytanie ze strony Locstar: ')+name+', '+emaila, message, to=[emaila])
 		email.send()
 		return context
 
