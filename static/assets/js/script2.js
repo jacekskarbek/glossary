@@ -365,7 +365,7 @@ jQuery(function ($) {
         if ($('#menuMap').length) {
             google.maps.event.addDomListener(window, 'load', init);
             
-            function init() {
+            init = function()  {
                 var mapOptions = {
                     // How zoomed in you want the map to start at (always required)
                     zoom: 12,

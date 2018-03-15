@@ -320,7 +320,7 @@ jQuery(function ($) {
         if ($('#googleMap').length) {
             google.maps.event.addDomListener(window, 'load', init);
             
-            init = function() {
+            function init() {
                 var mapOptions = {
                     // How zoomed in you want the map to start at (always required)
                     zoom: 12,

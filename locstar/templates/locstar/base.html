@@ -6,6 +6,7 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="{% trans 'LocStar - Tłumaczenie, lokalizacja, zarządzanie projektami, testowanie' %}">
         <title>{% trans 'LocStar - Tłumaczenie, lokalizacja, zarządzanie projektami, testowanie' %}</title>
         <!-- fav icon -->
         <link href="{% static "assets/images/favicon.png" %}" rel="shortcut icon"  type="image/png">
@@ -32,7 +33,7 @@
     <body class="homePageFour">
     <!--<body class="service-sidebar-page sub-page"> -->
 
-        <div id="preloader"><img src="{% static "assets/images/loader.gif" %}" alt=""></div>
+       <div id="preloader"><img src="{% static "assets/images/loader.gif" %}" alt=""></div>  
 
         <div id="main-wrapper">
 
@@ -218,6 +219,11 @@
                                     <div class="form-group">
                                         {{ form.message }}
                                     </div>
+                                   <div class="form-group">
+                                        {{ form.captcha }}
+                                    </div>
+                                   
+								
                                     <div class="form-group">
                                         <button type="submit" class="subscribeBtn btn btn-primary">{% trans 'Wyślij' %}</button>
                                     </div>
@@ -370,6 +376,6 @@
         <script src="{% static "assets/js/chart.js" %}"></script>
         <script src="{% static "assets/owl-carrosel/owl.carousel.min.js" %}"></script>
         
-        <script src="{% static "assets/js/script.js" %}"></script>
-    </body>
+    <script src="{% static "assets/js/script2.js" %}"></script> 
+          </body>
 </html>
