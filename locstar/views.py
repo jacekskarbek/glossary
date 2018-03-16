@@ -72,11 +72,11 @@ def onas (request):
 def special (request):
 	return renderwithemail(request, 'locstar/special.html')
 def prices (request):
-	return renderwithemail(request, 'locstar/email.html')
+	return renderwithemail(request, 'locstar/prices.html')
 def contact (request):
 	return renderwithemail(request, 'locstar/contact.html')
 def technologie (request):
-	return renderwithemail(request, 'locstar/email.html')
+	return renderwithemail(request, 'locstar/technologie.html')
 def tm (request):
 	return renderwithemail(request, 'locstar/tm.html')
 def servicegrid (request):
