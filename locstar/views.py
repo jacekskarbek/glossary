@@ -1,11 +1,15 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from .forms import ContactForm
 from django.core.mail import EmailMessage
 from django.http import HttpResponse, JsonResponse, HttpResponseRedirect
 from django.utils.translation import ugettext_lazy as _
+import urllib
+import json
+from django.conf import settings
+from django.contrib import messages
 
 def facebook (request):
-	return HttpResponseRedirect('https://www.facebook.com/Locstar-136863929657219/')
+	return HttpResponseRedirect('https://www.facebook.com/LocstarPL/')
 	
 def twitter (request):
 	return HttpResponseRedirect('https://twitter.com/LocStarPL')
@@ -20,16 +24,16 @@ def error_404(request):
     return render(request,'404.html', data)
 
 def emailform():
+	
 	form=ContactForm()
 	context = {
 			'form': form,
 			'email': True,
 	}
-	print('FORM',form)
 	return context
 	
-def emailformOK(req):
-	form=ContactForm(req.POST)
+def emailformOK(request):
+	form=ContactForm(request.POST)
 	if form.is_valid():
 		name = form.cleaned_data['name']
 		emaila = form.cleaned_data['email']
@@ -37,16 +41,23 @@ def emailformOK(req):
 		context = {
 		'form': form,
 		'email': False,
+		'captcha': False,
 		}
 		email = EmailMessage(_(u'Zapytanie ze strony Locstar: ')+name+', '+emaila, message, to=['info@locstar.pl'])
 		email.send()
 		email = EmailMessage(_(u'Zapytanie ze strony Locstar: ')+name+', '+emaila, message, to=[emaila])
+		print('wysyłamy')
 		email.send()
+		context = {
+			'form': form,
+			'email': False,
+			'captcha': True,
+			}
 		return context
+	
 
 def locstar (request):
 	if request.method == 'POST':
-		#emailformOK(request)
 		return render(request, 'locstar/email.html', emailformOK(request))
 	else:
 		return render(request, 'locstar/locstar.html', emailform())
