@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*- 
 from django.shortcuts import render, redirect
 from .forms import ContactForm
 from django.core.mail import EmailMessage
@@ -46,7 +47,7 @@ def emailformOK(request):
 		email = EmailMessage(_(u'Zapytanie ze strony Locstar: ')+name+', '+emaila, message, to=['info@locstar.pl'])
 		email.send()
 		email = EmailMessage(_(u'Zapytanie ze strony Locstar: ')+name+', '+emaila, message, to=[emaila])
-		#print('wysyłamy')
+		print(u'wysyłamy')
 		email.send()
 		context = {
 			'form': form,
