@@ -25,7 +25,6 @@ def error_404(request):
     return render(request,'404.html', data)
 
 def emailform():
-	
 	form=ContactForm()
 	context = {
 			'form': form,
@@ -35,15 +34,15 @@ def emailform():
 	
 def emailformOK(request):
 	form=ContactForm(request.POST)
-	if form.is_valid():
-		name = form.cleaned_data['name']
-		emaila = form.cleaned_data['email']
-		message = form.cleaned_data['message']
-		context = {
+	context = {
 		'form': form,
 		'email': False,
 		'captcha': False,
 		}
+	if form.is_valid():
+		name = form.cleaned_data['name']
+		emaila = form.cleaned_data['email']
+		message = form.cleaned_data['message']
 		email = EmailMessage(_(u'Zapytanie ze strony Locstar: ')+name+', '+emaila, message, to=['info@locstar.pl'])
 		email.send()
 		email = EmailMessage(_(u'Zapytanie ze strony Locstar: ')+name+', '+emaila, message, to=[emaila])
@@ -54,115 +53,49 @@ def emailformOK(request):
 			'email': False,
 			'captcha': True,
 			}
-		return context
+	return context
 	
 
+def renderwithemail(request, link):
+	if request.method == 'POST':
+		emailOK=emailformOK(request)
+		if emailOK['captcha']:
+			return render(request, 'locstar/email.html', emailOK)
+	return render(request, link, emailform())
+
 def locstar (request):
-	if request.method == 'POST':
-		return render(request, 'locstar/email.html', emailformOK(request))
-	else:
-		return render(request, 'locstar/locstar.html', emailform())
-		
+	return renderwithemail(request, 'locstar/locstar.html')
 def people (request):
-	if request.method == 'POST':
-		#emailformOK(request)
-		return render(request, 'locstar/email.html', emailformOK(request))
-	else:
-		return render(request, 'locstar/people.html', emailform())
-		
+	return renderwithemail(request, 'locstar/people.html')
 def onas (request):
-	if request.method == 'POST':
-		#emailformOK(request)
-		return render(request, 'locstar/email.html', emailformOK(request))
-	else:
-		return render(request, 'locstar/onas.html', emailform())
+	return renderwithemail(request, 'locstar/onas.html')
 def special (request):
-	if request.method == 'POST':
-		#emailformOK(request)
-		return render(request, 'locstar/email.html', emailformOK(request))
-	else:
-		return render(request, 'locstar/special.html', emailform())
+	return renderwithemail(request, 'locstar/special.html')
 def prices (request):
-	if request.method == 'POST':
-		#emailformOK(request)
-		return render(request, 'locstar/email.html', emailformOK(request))
-	else:
-		return render(request, 'locstar/prices.html', emailform())
+	return renderwithemail(request, 'locstar/email.html')
 def contact (request):
-	if request.method == 'POST':
-		#emailformOK(request)
-		return render(request, 'locstar/email.html', emailformOK(request))
-	else:
-		return render(request, 'locstar/contact.html', emailform())
+	return renderwithemail(request, 'locstar/contact.html')
 def technologie (request):
-	if request.method == 'POST':
-		#emailformOK(request)
-		return render(request, 'locstar/email.html', emailformOK(request))
-	else:
-		return render(request, 'locstar/technologie.html', emailform())
+	return renderwithemail(request, 'locstar/email.html')
 def tm (request):
-	if request.method == 'POST':
-		#emailformOK(request)
-		return render(request, 'locstar/email.html', emailformOK(request))
-	else:
-		return render(request, 'locstar/tm.html', emailform())
+	return renderwithemail(request, 'locstar/tm.html')
 def servicegrid (request):
-	if request.method == 'POST':
-		#emailformOK(request)
-		return render(request, 'locstar/email.html', emailformOK(request))
-	else:
-		return render(request, 'locstar/servicegrid.html', emailform())
+	return renderwithemail(request, 'locstar/servicegrid.html')
 def servicetl (request):
-	if request.method == 'POST':
-		emailformOK(request)
-		return render(request, 'locstar/email.html', emailformOK(request))
-	else:
-		return render(request, 'locstar/servicetl.html', emailform())					
+	return renderwithemail(request, 'locstar/servicetl.html')				
 def terminology (request):
-	if request.method == 'POST':
-		#emailformOK(request)
-		return render(request, 'locstar/email.html', emailformOK(request))
-	else:
-		return render(request, 'locstar/terminology.html', emailform())		
+	return renderwithemail(request, 'locstar/terminology.html')
 def tools (request):
-	if request.method == 'POST':
-		#emailformOK(request)
-		return render(request, 'locstar/email.html', emailformOK(request))
-	else:
-		return render(request, 'locstar/tools.html', emailform())		
+	return renderwithemail(request, 'locstar/tools.html')		
 def mt (request):
-	if request.method == 'POST':
-		#emailformOK(request)
-		return render(request, 'locstar/email.html', emailformOK(request))
-	else:
-		return render(request, 'locstar/mt.html', emailform())		
+	return renderwithemail(request, 'locstar/mt.html')	
 def customers (request):
-	if request.method == 'POST':
-		#emailformOK(request)
-		return render(request, 'locstar/email.html', emailformOK(request))
-	else:
-		return render(request, 'locstar/customers.html', emailform())		
+	return renderwithemail(request, 'locstar/customers.html')	
 def translation (request):
-	if request.method == 'POST':
-		#emailformOK(request)
-		return render(request, 'locstar/email.html', emailformOK(request))
-	else:
-		return render(request, 'locstar/translation.html', emailform())		
+	return renderwithemail(request, 'locstar/translation.html')	
 def localization (request):
-	if request.method == 'POST':
-		#emailformOK(request)
-		return render(request, 'locstar/email.html', emailformOK(request))
-	else:
-		return render(request, 'locstar/localization.html', emailform())		
+	return renderwithemail(request, 'locstar/localization.html')			
 def website (request):
-	if request.method == 'POST':
-		#emailformOK(request)
-		return render(request, 'locstar/email.html', emailformOK(request))
-	else:
-		return render(request, 'locstar/website.html', emailform())		
+	return renderwithemail(request, 'locstar/website.html')	
 def other (request):
-	if request.method == 'POST':
-		#emailformOK(request)
-		return render(request, 'locstar/email.html', emailformOK(request))
-	else:
-		return render(request, 'locstar/other.html', emailform())		
+	return renderwithemail(request, 'locstar/other.html')		

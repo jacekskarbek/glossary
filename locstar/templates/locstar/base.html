@@ -136,6 +136,7 @@
                                         </li>
                                     </ul>
                                 </li>
+                               <!--
                                 <li class="dropdown">
                                 <form action="{% url 'set_language' %}" method="post" style="background-color: #1cc700;">
     									{% csrf_token %}
@@ -153,9 +154,31 @@
     									<noscript><input type="submit" value="Submit"/></noscript>
 										</form>
 								</li>
+								-->
+								
+    <li>
+        {% get_available_languages as LANGUAGES %}
+        {% get_current_language as LANGUAGE_CODE %}
+        {% for language in LANGUAGES %}
+        {% if not language.0 == LANGUAGE_CODE %}
+            <form action="{% url 'set_language' %}" method="post">
+                {% csrf_token %}
+                <input name="next" type="hidden" value="{{ redirect_to }}" />
+                <input name="language" type="hidden" value="{{ language.0 }}"/>
+                <button type="submit" class="linkbutton">{{ language.1 }}</button> 
+             <!--     <a href="" onclick='this.form.submit()'>{{ language.1 }}</a> -->
+            </form>
+        {% endif %}
+        {% endfor %}
+    </li>
+
+								
+							
                             </ul>
+                            
                        <!--     <div id="link-button" class="pull-right hidden-sm hidden-xs"><i class="fa fa-angle-double-down" aria-hidden="true"></i></div>
                         </div><!--/.nav-collapse -->
+                        </div>
                     </div> <!-- container -->
                 </nav>
             </header> <!-- header-section -->
@@ -225,7 +248,7 @@
                                    
 								
                                     <div class="form-group">
-                                        <button type="submit" class="subscribeBtn btn btn-primary">{% trans 'Wyślij' %}</button>
+                                        <button type="submit" class="subscribeBtn btn btn-primary" id="recaptcha-submit" disabled >{% trans 'Wyślij' %}</button>
                                     </div>
                                 </form>
                             </div> <!-- contact-wrapper -->
@@ -336,21 +359,21 @@
                 <li><a href="{% url  'customers'  %}">{% trans 'Klienci' %}</a></li>
                                 <li class="mapdrop"><a href="{% url  'contact'  %}">{% trans 'Kontakt' %}</a><!-- end of li -->
                <li class="dropdown">
-                                <form action="{% url 'set_language' %}" method="post" >
-    									{% csrf_token %}
-    									<input name="next" type="hidden" value="{{ redirect_to }}"    />
-    										<select name="language" onchange='this.form.submit()'>
-        										{% get_current_language as LANGUAGE_CODE %}
-        										{% get_available_languages as LANGUAGES %}
-        										{% for lang in LANGUAGES %}
-            									<option  value="{{ lang.0 }}" {% if lang.0 == LANGUAGE_CODE %} selected="selected"{% endif %}>
-                									{{ lang.1 }} 
-                									
-            									</option>
-        										{% endfor %}
-    										</select>
-    									<noscript><input type="submit" value="Submit"/></noscript>
-										</form>
+                               
+        {% get_available_languages as LANGUAGES %}
+        {% get_current_language as LANGUAGE_CODE %}
+        {% for language in LANGUAGES %}
+        {% if not language.0 == LANGUAGE_CODE %}
+            <form action="{% url 'set_language' %}" method="post">
+                {% csrf_token %}
+                <input name="next" type="hidden" value="{{ redirect_to }}" />
+                <input name="language" type="hidden" value="{{ language.0 }}"/>
+                <button type="submit" class="linkbuttonwhite">{{ language.1 }}</button> 
+             <!--     <a href="" onclick='this.form.submit()'>{{ language.1 }}</a> -->
+            </form>
+        {% endif %}
+        {% endfor %}
+   
 								</li>
             </ul> <!-- menu-wrapper -->      
         </div>
