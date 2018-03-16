@@ -46,7 +46,7 @@ def emailformOK(request):
 		email = EmailMessage(_(u'Zapytanie ze strony Locstar: ')+name+', '+emaila, message, to=['info@locstar.pl'])
 		email.send()
 		email = EmailMessage(_(u'Zapytanie ze strony Locstar: ')+name+', '+emaila, message, to=[emaila])
-		print('wysyłamy')
+		#print('wysyłamy')
 		email.send()
 		context = {
 			'form': form,
