@@ -140,8 +140,8 @@ AUTH_PASSWORD_VALIDATORS = [
 # https://docs.djangoproject.com/en/1.10/topics/i18n/
 
 LANGUAGES = (
-    ('en-us', _('EN')),
-    ('pl-pl', _('PL')),
+    ('en-us', _('English (angielski)')),
+    ('pl-pl', _('polski (Polish)')),
 )
 
 
